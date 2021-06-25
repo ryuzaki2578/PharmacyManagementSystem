@@ -1290,3 +1290,29 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-25 17:04:29.200
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WHYtBptZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-25 17:04:29.210
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WHYtBptZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-25 17:04:29.212
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-25 17:04:29.213
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WHYtBptZ => OK
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-06-25 17:04:33.660
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2021-06-25 17:04:33.661
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-06-25 17:04:33.662
+!MESSAGE The project description file (.project) for 'MedicineStockModule' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.ui 2 2 2021-06-25 17:04:33.782
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-06-25 17:04:34.809
+!MESSAGE The workspace will exit with unsaved changes in this session.
