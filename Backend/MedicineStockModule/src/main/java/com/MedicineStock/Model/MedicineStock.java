@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -17,13 +14,16 @@ import java.util.Date;
 @Table(name="MedicineStock")
 public class MedicineStock {
     @Id
-    String name;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     @Column
-    String chemicalComposition;
+    private String name;
     @Column
-    String targetAilment;
+    private String chemicalComposition;
     @Column
-    Date dateOfExpiry;
+    private String targetAilment;
     @Column
-    long numberOfTabletsInStocks;
+    private Date dateOfExpiry;
+    @Column
+    private long numberOfTabletsInStocks;
 }
