@@ -14,12 +14,11 @@ export class MRScheduleComponent implements OnInit {
 
    }
    date:Date;
-
+   data:any;
    getMr(){
      const newDate=new DatePipe('en-US').transform(this.date,'dd-MM-yyyy');
-     console.log(newDate);
     this.mrScheduler.getMrSchedule(newDate).subscribe(
-      (response: any) =>{console.log(response);},
+      (response: any) =>{this.data=response;console.log(this.data)},
      );
 
    }
