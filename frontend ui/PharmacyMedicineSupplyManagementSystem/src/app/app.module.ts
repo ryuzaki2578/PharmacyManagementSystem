@@ -13,7 +13,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { CheckStockComponent } from './check-stock/check-stock.component';
 import { BasicAuthHttpInterceptorService } from './_service/basic-auth-http-interceptor.service';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
     FooterComponent,
@@ -22,6 +25,7 @@ import { BasicAuthHttpInterceptorService } from './_service/basic-auth-http-inte
     LoginComponent,
     HomeComponent,
     StocksComponent,
+    CheckStockComponent,
     AboutUsComponent,
     ContactUsComponent
   ],
