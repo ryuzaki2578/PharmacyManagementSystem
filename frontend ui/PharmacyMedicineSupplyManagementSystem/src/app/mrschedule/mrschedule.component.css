@@ -1,0 +1,33 @@
+img {
+    border-radius: 5px 5px 0 0;
+  }
+  .col-sm
+  {
+    text-align: center;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+  
+  span::after {
+    padding-left: 5px;
+  }
+  
+  input:invalid + span::after {
+    content: '✖';
+  }
+  
+  input:valid+span::after {
+    content: '✓';
+  }
+  label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
