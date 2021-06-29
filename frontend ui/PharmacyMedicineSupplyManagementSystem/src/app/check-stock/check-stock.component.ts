@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../_service/authentication.service';
 import { Router } from '@angular/router';  
-
+import { HttpClientService } from '../_service/http-client.service';
+import { StocksService,Stocks } from '../stocks.service';
 @Component({
   selector: 'app-check-stock',
   templateUrl: './check-stock.component.html',
@@ -9,10 +10,19 @@ import { Router } from '@angular/router';
 })
 export class CheckStockComponent implements OnInit {
 
-  constructor(private router: Router,private authenticationService: AuthenticationService) { }
+  stocks:Stocks[];
 
-  ngOnInit(): void {
+  constructor(private router: Router,private authenticationService: AuthenticationService,private stocksService:StocksService) { }
+
+ngOnInit(): void {
+    this.stocksService.getStocks().subscribe(
+      response =>this.handleSuccessfulResponse(response),
+     );
   }
+  handleSuccessfulResponse(response: Stocks[])
+{
+    this.stocks=response;
+}
       
   logout() {  
     this.authenticationService.logout();  

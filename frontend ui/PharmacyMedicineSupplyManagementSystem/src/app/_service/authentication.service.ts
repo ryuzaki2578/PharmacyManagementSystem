@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';  
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
@@ -29,4 +29,5 @@ export class AuthenticationService {
   public get loggedIn(): boolean {  
     return (localStorage.getItem('currentUser') !== null);  
   }  
+
 } 

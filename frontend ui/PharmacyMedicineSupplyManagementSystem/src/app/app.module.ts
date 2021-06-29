@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { BasicAuthHttpInterceptorService } from './_service/basic-auth-http-interceptor.service';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -32,7 +33,12 @@ import { FooterComponent } from './home/footer/footer.component';
 
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {  
+      provide:HTTP_INTERCEPTORS, useClass:BasicAuthHttpInterceptorService, multi:true 
+    }
+    ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

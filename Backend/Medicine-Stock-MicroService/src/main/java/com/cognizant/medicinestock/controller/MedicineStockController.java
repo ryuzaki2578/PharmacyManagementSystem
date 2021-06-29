@@ -54,7 +54,7 @@ public class MedicineStockController {
 
 	}
 
-	@PostMapping("/byTreatingAilment/{treatingAilment}")
+	@GetMapping("/byTreatingAilment/{treatingAilment}")
 	public ResponseEntity<?> getMedicineByTreatingAilment(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("treatingAilment") String treatingAilment) {
 		log.info("START");
@@ -85,7 +85,7 @@ public class MedicineStockController {
 	}
 
 
-	@PostMapping("/get-stock-count/{medicine}")
+	@GetMapping("/get-stock-count/{medicine}")
 	public ResponseEntity<?> getStockCountForMedicine(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("medicine") String medicine) {
 		log.info("START");
