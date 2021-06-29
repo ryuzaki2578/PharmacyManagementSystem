@@ -8,7 +8,7 @@ import { AuthenticationService } from '../_service/authentication.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-email: string;
+userId: string;
 password: string;
 title = 'auth-guard-demo';  
   constructor(private router: Router,private _auth: AuthenticationService, private _router: Router) { 
@@ -18,8 +18,8 @@ title = 'auth-guard-demo';
   }
 
   login(): void {  
-    if (this.email != '' && this.password != '') {  
-      if (this._auth.login(this.email, this.password)) {  
+    if (this.userId != '' && this.password != '') {  
+      if (this._auth.login(this.userId, this.password)) {  
         this._router.navigate(["stocks"]);  
       }  
       else  

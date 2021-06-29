@@ -17,7 +17,7 @@ import lombok.ToString;
 @ToString
 public class UserLoginCredential {
 
-	private String userid;
+	private String userId;
 
 	private String password;
 }

@@ -79,11 +79,11 @@ public class JwtAuthenticationController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ResponseEntity<UserToken> login(@RequestBody UserLoginCredential userlogincredentials) throws Exception {
 		log.info("START");
-		authenticate(userlogincredentials.getUserid(), userlogincredentials.getPassword());
-		final UserDetails userdetails = custdetailservice.loadUserByUsername(userlogincredentials.getUserid());
+		authenticate(userlogincredentials.getUserId(), userlogincredentials.getPassword());
+		final UserDetails userdetails = custdetailservice.loadUserByUsername(userlogincredentials.getUserId());
 		log.debug("USERDETAILS {}:", userdetails);
 		log.info("END");
-		return new ResponseEntity<>(new UserToken(userlogincredentials.getUserid(), jwtutil.generateToken(userdetails)),
+		return new ResponseEntity<>(new UserToken(userlogincredentials.getUserId(), jwtutil.generateToken(userdetails)),
 				HttpStatus.OK);
 
 	}

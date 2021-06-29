@@ -11,11 +11,11 @@ import { StocksComponent } from './stocks/stocks.component';
 import { AuthGuard } from './_service/auth-guard.service';
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'stocks',component:StocksComponent,canActivate: [AuthGuard]},
+{path:'stocks',component:StocksComponent,canActivate: [AuthGuard]},
   {path:'login',component:LoginComponent},
-{path:'mr-schedule',component:MRScheduleComponent},
-{path:'place-order',component:PlaceOrderComponent},
-{path:'check-stocks',component:CheckStockComponent},
+{path:'mr-schedule',component:MRScheduleComponent,canActivate: [AuthGuard]},
+{path:'place-order',component:PlaceOrderComponent,canActivate: [AuthGuard]},
+{path:'check-stocks',component:CheckStockComponent,canActivate: [AuthGuard]},
 {path:'about-us',component:AboutUsComponent},
 {path:'contact-us',component:ContactUsComponent}];
   

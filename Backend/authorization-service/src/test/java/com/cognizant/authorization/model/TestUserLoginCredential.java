@@ -25,7 +25,7 @@ public class TestUserLoginCredential {
 	@Test
 	public void testAllArgumentConstructor() {
 		UserLoginCredential userLog =new UserLoginCredential("admin","admin");
-		assertEquals("admin",userLog.getUserid());
+		assertEquals("admin",userLog.getUserId());
 	}
 	
 	@Test
@@ -43,7 +43,7 @@ public class TestUserLoginCredential {
 	@Test
 	public void testToStringMethod() {
 		
-		assertEquals("UserLoginCredential(userid=" + userLogin.getUserid() + ", password=" + userLogin.getPassword()
+		assertEquals("UserLoginCredential(userid=" + userLogin.getUserId() + ", password=" + userLogin.getPassword()
 				+  ")", userLogin.toString());	
 	}
 }
