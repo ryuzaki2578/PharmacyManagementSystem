@@ -6,7 +6,7 @@
       <div class="col-sm">
   <h2>Login for Admin Panel</h2>
   <br>
-  <form>
+  <form (ngSubmit)=login()>
       <div class="mb-3">
         <label for="exampleInputuserId" class="form-label">userId</label>
         <input class="form-control" name="userId" [(ngModel)]="userId">
@@ -15,7 +15,7 @@
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" name="password" [(ngModel)]="password">
       </div>
-      <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+      <button type="submit" >Submit</button>
     </form>
   </div>
   </div>

@@ -7,6 +7,9 @@
       <a href="./check-stocks">Check Stocks</a>
       <a href="./about-us">About Us</a>
       <a href="./contact-us">Contact Us</a>
-      <a href="./login">Login</a>
+      
+      <a  *ngIf="!authenticated" mdbRippleRadius href="./login" (click)="refresh()">Log In</a>
+      <button *ngIf="authenticated"><a   mdbRippleRadius (click)="logout()" (click)="refresh()" href="./login">Log Out</a></button>
+      
     </div>
   </div>

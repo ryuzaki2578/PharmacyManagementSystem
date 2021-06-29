@@ -8,9 +8,10 @@ import { AuthenticationService } from '../_service/authentication.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-userId: string;
-password: string;
-
+  
+    userId:string="";
+    password:string="";
+  
 title = 'auth-guard-demo';  
   constructor(private router: Router,private _auth: AuthenticationService, private _router: Router) { 
     if (this._auth.loggedIn) {  
@@ -26,6 +27,7 @@ title = 'auth-guard-demo';
       else  
         alert("Wrong username or password");  
     }  
-
+ 
 }
+
 }
