@@ -29,5 +29,8 @@ export class MrScheduleService {
     
        return this.httpClient.get<Mrschedule[]>('http://localhost:8082/medicalRepresentatives',{headers});
   }
+  getMrSchedule(date:string){
+      return this.httpClient.get<any>('http://localhost:8082/medicalRepresentatives');
+  }
 }
 

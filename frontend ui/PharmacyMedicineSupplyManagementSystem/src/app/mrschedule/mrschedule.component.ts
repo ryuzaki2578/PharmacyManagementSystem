@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MrScheduleService } from '../mrschedule.service';
 
 @Component({
   selector: 'app-mrschedule',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MRScheduleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mrScheduler:MrScheduleService,private httpClient:HttpClient) {
+
+   }
+   date:string;
+
+   submit(){
+     console.log('called');
+    this.mrScheduler.getMrSchedule(this.date).subscribe(
+      (response: any) =>{console.log(response);},
+     );
+
+   }
 
   ngOnInit(): void {
   }

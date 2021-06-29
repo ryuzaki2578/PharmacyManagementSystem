@@ -16,7 +16,7 @@ public class DateUtil {
 
 			log.info("Start");
 
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH);
 			localDate = LocalDate.parse(scheduleStartDate, formatter);
 
 			log.debug("localDate : {}", localDate);
