@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../_service/authentication.service';  
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-admin-panel',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class LoginComponent  {
+email: string;
+password: string;
+title = 'auth-guard-demo';  
+  constructor(private router: Router,private _auth: AuthenticationService, private _router: Router) { 
+    if (this._auth.loggedIn) {  
+      this._router.navigate(['stocks']);  
+    }  
   }
 
+  login(): void {  
+    if (this.email != '' && this.password != '') {  
+      if (this._auth.login(this.email, this.password)) {  
+        this._router.navigate(["stocks"]);  
+      }  
+      else  
+        alert("Wrong username or password");  
+    }  
+
+}
 }

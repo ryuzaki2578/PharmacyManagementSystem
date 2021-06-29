@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container adminpanel">
+    <div class="row ">
+      <div class="col-sm ">
+        <img src="../../assets/images/218.jpg" width="70%">
+      </div>
+      <div class="col-sm">
+  <h2>Login for Admin Panel</h2>
+  <br>
+  <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="password">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+    </form>
+  </div>
+  </div>
+  </div>

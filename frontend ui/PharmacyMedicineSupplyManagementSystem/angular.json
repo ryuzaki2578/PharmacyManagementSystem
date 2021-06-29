@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "b47e2e02-fc4c-4558-8d62-59d079ba6535"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PharmacyMedicineSupplyManagementSystem": {
+    "Hospital-Mangement-System": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/PharmacyMedicineSupplyManagementSystem",
+            "outputPath": "dist/Hospital-Mangement-System",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +30,14 @@
               "src/assets"
             ],
             "styles": [
+
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PharmacyMedicineSupplyManagementSystem:build:production"
+              "browserTarget": "Hospital-Mangement-System:build:production"
             },
             "development": {
-              "browserTarget": "PharmacyMedicineSupplyManagementSystem:build:development"
+              "browserTarget": "Hospital-Mangement-System:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PharmacyMedicineSupplyManagementSystem:build"
+            "browserTarget": "Hospital-Mangement-System:build"
           }
         },
         "test": {
@@ -102,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "PharmacyMedicineSupplyManagementSystem"
+  "defaultProject": "Hospital-Mangement-System"
 }
