@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MrScheduleService } from '../mrschedule.service';
@@ -12,11 +13,12 @@ export class MRScheduleComponent implements OnInit {
   constructor(private mrScheduler:MrScheduleService,private httpClient:HttpClient) {
 
    }
-   date:string;
+   date:Date;
 
-   submit(){
-     console.log('called');
-    this.mrScheduler.getMrSchedule(this.date).subscribe(
+   getMr(){
+     const newDate=new DatePipe('en-US').transform(this.date,'dd-MM-yyyy');
+     console.log(newDate);
+    this.mrScheduler.getMrSchedule(newDate).subscribe(
       (response: any) =>{console.log(response);},
      );
 
