@@ -22,12 +22,10 @@ export class MrScheduleService {
   constructor(private httpClient:HttpClient) { }
   getMR()
   {
-    let username=''
-    let password=''
-  
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-    
-       return this.httpClient.get<Mrschedule[]>('http://localhost:8082/medicalRepresentatives',{headers});
+    const token=localStorage.getItem('accessToken');
+    console.log(token);
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
+       return this.httpClient.get<Mrschedule[]>('http://localhost:8082/api/medical-representative-schedule-service/RepSchedule',{headers});
   }
 }
 

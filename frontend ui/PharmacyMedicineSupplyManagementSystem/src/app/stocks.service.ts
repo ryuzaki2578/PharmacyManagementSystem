@@ -22,8 +22,6 @@ export class StocksService {
     const token=localStorage.getItem('accessToken');
     console.log(token);
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-
-    
        return this.httpClient.get<Stocks[]>('http://localhost:8081/api/medicine-stock/medicine-stock-information',{headers});
   }
 }

@@ -23,8 +23,5 @@ ngOnInit(): void {
 {
     this.stocks=response;
 }
-login()
-{
-  window.location.reload();
-}
+
 }
