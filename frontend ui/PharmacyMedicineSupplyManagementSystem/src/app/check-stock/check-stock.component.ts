@@ -23,10 +23,8 @@ ngOnInit(): void {
 {
     this.stocks=response;
 }
-      
-  logout() {  
-    this.authenticationService.logout();  
-    this.router.navigate(['']);  
-  }  
-
+login()
+{
+  window.location.reload();
+}
 }
