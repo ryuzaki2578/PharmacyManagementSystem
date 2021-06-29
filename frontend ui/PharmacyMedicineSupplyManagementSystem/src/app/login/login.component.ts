@@ -10,17 +10,18 @@ import { AuthenticationService } from '../_service/authentication.service';
 export class LoginComponent  {
 email: string;
 password: string;
+
 title = 'auth-guard-demo';  
   constructor(private router: Router,private _auth: AuthenticationService, private _router: Router) { 
     if (this._auth.loggedIn) {  
-      this._router.navigate(['stocks']);  
+      this._router.navigate(['check-stocks']);  
     }  
   }
 
   login(): void {  
     if (this.email != '' && this.password != '') {  
       if (this._auth.login(this.email, this.password)) {  
-        this._router.navigate(["stocks"]);  
+        this._router.navigate(["check-stocks"]);  
       }  
       else  
         alert("Wrong username or password");  

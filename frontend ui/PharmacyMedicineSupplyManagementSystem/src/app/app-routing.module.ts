@@ -14,8 +14,8 @@ const routes: Routes = [
   {path:'stocks',component:StocksComponent,canActivate: [AuthGuard]},
   {path:'login',component:LoginComponent},
 {path:'mr-schedule',component:MRScheduleComponent},
-{path:'place-order',component:PlaceOrderComponent},
-{path:'check-stocks',component:CheckStockComponent},
+{path:'place-order',component:PlaceOrderComponent,canActivate: [AuthGuard]},
+{path:'check-stocks',component:CheckStockComponent,canActivate: [AuthGuard]},
 {path:'about-us',component:AboutUsComponent},
 {path:'contact-us',component:ContactUsComponent}];
   
