@@ -12,7 +12,7 @@ export class BasicAuthHttpInterceptorService implements HttpInterceptor {
   constructor() { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    var token=localStorage.getItem('token');
+    var token=localStorage.getItem('accessToken');
     console.log(token);
     if (localStorage.getItem('userId') && token) {
       req = req.clone({

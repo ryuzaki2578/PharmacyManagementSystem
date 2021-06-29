@@ -19,7 +19,7 @@ export class StocksService {
   constructor(private httpClient:HttpClient) { }
   getStocks()
   {
-    const token=localStorage.getItem('token');
+    const token=localStorage.getItem('accessToken');
     console.log(token);
     const headers = new HttpHeaders({ Authorization: "Bearer " +token });
     

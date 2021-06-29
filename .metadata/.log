@@ -5008,3 +5008,48 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.383
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.394
+!MESSAGE classpath=128 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.399
+!MESSAGE buffering callback sts4.classpath.EkrUCqOk authorization-service false 128
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.400
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.409
+!MESSAGE classpath=122 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.415
+!MESSAGE buffering callback sts4.classpath.EkrUCqOk medical-representative-schedule-service false 122
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.416
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.426
+!MESSAGE classpath=131 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.432
+!MESSAGE buffering callback sts4.classpath.EkrUCqOk pharmacysupply false 131
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:52.433
+!MESSAGE executing callback sts4.classpath.EkrUCqOk 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-29 13:23:53.787
+!MESSAGE executing callback sts4.classpath.EkrUCqOk SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-06-29 13:26:17.403
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

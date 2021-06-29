@@ -2428,3 +2428,31 @@ Caused by: java.lang.Exception: File not found: C:\Users\rYuZAki\Desktop\MPFE\Ba
 2021-06-29 13:14:41,915 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2021-06-29 13:14:41,919 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-06-29 13:14:41,920 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rYuZAki\Desktop\MPFE\Backend\authorization-service\src\test\resources
+2021-06-29 13:23:56,608 [Worker-49: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cognizant.authorization:authorization-service:0.0.1-SNAPSHOT @ C:\Users\rYuZAki\Desktop\MPFE\Backend\authorization-service\pom.xml.
+2021-06-29 13:23:58,062 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 13:23:58,064 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 13:23:58,067 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 13:23:58,073 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 13:23:58,073 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rYuZAki\Desktop\MPFE\Backend\authorization-service\src\test\resources
+2021-06-29 13:23:59,889 [Worker-45: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cognizant:medical-representative-schedule-service:0.0.1-SNAPSHOT @ C:\Users\rYuZAki\Desktop\MPFE\Backend\medical-representative-schedule-service\pom.xml.
+2021-06-29 13:24:01,204 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 13:24:01,206 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 13:24:01,209 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2021-06-29 13:24:01,219 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 13:24:01,219 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rYuZAki\Desktop\MPFE\Backend\medical-representative-schedule-service\src\test\resources
+2021-06-29 13:24:02,895 [Worker-45: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cognizant:pharmacysupply:0.0.1-SNAPSHOT @ C:\Users\rYuZAki\Desktop\MPFE\Backend\pharmacysupply\pom.xml.
+2021-06-29 13:24:04,072 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 13:24:04,073 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 13:24:04,076 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-29 13:24:04,078 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 13:24:04,079 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rYuZAki\Desktop\MPFE\Backend\pharmacysupply\src\test\resources
+2021-06-29 16:35:28,618 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 16:35:28,622 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 16:35:28,627 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 16:35:28,631 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 16:35:28,631 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rYuZAki\Desktop\MPFE\Backend\Medicine-Stock-MicroService\src\test\resources
+2021-06-29 16:43:56,871 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 16:43:56,879 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 16:43:56,884 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-29 16:43:56,887 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-29 16:43:56,887 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rYuZAki\Desktop\MPFE\Backend\Medicine-Stock-MicroService\src\test\resources
