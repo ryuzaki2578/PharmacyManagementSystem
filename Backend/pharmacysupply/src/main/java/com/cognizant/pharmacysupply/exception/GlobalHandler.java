@@ -20,7 +20,7 @@ public class GlobalHandler extends ResponseEntityExceptionHandler{
 		response.setMessage(ex.getMessage());
 		response.setStatus(HttpStatus.BAD_REQUEST);
 		response.setReason("Bad request");
-		return new ResponseEntity<ErrorResponse>(response, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
 	}
 	
 	
@@ -31,7 +31,7 @@ public class GlobalHandler extends ResponseEntityExceptionHandler{
 		customErrorResponse.setMessage("The medicine is not present in the stock");
 		customErrorResponse.setReason("You might have entered wrong medicine name.");
 		customErrorResponse.setTimestamp(LocalDateTime.now());
-		return new ResponseEntity<ErrorResponse>(customErrorResponse, HttpStatus.FORBIDDEN);
+		return new ResponseEntity<>(customErrorResponse, HttpStatus.FORBIDDEN);
 	}
 	
 	
@@ -43,6 +43,6 @@ public class GlobalHandler extends ResponseEntityExceptionHandler{
 		customErrorResponse
 				.setReason("You might have entered wrong medicine name or medicine not present in the stock");
 		customErrorResponse.setTimestamp(LocalDateTime.now());
-		return new ResponseEntity<ErrorResponse>(customErrorResponse, HttpStatus.FORBIDDEN);
+		return new ResponseEntity<>(customErrorResponse, HttpStatus.FORBIDDEN);
 	}
 }

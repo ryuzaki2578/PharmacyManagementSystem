@@ -1,10 +1,10 @@
 package com.cognizant.pharmacysupply.service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import com.cognizant.pharmacysupply.exception.MedicineNotFoundException;
@@ -116,7 +116,6 @@ public class PharmacyServiceImpl implements PharmacyService{
 
 	public MedicineStock getNumberOfTablets(String token, MedicineDemand medicineDemand)
 			throws MedicineNotFoundException {
-		// TODO Auto-generated method stub
 		log.info("Start");
 		MedicineStock medicineStock = null;
 		log.info("Medicine : {}", medicineDemand);
