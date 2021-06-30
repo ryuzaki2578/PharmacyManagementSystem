@@ -11,6 +11,12 @@ export class Stocks{
     public numberOfTabletsInStock:number
   ) {}
 }
+export class UpdateStocks{
+  constructor(
+    public quantity:number,
+    public name:string,
+  ) {}
+}
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +28,13 @@ export class StocksService {
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
        return this.httpClient.get<Stocks[]>('http://localhost:8081/api/medicine-stock/medicine-stock-information',{headers});
+  }
+  updateStocks(medicine:string,count:number)
+  {
+    const token=localStorage.getItem('accessToken');
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
+    const url = `http://localhost:8081//api/medicine-stock/update-stock/${medicine}/${count}`;
+    return this.httpClient.post(url,headers)
   }
 }
 

@@ -1,1 +1,11 @@
-<p>place-order works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<label for="mname">Select Medicines:</label><br>
+        <select id='mname' formControlName="mname">
+          <option *ngFor="let stock of stocks" [ngValue]='stock.name'>
+            {{stock.name}}
+          </option>
+        </select>
+<label for="quantity">Enter quantity of Medicines</label>
+<input type="number" formControlName="quantity">        
+<button type="submit">Submit</button>
+</form>

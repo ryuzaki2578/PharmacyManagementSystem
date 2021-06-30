@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cognizant.medicinestock.exception.TokenValidationFailedException;
@@ -107,7 +108,7 @@ public class MedicineStockController {
 	
 	@PostMapping("/update-stock/{medicine}/{count}")
 	public Boolean updateNumberOfTabletsInStockByName(@RequestHeader(name = "Authorization") String token,
-			@PathVariable("medicine") String medicine, @PathVariable("count") int count) {
+			@RequestParam("medicine") String medicine, @RequestParam("count") int count) {
 
 		log.info("START");
 		Boolean ans = false;

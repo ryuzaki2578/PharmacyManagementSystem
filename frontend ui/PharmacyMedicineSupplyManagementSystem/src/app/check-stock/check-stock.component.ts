@@ -9,7 +9,6 @@ import { StocksService,Stocks } from '../stocks.service';
   styleUrls: ['./check-stock.component.css']
 })
 export class CheckStockComponent implements OnInit {
-
   stocks:Stocks[];
 
   constructor(private router: Router,private authenticationService: AuthenticationService,private stocksService:StocksService) { }
