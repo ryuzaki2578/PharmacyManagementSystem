@@ -42,7 +42,7 @@ public class JwtResponseTest {
 	public void testNoArgsConstructor() {
 		
 		JwtResponse response = new JwtResponse();
-		assertEquals(response, response);
+		assertEquals(response, new JwtResponse());
 	}
 	@Test
 	public void testSetters() {

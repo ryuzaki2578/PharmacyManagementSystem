@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cognizant.authorization.exception.UserNotFoundException;
 import com.cognizant.authorization.model.JwtResponse;
 import com.cognizant.authorization.model.UserLoginCredential;
 import com.cognizant.authorization.model.UserToken;
@@ -59,10 +60,10 @@ public class JwtAuthenticationController {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userid, password));
 		} catch (DisabledException e) {
 			log.error("EXCEPTION: NOT A VALID USER");
-			throw new Exception("USER DISABLED", e);
+			throw new UserNotFoundException("USER DISABLED");
 		} catch (BadCredentialsException e) {
 			log.error("EXCEPTION: NOT A VALID USER");
-			throw new Exception("INVALID_CREDENTIALS", e);
+			throw new UserNotFoundException("INVALID_CREDENTIALS");
 		}
 	}
 
