@@ -34,7 +34,7 @@ public class MedicineStockController {
 	private MedicineStockServiceImpl medicineStockService;
 
 	@GetMapping("/medicine-stock-information")
-	public ResponseEntity<?> getMedicineStockInformation(@RequestHeader(name = "Authorization") String token) {
+	public ResponseEntity<List<MedicineStock>> getMedicineStockInformation(@RequestHeader(name = "Authorization") String token) {
 		log.info("START");
 		log.debug("TOKEN {}:", token);
 		List<MedicineStock> medicineStockInformation = null;
@@ -55,7 +55,7 @@ public class MedicineStockController {
 	}
 
 	@GetMapping("/byTreatingAilment/{treatingAilment}")
-	public ResponseEntity<?> getMedicineByTreatingAilment(@RequestHeader(name = "Authorization") String token,
+	public ResponseEntity<String[]> getMedicineByTreatingAilment(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("treatingAilment") String treatingAilment) {
 		log.info("START");
 		log.debug("TOKEN {}:", token);
@@ -86,7 +86,7 @@ public class MedicineStockController {
 
 
 	@GetMapping("/get-stock-count/{medicine}")
-	public ResponseEntity<?> getStockCountForMedicine(@RequestHeader(name = "Authorization") String token,
+	public ResponseEntity<MedicineStock> getStockCountForMedicine(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("medicine") String medicine) {
 		log.info("START");
 
