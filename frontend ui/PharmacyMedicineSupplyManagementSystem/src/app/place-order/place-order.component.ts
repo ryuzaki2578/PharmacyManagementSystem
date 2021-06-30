@@ -15,24 +15,24 @@ export class PlaceOrderComponent implements OnInit{
 
   constructor(private stocksService:StocksService) { }
   profileForm = new FormGroup({
-    mname: new FormControl(''),
+    name: new FormControl(''),
     quantity:new FormControl(''),
   });
   ngOnInit(): void {
     this.getStocks();
   }
   onSubmit() {
-    console.log(this.profileForm.value);
+    //console.log(this.profileForm.value);
     this.updatestock(this.profileForm.value);
   }
   public updatestock(medicine:UpdateStocks)
   {
-   
+   this.stocksService.updateStocks(medicine.name,medicine.quantity).subscribe(response=>(console.log(response)));
   }
   public getStocks():void
   {
     this.stocksService.getStocks().subscribe(
-      response =>this.handleSuccessfulResponse(response));
+      response =>{this.handleSuccessfulResponse(response)});
   }
   handleSuccessfulResponse(response: Stocks[])
   {
