@@ -74,7 +74,7 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
 
 		log.info("End");
 
-		return new ResponseEntity<ErrorResponse>(errorResponse, HttpStatus.FORBIDDEN);
+		return new ResponseEntity<>(errorResponse, HttpStatus.FORBIDDEN);
 	}
 
 }

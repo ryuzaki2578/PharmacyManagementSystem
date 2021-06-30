@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -35,7 +35,7 @@ class MedRepScheduleServiceImplTest {
 
 	List<Doctor> doctorDetailsList;
 
-	@Before
+	@BeforeEach
 	public void setup() {
 		String[] medicines = { "Crocin", "Percocet" };
 		repSchedule = new RepSchedule();
