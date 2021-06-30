@@ -27,7 +27,7 @@ export class PlaceOrderComponent implements OnInit{
   }
   public updatestock(medicine:UpdateStocks)
   {
-   this.stocksService.updateStocks();
+   
   }
   public getStocks():void
   {
