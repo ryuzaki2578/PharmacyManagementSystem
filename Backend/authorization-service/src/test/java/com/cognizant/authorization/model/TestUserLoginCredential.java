@@ -37,7 +37,7 @@ public class TestUserLoginCredential {
 	@Test
 	public void testNoArgConstructor() {
 		UserLoginCredential ulc=new UserLoginCredential();
-		assertEquals(ulc,ulc);
+		assertEquals(ulc,new UserLoginCredential());
 	}
 	
 	@Test

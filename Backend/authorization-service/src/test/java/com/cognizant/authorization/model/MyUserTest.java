@@ -31,7 +31,7 @@ public class MyUserTest {
 	@Test
 	public void testNoArgumentConstructor() {
 		MyUser user=new MyUser();
-		assertEquals(user,user);
+		assertEquals(user,new MyUser());
 	}
 	
 	@Test
