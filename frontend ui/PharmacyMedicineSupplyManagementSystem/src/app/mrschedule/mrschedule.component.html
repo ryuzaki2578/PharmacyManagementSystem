@@ -13,18 +13,13 @@
 <form style="width: 100%; ">
     <label >
       Choose your preferred appointment date (required):
-      <input type="date" name="mrschedule" min="2021-06-29" max="2021-07-10" required>
+      <input type="date" [(ngModel)]='date' name="date" min="2021-06-29" max="2021-07-10" required>
       <span class="validity"></span>
     </label>
-    <label for="appt">Choose a time for your meeting:</label>
 
-<input type="time" id="appt" name="appt"
-       min="12:00" max="15:00" required>
-
-<small>Meeting hours are 12pm to 3pm</small>
   
     <p style="margin-top: 25px; ">
-      <button  onclick="" style="background-color: green;">Submit</button>
+      <button  (click)='getMr()' style="background-color: green;">Submit</button>
     </p>
 </form>
     </div>

@@ -27,5 +27,11 @@ export class MrScheduleService {
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
        return this.httpClient.get<Mrschedule[]>('http://localhost:8082/api/medical-representative-schedule-service/RepSchedule',{headers});
   }
+  getMrSchedule(date:any){
+    
+    const token=localStorage.getItem('accessToken');
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
+      return this.httpClient.get<any>('http://localhost:8082/api/medical-representative-schedule-service/RepSchedule/'+date,{headers});
+  }
 }
 

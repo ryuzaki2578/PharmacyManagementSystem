@@ -16,6 +16,7 @@ import { FooterComponent } from './home/footer/footer.component';
 import { CheckStockComponent } from './check-stock/check-stock.component';
 import { BasicAuthHttpInterceptorService } from './_service/basic-auth-http-interceptor.service';
 import { CommonModule } from '@angular/common';
+import { MRScheduleComponent } from './mrschedule/mrschedule.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CommonModule } from '@angular/common';
     StocksComponent,
     CheckStockComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    MRScheduleComponent
   ],
   imports: [
     BrowserModule,
