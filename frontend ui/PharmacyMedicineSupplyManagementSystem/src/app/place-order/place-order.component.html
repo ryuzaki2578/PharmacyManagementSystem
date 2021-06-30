@@ -1,11 +1,11 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-<label for="mname">Select Medicines:</label><br>
-        <select id='mname' formControlName="mname">
+<label for="name">Select names:</label><br>
+        <select id='name' formControlName="name">
           <option *ngFor="let stock of stocks" [ngValue]='stock.name'>
             {{stock.name}}
           </option>
         </select>
-<label for="quantity">Enter quantity of Medicines</label>
+<label for="quantity">Enter quantity of names</label>
 <input type="number" formControlName="quantity">        
 <button type="submit">Submit</button>
 </form>

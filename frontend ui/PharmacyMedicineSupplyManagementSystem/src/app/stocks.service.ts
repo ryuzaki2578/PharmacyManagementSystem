@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 export class Stocks{
@@ -33,8 +33,8 @@ export class StocksService {
   {
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-    const url = `http://localhost:8081//api/medicine-stock/update-stock/${medicine}/${count}`;
-    return this.httpClient.post(url,headers)
+    const url = `http://localhost:8081/api/medicine-stock/update-stock/${medicine}/${count}`;
+    return this.httpClient.post(url,{headers})
   }
 }
 

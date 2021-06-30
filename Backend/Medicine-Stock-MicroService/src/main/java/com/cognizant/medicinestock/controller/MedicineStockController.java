@@ -108,7 +108,7 @@ public class MedicineStockController {
 	
 	@PostMapping("/update-stock/{medicine}/{count}")
 	public Boolean updateNumberOfTabletsInStockByName(@RequestHeader(name = "Authorization") String token,
-			@RequestParam("medicine") String medicine, @RequestParam("count") int count) {
+			@PathVariable("medicine") String medicine, @PathVariable("count") int count) {
 
 		log.info("START");
 		Boolean ans = false;
