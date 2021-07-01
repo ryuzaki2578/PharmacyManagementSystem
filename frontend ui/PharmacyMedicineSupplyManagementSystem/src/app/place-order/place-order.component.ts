@@ -19,6 +19,7 @@ export class PlaceOrderComponent implements OnInit{
     name: new FormControl(''),
     quantity:new FormControl(''),
   });
+  
   ngOnInit(): void {
     this.getStocks();
   }
@@ -28,7 +29,7 @@ export class PlaceOrderComponent implements OnInit{
   }
   public updatestock(medicine:UpdateStocks)
   {
-   this.stocksService.updateStocks(medicine.name,medicine.quantity).subscribe(response=>(console.log(response)));
+   this.stocksService.updateStocks(medicine.name,  medicine.quantity).subscribe(response=>(console.log(response)));
    alert("Stocks has been updated");
    this.router.navigateByUrl('check-stocks');
 
