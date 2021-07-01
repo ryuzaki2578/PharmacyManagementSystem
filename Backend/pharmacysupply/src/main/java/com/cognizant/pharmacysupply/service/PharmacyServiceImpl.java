@@ -39,18 +39,6 @@ public class PharmacyServiceImpl implements PharmacyService{
 	@Autowired
 	private MedicineDemandRepository medicineDemandRepository;
 	
-
-	/**
-	 * Get the count of supply from stock on giving the input as demand count. We
-	 * are getting the supply count from the medicine stock service via feign
-	 * client. And if the medicine demand count is higher then the medicine supply
-	 * count we are setting demand count as supply count.
-	 * Method Name --> getPharmacySupplyCount
-	 * @param      --> token
-	 * @param      --> medicineDemandList
-	 * @return     --> List of MedicineSupply
-	 * *
-	 */
 	@Override
 	public List<PharmacyMedicineSupply> getPharmacySupplyCount(String token, List<MedicineDemand> medicineDemandList)
 			throws MedicineNotFoundException {
@@ -103,16 +91,6 @@ public class PharmacyServiceImpl implements PharmacyService{
 		log.info("End");
 	}
 
-	/**
-	 * Get the count of supply from stock on giving the input as demand count. We
-	 * are getting the supply count from the medicine stock service via feign
-	 * client. And if the medicine demand count is higher then the medicine supply
-	 * count we are setting demand count as supply count.
-	 * Method Name --> getNumberOfTablets
-	 * @param      --> token
-	 * @param      --> medicineDemandList
-	 * @return     --> List of  MedicineSupply
-	 */
 
 	public MedicineStock getNumberOfTablets(String token, MedicineDemand medicineDemand)
 			throws MedicineNotFoundException {
@@ -132,37 +110,18 @@ public class PharmacyServiceImpl implements PharmacyService{
 		return medicineStock;
 	}
 
-	/**
-	 * From the database we are fetching all the {@link MedicineDemand}. We are
-	 * invoking method findAll() which is present in the {@link JpaRepository}
-	 * interface.
-	 * Method Name --> getMedicineDemand 
-	 * @return     --> List of medicine demand
-	 */
 	 @Override
 	public List<MedicineDemand> getMedicineDemand() {
 		log.info("Start");
 		return medicineDemandRepo.findAll();
 	}
-	
-	/**
-	 * From the database we are fetching all the {@link MedicineSupply}. We are
-	 * invoking method findAll() which is present in the {@link JpaRepository}
-	 * interface.
-	 * Method Name --> getMedicineSupply 
-	 * @return     --> List of medicine supply
-	 */
+
 	 @Override
 	public List<PharmacyMedicineSupply> getMedicineSupply() {
 		log.info("Start");
 		return pharmacyMedicineSupplyRepository.findAll();
 	}
 
-	/**
-	 * Validate the token received inside the Authorization part of the header
-	 * Method Name --> validateToken 
-	 * @return     --> List of medicine supply
-	 */
 	@Override
 	public Boolean validateToken(String token) {
 		log.info("Start");
