@@ -35,23 +35,24 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 	AuthenticationFeignClient authFeignClient;
 
 	@Override
-	public List<RepSchedule> getRepSchedule(String token, LocalDate scheduleStartDate) throws TokenValidationFailedException {
+	public List<RepSchedule> getRepSchedule(String token, LocalDate scheduleStartDate)
+			throws TokenValidationFailedException {
 		log.info("Start");
 
 		if (!isValidSession(token)) {
 			log.info("End");
-			
+
 			return null;
 		}
 
 		List<RepSchedule> repSchedules = new ArrayList<>();
 
 		List<Doctor> doctors = CsvParseUtil.parseDoctors();
-		
+
 		log.debug("docters : {}", doctors);
-		
+
 		List<MedicalRepresentative> medicalRepresentatives = medicalRepresentativeRepository.findAll();
-		
+
 		log.debug("medicalRepresentatives : {}", medicalRepresentatives);
 
 		LocalDate localDate = scheduleStartDate;
@@ -66,11 +67,9 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 			return repSchedules;
 		}
 
-		if (scheduleStartDate.equals(today)) {
+		if (scheduleStartDate.equals(today) && now.isAfter(one)) {
 
-			if (now.isAfter(one)) {
-				localDate = localDate.plusDays(1);
-			}
+			localDate = localDate.plusDays(1);
 
 		}
 
@@ -92,7 +91,8 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 			repSchedule.setMeetingSlot("1 PM to 2 PM");
 			repSchedule.setTreatingAilment(doctor.getTreatingAilment());
 
-			String[] medicinesByTreatingAilment = medicineStockClient.getMedicinesByTreatingAilment(token, doctor.getTreatingAilment());
+			String[] medicinesByTreatingAilment = medicineStockClient.getMedicinesByTreatingAilment(token,
+					doctor.getTreatingAilment());
 
 			repSchedule.setMedicines(medicinesByTreatingAilment);
 
@@ -110,9 +110,9 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 	}
 
 	public Boolean isValidSession(String token) throws TokenValidationFailedException {
-		
+
 		log.info("Start");
-		
+
 		JwtResponse response = authFeignClient.verifyToken(token);
 		if (!response.isValid()) {
 			log.info("End");

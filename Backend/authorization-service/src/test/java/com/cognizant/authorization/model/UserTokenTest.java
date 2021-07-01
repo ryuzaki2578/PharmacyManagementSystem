@@ -29,7 +29,7 @@ public class UserTokenTest {
 	@Test
 	public void testNoArgConstructor() {
 		UserToken usr=new UserToken();
-		assertEquals(usr,usr);
+		assertEquals(usr,new UserToken());
 	}
 	@Test
 	public void testEquals() {

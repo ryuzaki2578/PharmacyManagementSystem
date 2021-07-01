@@ -8,12 +8,13 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cognizant.authorization.exception.UserNotFoundException;
 import com.cognizant.authorization.model.JwtResponse;
 import com.cognizant.authorization.model.UserLoginCredential;
 import com.cognizant.authorization.model.UserToken;
@@ -59,10 +60,10 @@ public class JwtAuthenticationController {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userid, password));
 		} catch (DisabledException e) {
 			log.error("EXCEPTION: NOT A VALID USER");
-			throw new Exception("USER DISABLED", e);
+			throw new UserNotFoundException("USER DISABLED");
 		} catch (BadCredentialsException e) {
 			log.error("EXCEPTION: NOT A VALID USER");
-			throw new Exception("INVALID_CREDENTIALS", e);
+			throw new UserNotFoundException("INVALID_CREDENTIALS");
 		}
 	}
 
@@ -76,7 +77,7 @@ public class JwtAuthenticationController {
 	 * @return UserToken Class with UserId and password with token and status as OK.
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@PostMapping(value = "/login")
 	public ResponseEntity<UserToken> login(@RequestBody UserLoginCredential userlogincredentials) throws Exception {
 		log.info("START");
 		authenticate(userlogincredentials.getUserId(), userlogincredentials.getPassword());
@@ -95,8 +96,8 @@ public class JwtAuthenticationController {
 	 * @param token
 	 * @return JwtToken class and status as OK for valid token.
 	 */
-	@RequestMapping(value = "/validate", method = RequestMethod.GET)
-	public ResponseEntity<?> getValidity(@RequestHeader("Authorization") final String token) {
+	@GetMapping(value = "/validate")
+	public ResponseEntity<JwtResponse> getValidity(@RequestHeader("Authorization") final String token) {
 		log.debug("TOKEN {}:", token);
 		String newToken = token.substring(7);
 		log.debug("TOKEN AFTER REMOVING BEARER {}:", newToken);

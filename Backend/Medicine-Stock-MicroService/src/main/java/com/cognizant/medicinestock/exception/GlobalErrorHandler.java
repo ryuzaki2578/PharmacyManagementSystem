@@ -26,7 +26,7 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler{
 		response.setStatus(HttpStatus.BAD_REQUEST);
 		response.setReason("BAD REQUEST");
 		log.debug("ERROR RESPONSE {}:", response);
-		return new ResponseEntity<ErrorResponse>(response, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler(TokenValidationFailedException.class)
@@ -38,7 +38,7 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler{
 		errorResponse.setReason("YOUR TOKEN MIGHT BE WRONG OR MAYBE EXPIRED");
 		errorResponse.setLocalDateTime(LocalDateTime.now());
 		log.info("END");
-		return new ResponseEntity<ErrorResponse>(errorResponse, HttpStatus.FORBIDDEN);
+		return new ResponseEntity<>(errorResponse, HttpStatus.FORBIDDEN);
 	}
 	
 

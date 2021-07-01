@@ -38,7 +38,7 @@ public class PharmacyController {
 	 */
 	
 	@PostMapping("/pharmacy-supply")
-	public ResponseEntity<?> getPharmacySupply(@RequestHeader(name = "Authorization") String token,
+	public ResponseEntity<List<PharmacyMedicineSupply>> getPharmacySupply(@RequestHeader(name = "Authorization") String token,
 			@Valid @RequestBody List<MedicineDemand> medicineDemandList) throws MedicineNotFoundException {
 		log.info("Start");
 
@@ -66,7 +66,7 @@ public class PharmacyController {
 	 */
 
 	@GetMapping("/getMedicineSupply")
-	public ResponseEntity<?> getMedicineSupply(@RequestHeader("Authorization") String token) {
+	public ResponseEntity<List<PharmacyMedicineSupply>> getMedicineSupply(@RequestHeader("Authorization") String token) {
 		List<PharmacyMedicineSupply> medicineSupply = null;
 		if (pharmacyService.validateToken(token)) {
 			medicineSupply = pharmacyService.getMedicineSupply();
@@ -83,7 +83,7 @@ public class PharmacyController {
 	 */
 	
 	@GetMapping("/getMedicineDemand")
-	public ResponseEntity<?> getMedicineDemand(@RequestHeader(name = "Authorization") String token) {
+	public ResponseEntity<List<MedicineDemand>> getMedicineDemand(@RequestHeader(name = "Authorization") String token) {
 		List<MedicineDemand> medicineDemand = null;
 		if (pharmacyService.validateToken(token)) {
 			medicineDemand = pharmacyService.getMedicineDemand();
