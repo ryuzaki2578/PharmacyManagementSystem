@@ -27,15 +27,6 @@ public class PharmacyController {
 	
 	@Autowired
 	private PharmacyServiceImpl pharmacyService;
-
-	/*
-	 *  Method Name --> pharmacySupply
-	 *  @param      --> Medicine Demand 
-	 *  @return     --> Pharmacy Supply
-	 *  This method takes medicine demand as input checks if there is enough stock to 
-	 *  fulfill the demand, if sufficient stock is available then it supplies the medicine
-	 *  else it will not supply
-	 */
 	
 	@PostMapping("/pharmacy-supply")
 	public ResponseEntity<List<PharmacyMedicineSupply>> getPharmacySupply(@RequestHeader(name = "Authorization") String token,
@@ -57,13 +48,7 @@ public class PharmacyController {
 		log.info("End");
 		throw new TokenValidationFailedException("Token is no longer valid");
 	}
-	
-	/*
-	 *  Method Name --> getMedicineSupply
-	 *  @param      --> Null
-	 *  @return     --> Medicine Supplied
-	 *  This method returns the medicine supplied till this time.
-	 */
+
 
 	@GetMapping("/getMedicineSupply")
 	public ResponseEntity<List<PharmacyMedicineSupply>> getMedicineSupply(@RequestHeader("Authorization") String token) {
@@ -74,13 +59,6 @@ public class PharmacyController {
 		}
 		throw new TokenValidationFailedException("Token is no longer valid");
 	}
-
-	/*
-	 *  Method Name --> getMedicineDemand
-	 *  @param      --> Null
-	 *  @return     --> Medicine Demanded
-	 *  This method returns the medicine demanded till this time.
-	 */
 	
 	@GetMapping("/getMedicineDemand")
 	public ResponseEntity<List<MedicineDemand>> getMedicineDemand(@RequestHeader(name = "Authorization") String token) {
