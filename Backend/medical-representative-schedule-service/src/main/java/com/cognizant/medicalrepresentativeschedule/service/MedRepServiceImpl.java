@@ -1,5 +1,6 @@
 package com.cognizant.medicalrepresentativeschedule.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ public class MedRepServiceImpl implements MedRepService {
 		if (!isValidSession(token)) {
 			log.info("End");
 
-			return null;
+			return Collections.emptyList();          
 		}
 
 		log.info("End");

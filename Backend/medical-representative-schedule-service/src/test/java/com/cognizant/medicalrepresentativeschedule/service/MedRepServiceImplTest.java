@@ -41,7 +41,7 @@ class MedRepServiceImplTest {
 	private MedRepServiceImpl medicalRepresentativeService;
 
 	@Test
-	public void testGetMedicalRepresentatives() throws TokenValidationFailedException {
+	 void testGetMedicalRepresentatives() throws TokenValidationFailedException {
 
 		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("1", "admin", true));
 		when(new MedRepServiceImpl().isValidSession("token")).thenReturn(false);

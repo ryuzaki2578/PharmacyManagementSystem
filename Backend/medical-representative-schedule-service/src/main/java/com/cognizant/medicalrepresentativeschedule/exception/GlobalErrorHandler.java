@@ -2,6 +2,7 @@ package com.cognizant.medicalrepresentativeschedule.exception;
 
 import java.time.LocalDateTime;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,13 +18,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestControllerAdvice
 public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
-	
+	private static final String START = "Start";
 	@Autowired
 	ErrorResponse errorResponse;
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorResponse> handleAllErrors(Exception ex) {
-		log.info("Start");
+		log.info(START);
 
 		errorResponse.setMessage(ex.getMessage());
 		errorResponse.setReason("BAD_REQUEST");
@@ -37,7 +38,7 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(MethodArgumentTypeMismatchException.class)
 	public ResponseEntity<ErrorResponse> handleMethodArgTypeMismatchException(MethodArgumentTypeMismatchException e) {
-		log.info("Start");
+		log.info(START);
 
 		errorResponse.setMessage("Please enter the date in dd-MM-yyyy format");
 		errorResponse.setReason("You need to provide date in dd-MM-yyyy format");
@@ -51,7 +52,7 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(InvalidDateException.class)
 	public ResponseEntity<ErrorResponse> handleDateNotFoundException(InvalidDateException e) {
-		log.info("Start");
+		log.info(START);
 
 		errorResponse.setMessage("Please enter the date in dd-MM-yyyy format");
 		errorResponse.setReason("You need to provide date in dd-MM-yyyy format");
@@ -65,7 +66,7 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(TokenValidationFailedException.class)
 	public ResponseEntity<ErrorResponse> handleTokenValidationFailedException(TokenValidationFailedException e) {
-		log.info("Start");
+		log.info(START);
 
 		errorResponse.setMessage("Your token is invalid");
 		errorResponse.setReason("Your token might have been expired or you have entered wrong token");

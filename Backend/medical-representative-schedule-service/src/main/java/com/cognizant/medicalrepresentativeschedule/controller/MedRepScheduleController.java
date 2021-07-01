@@ -30,6 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 public class MedRepScheduleController {
+	private static final String START_1 = "Start";
 
 	@Autowired
 	private MedRepScheduleService scheduleService;
@@ -46,7 +47,7 @@ public class MedRepScheduleController {
 	@GetMapping("/RepSchedule/{scheduleStartDate}")
 	public ResponseEntity<List<RepSchedule>> getRepSchedule(@RequestHeader(name = "Authorization") final String token, @PathVariable("scheduleStartDate") final String scheduleStartDate)
 			throws InvalidDateException, TokenValidationFailedException {
-		log.info("Start");
+		log.info(START_1);
 
 		log.debug("scheduleStartDate : {}", scheduleStartDate);
 
@@ -81,7 +82,7 @@ public class MedRepScheduleController {
 	}
 
 	public Boolean isValidSession(String token) throws TokenValidationFailedException {
-		log.info("Start");
+		log.info(START_1);
 
 		final JwtResponse response = authFeignClient.verifyToken(token);
 
@@ -100,7 +101,7 @@ public class MedRepScheduleController {
 
 	@GetMapping
 	public ResponseEntity<String[]> getMedicinesByTreatingAilment(@RequestHeader(name = "Authorization") String token) {
-		log.info("Start");
+		log.info(START_1);
 		
 		final ResponseEntity<String[]> responseEntity = ResponseEntity.of(Optional.of(medicineStockClient.getMedicinesByTreatingAilment(token, "medicine")));
 		
@@ -111,7 +112,7 @@ public class MedRepScheduleController {
 
 	@GetMapping("/medicalRepresentatives")
 	public List<MedicalRepresentative> getMedicalRepresentatives(@RequestHeader(name = "Authorization") final String token) throws TokenValidationFailedException {
-		log.info("Start");
+		log.info(START_1);
 
 		List<MedicalRepresentative> medicalRepresentatives = medicalRepresentativeService.getMedicalRepresentatives(token);
 		
@@ -121,7 +122,7 @@ public class MedRepScheduleController {
 
 	@GetMapping("/doctors")
 	public List<Doctor> getDoctors() {
-		log.info("Start");
+		log.info(START_1);
 		
 		List<Doctor> doctors = CsvParseUtil.parseDoctors();
 		

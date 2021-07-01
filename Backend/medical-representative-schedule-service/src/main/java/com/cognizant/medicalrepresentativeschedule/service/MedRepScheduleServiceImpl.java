@@ -4,6 +4,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 public class MedRepScheduleServiceImpl implements MedRepScheduleService {
-
+	private static final String START_1 = "Start";
+	
 	@Autowired
 	private MedicineStockFeignClient medicineStockClient;
 
@@ -37,12 +39,12 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 	@Override
 	public List<RepSchedule> getRepSchedule(String token, LocalDate scheduleStartDate)
 			throws TokenValidationFailedException {
-		log.info("Start");
+		log.info(START_1);
 
 		if (!isValidSession(token)) {
 			log.info("End");
 
-			return null;
+			return Collections.emptyList();
 		}
 
 		List<RepSchedule> repSchedules = new ArrayList<>();
@@ -111,7 +113,7 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 
 	public Boolean isValidSession(String token) throws TokenValidationFailedException {
 
-		log.info("Start");
+		log.info(START_1);
 
 		JwtResponse response = authFeignClient.verifyToken(token);
 		if (!response.isValid()) {
