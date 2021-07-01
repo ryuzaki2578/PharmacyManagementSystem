@@ -6,8 +6,11 @@ import com.cognizant.medicinestock.model.MedicineStock;
 
 public interface MedicineStockService {
 
-	public List<MedicineStock> getMedicineStockInformation();
-	public List<MedicineStock> getMedicineByTargetAilment(String treatingAilment);
-	public MedicineStock getNumberOfTabletsInStockByName(String medicine);
-	public Boolean updateNumberOfTabletsInStockByName(String medicine, int count);
+	List<MedicineStock> getMedicineStockInformation();
+
+	List<MedicineStock> getMedicineByTargetAilment(String treatingAilment);
+
+	MedicineStock getNumberOfTabletsInStockByName(String medicine);
+
+	Boolean updateNumberOfTabletsInStockByName(String medicine, int count);
 }

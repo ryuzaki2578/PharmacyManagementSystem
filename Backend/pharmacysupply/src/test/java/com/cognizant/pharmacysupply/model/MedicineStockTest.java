@@ -1,6 +1,7 @@
 package com.cognizant.pharmacysupply.model;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import java.util.Date;
 
@@ -45,7 +46,7 @@ public class MedicineStockTest {
 	@Test
 	public void NoArgsConstructorTest() {
 		MedicineStock medicineStock = new MedicineStock();
-		assertEquals(null, medicineStock.getPharmacyName());
+		assertNull(medicineStock.getPharmacyName());
 	}
 
 	@Test
@@ -58,9 +59,11 @@ public class MedicineStockTest {
 
 	@Test
 	public void testToString() {
-		assertEquals("MedicineStock(id=" + 1 + ", name=" + medicineStock.getName() + ", chemicalComposition=" + medicineStock.getChemicalComposition()
-				+ ", targetAilment=" + medicineStock.getTargetAilment() + ", pharmacyName=" + medicineStock.getPharmacyName() + ", dateOfExpiry="
-				+ medicineStock.getDateOfExpiry() + ", numberOfTabletsInStock=" + medicineStock.getNumberOfTabletsInStock() + ")", medicineStock.toString());
+		assertEquals("MedicineStock(id=" + 1 + ", name=" + medicineStock.getName() + ", chemicalComposition="
+				+ medicineStock.getChemicalComposition() + ", targetAilment=" + medicineStock.getTargetAilment()
+				+ ", pharmacyName=" + medicineStock.getPharmacyName() + ", dateOfExpiry="
+				+ medicineStock.getDateOfExpiry() + ", numberOfTabletsInStock="
+				+ medicineStock.getNumberOfTabletsInStock() + ")", medicineStock.toString());
 	}
 
 }

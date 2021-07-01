@@ -60,7 +60,7 @@ class MedRepScheduleControllerTest {
 	}
 
 	@Test
-	public void retrieveDetailsForCourse() throws InvalidDateException, TokenValidationFailedException {
+	 void retrieveDetailsForCourse() throws InvalidDateException, TokenValidationFailedException {
 
 		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("admin", "adminpass", true));
 		ResponseEntity<?> allMedicineStockInformation = medicalRepresenativeScheduleController.getRepSchedule("token", "2020-02-03");
@@ -69,7 +69,7 @@ class MedRepScheduleControllerTest {
 	}
 
 	@Test
-	public void testGetRepScheduleFails() throws InvalidDateException, TokenValidationFailedException {
+	 void testGetRepScheduleFails() throws InvalidDateException, TokenValidationFailedException {
 		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("admin", "admin", false));
 		ResponseEntity<?> allProducts = medicalRepresenativeScheduleController.getRepSchedule("token", "2020-02-03");
 		assertNotNull(allProducts);

@@ -7,7 +7,7 @@ import com.cognizant.medicalrepresentativeschedule.MedRepScheduleServiceApplicat
 
 
 @SpringBootTest
-public class MedRepScheduleServiceApplicationTests {
+ class MedRepScheduleServiceApplicationTests {
 
 	
 	@Test

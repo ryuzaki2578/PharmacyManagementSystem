@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 public class MedRepServiceImpl implements MedRepService {
 
 	@Autowired
-	AuthenticationFeignClient authFeignClient;
+	private AuthenticationFeignClient authFeignClient;
 
 	@Autowired
 	private MedRepRepository medicalRepresentativesRepository;
@@ -29,11 +29,11 @@ public class MedRepServiceImpl implements MedRepService {
 		log.info("Start");
 
 		log.debug("token : {}", token);
-
+		List< MedicalRepresentative> nullList=null;
 		if (!isValidSession(token)) {
 			log.info("End");
 
-			return null;
+			return nullList;
 		}
 
 		log.info("End");

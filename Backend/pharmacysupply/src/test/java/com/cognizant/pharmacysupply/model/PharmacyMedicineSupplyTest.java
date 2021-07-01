@@ -1,6 +1,7 @@
 package com.cognizant.pharmacysupply.model;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,7 +41,7 @@ public class PharmacyMedicineSupplyTest {
 	@Test
 	public void NoArgsConstructorTest() {
 		PharmacyMedicineSupply supply = new PharmacyMedicineSupply();
-		assertEquals(null, supply.getMedicineName());
+		assertNull(supply.getMedicineName());
 	}
 
 	@Test

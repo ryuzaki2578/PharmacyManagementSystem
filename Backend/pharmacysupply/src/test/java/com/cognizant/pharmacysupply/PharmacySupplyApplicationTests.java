@@ -12,14 +12,16 @@ class PharmacySupplyApplicationTests {
 
 	@Mock
 	PharmacySupplyApplication PharmacySupplyApplication;
+
 	@Test
 	void contextLoads() {
 		assertNotNull(PharmacySupplyApplication);
 	}
-	 @SuppressWarnings("static-access")
+
+	@SuppressWarnings("static-access")
 	@Test
-	   public void main() {
-	      PharmacySupplyApplication.main(new String[] {});
-	   }
+	void main() {
+		PharmacySupplyApplication.main(new String[] {});
+	}
 
 }

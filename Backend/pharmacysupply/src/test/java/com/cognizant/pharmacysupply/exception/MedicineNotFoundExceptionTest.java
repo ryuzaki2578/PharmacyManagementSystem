@@ -1,5 +1,6 @@
 package com.cognizant.pharmacysupply.exception;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -20,11 +21,11 @@ public class MedicineNotFoundExceptionTest {
 		MedicineNotFoundException medicineNotFoundException = new MedicineNotFoundException("Medicine not found.");
 		assertEquals("Medicine not found.", medicineNotFoundException.getMessage());
 	}
-	
+
 	@Test
 	public void testNoArgsConstructor() {
 		MedicineNotFoundException exception = new MedicineNotFoundException();
-		assertEquals(null, exception.getMessage());
+		assertNull(exception.getMessage());
 	}
 
 }

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import com.cognizant.pharmacysupply.exception.MedicineNotFoundException;
@@ -23,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class PharmacyServiceImpl implements PharmacyService{
+public class PharmacyServiceImpl implements PharmacyService {
 	@Autowired
 	private MedicineDemandRepository medicineDemandRepo;
 
@@ -38,24 +37,25 @@ public class PharmacyServiceImpl implements PharmacyService{
 
 	@Autowired
 	private MedicineDemandRepository medicineDemandRepository;
-	
+
 	@Override
 	public List<PharmacyMedicineSupply> getPharmacySupplyCount(String token, List<MedicineDemand> medicineDemandList)
 			throws MedicineNotFoundException {
 		log.info("Start");
 		log.info("Medicine Demand List {} ", medicineDemandList);
 		List<PharmacyMedicineSupply> list = new ArrayList<>();
-		
+		List<PharmacyMedicineSupply> nullList = null;
 		for (MedicineDemand medicineDemand : medicineDemandList) {
-			PharmacyMedicineSupply pharmacyMedicineSupply = new PharmacyMedicineSupply();
 			MedicineStock medicineStock = getNumberOfTablets(token, medicineDemand);
 			log.info("{}", medicineStock);
-			log.info("Medicine {} , Tablets {}", medicineDemand.getMedicineName(), medicineStock.getNumberOfTabletsInStock());
-			
+			log.info("Medicine {} , Tablets {}", medicineDemand.getMedicineName(),
+					medicineStock.getNumberOfTabletsInStock());
+
 			if (medicineStock.getNumberOfTabletsInStock() < medicineDemand.getDemandCount()) {
-				return null;
+				return nullList;
 			}
-			
+			PharmacyMedicineSupply pharmacyMedicineSupply = new PharmacyMedicineSupply();
+
 			setSupply(token, pharmacyMedicineSupply, medicineDemand, medicineStock);
 			list.add(pharmacyMedicineSupply);
 		}
@@ -91,7 +91,6 @@ public class PharmacyServiceImpl implements PharmacyService{
 		log.info("End");
 	}
 
-
 	public MedicineStock getNumberOfTablets(String token, MedicineDemand medicineDemand)
 			throws MedicineNotFoundException {
 		log.info("Start");
@@ -110,13 +109,13 @@ public class PharmacyServiceImpl implements PharmacyService{
 		return medicineStock;
 	}
 
-	 @Override
+	@Override
 	public List<MedicineDemand> getMedicineDemand() {
 		log.info("Start");
 		return medicineDemandRepo.findAll();
 	}
 
-	 @Override
+	@Override
 	public List<PharmacyMedicineSupply> getMedicineSupply() {
 		log.info("Start");
 		return pharmacyMedicineSupplyRepository.findAll();
@@ -129,8 +128,9 @@ public class PharmacyServiceImpl implements PharmacyService{
 		JwtResponse jwtResponse = authFeign.verifyToken(token);
 		log.info("End");
 
-		if (jwtResponse.isValid())
+		if (jwtResponse.isValid()) {
 			return true;
+		}
 		throw new TokenValidationFailedException("Token is no longer valid");
 
 	}

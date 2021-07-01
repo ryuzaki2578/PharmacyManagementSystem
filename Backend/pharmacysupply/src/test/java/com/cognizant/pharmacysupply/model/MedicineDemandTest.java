@@ -1,5 +1,6 @@
 package com.cognizant.pharmacysupply.model;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Before;
@@ -39,7 +40,7 @@ public class MedicineDemandTest {
 	@Test
 	public void testNoArgsConstructor() {
 		MedicineDemand demand = new MedicineDemand();
-		assertEquals(null, demand.getMedicineName());
+		assertNull( demand.getMedicineName());
 	}
 	
 	@Test

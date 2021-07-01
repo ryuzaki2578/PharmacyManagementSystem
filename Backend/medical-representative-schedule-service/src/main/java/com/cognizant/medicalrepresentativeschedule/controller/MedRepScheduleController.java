@@ -50,7 +50,7 @@ public class MedRepScheduleController {
 
 		log.debug("scheduleStartDate : {}", scheduleStartDate);
 
-		List<RepSchedule> repSchedule = null;
+		
 		LocalDate localDate = DateUtil.getDate(scheduleStartDate);
 		log.debug("localDate : {}", localDate);
 
@@ -63,9 +63,8 @@ public class MedRepScheduleController {
 			log.info("End");
 			throw new InvalidDateException("Invalid date");
 		}
-
+		List<RepSchedule> repSchedule = null;
 		repSchedule = scheduleService.getRepSchedule(token, localDate);
-
 		log.debug("repSchedule : {}", repSchedule);
 
 		if (repSchedule.isEmpty()) {

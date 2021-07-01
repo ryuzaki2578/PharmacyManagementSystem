@@ -1,5 +1,6 @@
 package com.cognizant.pharmacysupply.exception;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -31,7 +32,7 @@ public class TokenValidationFailedExceptionTest {
 	@Test
 	public void testNoArgsConstructor() {
 		TokenValidationFailedException exception = new TokenValidationFailedException();
-		assertEquals(null, exception.getMessage());
+		assertNull(exception.getMessage());
 	}
 
 }

@@ -1,8 +1,11 @@
 package com.cognizant.medicalrepresentative.model;
 
+import static org.junit.Assert.assertEquals;
+
 import java.time.LocalDate;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.cognizant.medicalrepresentativeschedule.model.RepSchedule;
@@ -21,6 +24,12 @@ public class RepScheduleTest {
 		repSchedule.setDoctorContactNumber("8080080880");
 		repSchedule.setMeetingDate(LocalDate.now());
 		repSchedule.setMeetingSlot("1 PM to 2 PM");
-		//repSchedule.setRepName(repName);
+		repSchedule.setRepName("testName");
+		repSchedule.setMedicines(new String[]{"testMed"});
+	}
+	@Test
+	void testSchedule() {
+		String []medicine=new String[]{"testMed"};
+		assertEquals(repSchedule,new RepSchedule(1,"Raju Rastogi","testName","1 PM to 2 PM",LocalDate.now(),"8080080880",medicine,"Treating"));
 	}
 }

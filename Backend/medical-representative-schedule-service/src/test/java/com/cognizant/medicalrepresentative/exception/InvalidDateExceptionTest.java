@@ -1,5 +1,6 @@
 package com.cognizant.medicalrepresentative.exception;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -23,7 +24,7 @@ public class InvalidDateExceptionTest {
 	@Test
 	public void testNoArgConstructor() {
 		InvalidDateException exception = new InvalidDateException();
-		assertEquals(null, exception.getMessage());
+		assertNull( exception.getMessage());
 	}
 
 }

@@ -32,17 +32,18 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 	private MedRepRepository medicalRepresentativeRepository;
 
 	@Autowired
-	AuthenticationFeignClient authFeignClient;
+	private AuthenticationFeignClient authFeignClient;
 
 	@Override
 	public List<RepSchedule> getRepSchedule(String token, LocalDate scheduleStartDate)
 			throws TokenValidationFailedException {
 		log.info("Start");
+		List<RepSchedule> nullList=null;
 
 		if (!isValidSession(token)) {
 			log.info("End");
 
-			return null;
+			return nullList;
 		}
 
 		List<RepSchedule> repSchedules = new ArrayList<>();
@@ -55,10 +56,7 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 
 		log.debug("medicalRepresentatives : {}", medicalRepresentatives);
 
-		LocalDate localDate = scheduleStartDate;
-
-		LocalTime now = LocalTime.now();
-		LocalTime one = LocalTime.of(13, 0);
+		
 
 		LocalDate today = LocalDate.now();
 		if (scheduleStartDate.isBefore(today)) {
@@ -66,6 +64,10 @@ public class MedRepScheduleServiceImpl implements MedRepScheduleService {
 			log.info("End");
 			return repSchedules;
 		}
+		LocalDate localDate = scheduleStartDate;
+
+		LocalTime now = LocalTime.now();
+		LocalTime one = LocalTime.of(13, 0);
 
 		if (scheduleStartDate.equals(today) && now.isAfter(one)) {
 
