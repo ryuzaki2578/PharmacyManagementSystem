@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
 	private static final String START = "Start";
 	@Autowired
-	ErrorResponse errorResponse;
+	private ErrorResponse errorResponse;
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorResponse> handleAllErrors(Exception ex) {

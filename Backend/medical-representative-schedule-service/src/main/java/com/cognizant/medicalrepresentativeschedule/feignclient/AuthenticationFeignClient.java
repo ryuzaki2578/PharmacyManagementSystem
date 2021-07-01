@@ -12,6 +12,6 @@ public interface AuthenticationFeignClient {
 
 
 	@GetMapping(value = "/api/auth/validate")
-	public JwtResponse verifyToken(@RequestHeader(name = "Authorization", required = true) String token);
+	 JwtResponse verifyToken(@RequestHeader(name = "Authorization", required = true) String token);
 	
 }

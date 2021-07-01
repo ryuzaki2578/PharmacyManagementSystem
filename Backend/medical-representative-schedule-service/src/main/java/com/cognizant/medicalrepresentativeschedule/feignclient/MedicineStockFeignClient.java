@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface MedicineStockFeignClient {
 
 	@GetMapping("/api/medicine-stock/byTreatingAilment/{treatingAilment}")
-	public String[] getMedicinesByTreatingAilment(@RequestHeader("Authorization") String token, @PathVariable("treatingAilment") String treatingAilment);
+	 String[] getMedicinesByTreatingAilment(@RequestHeader("Authorization") String token, @PathVariable("treatingAilment") String treatingAilment);
 
 }

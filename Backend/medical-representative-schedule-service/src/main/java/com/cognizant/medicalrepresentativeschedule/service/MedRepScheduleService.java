@@ -7,7 +7,7 @@ import com.cognizant.medicalrepresentativeschedule.exception.TokenValidationFail
 import com.cognizant.medicalrepresentativeschedule.model.RepSchedule;
 
 public interface MedRepScheduleService {
-	public List<RepSchedule> getRepSchedule(String token, LocalDate scheduleStartDate)
+	List<RepSchedule> getRepSchedule(String token, LocalDate scheduleStartDate)
 			throws TokenValidationFailedException;
 
 }

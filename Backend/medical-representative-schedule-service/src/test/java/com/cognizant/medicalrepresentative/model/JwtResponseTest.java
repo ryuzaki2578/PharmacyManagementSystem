@@ -23,16 +23,16 @@ public class JwtResponseTest {
 	@Before
 	public void setUp() throws Exception {
 		log.info("Start");
-		jwtResponse = new JwtResponse("admin", "adminpass", true);
+		jwtResponse = new JwtResponse("root", "root", true);
 		log.info("End");
 	}
 
 	@Test
 	public void testAuthResponseDetails() throws Exception {
 		log.info("Start");
-		assertEquals("admin", jwtResponse.getId());
-		assertEquals("adminpass", jwtResponse.getName());
-		assertEquals(true, jwtResponse.isValid());
+		assertEquals("root", jwtResponse.getId());
+		assertEquals("root", jwtResponse.getName());
+		assertTrue(jwtResponse.isValid());
 		log.info("End");
 	}
 

@@ -50,11 +50,11 @@ class MedRepScheduleServiceImplTest {
 	}
 
 	@Test
-	public void testGetRepSchedule() throws FeignException {
+	 void testGetRepSchedule() throws FeignException {
 		log.info("Start");
-
+		 LocalDate localDate=LocalDate.of(2020, 2, 2);
 		FeignException thrown = assertThrows(FeignException.class,
-				() -> medicalRepresentativeScheduleService.getRepSchedule("token", LocalDate.of(2020, 2, 2)));
+				() -> medicalRepresentativeScheduleService.getRepSchedule("token",localDate));
 
 		assertTrue(thrown.getMessage().contains("Invalid Token"));
 

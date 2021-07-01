@@ -110,9 +110,10 @@ public class JwtUtil {
 		log.info("START");
 		log.debug("CLAIMS {}:", claims);
 		log.debug("SUBJECT {}:", subject);
+		// token for 30 mins
 		String token = Jwts.builder().setClaims(claims).setSubject(subject)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 30))// token for 30 mins
+				.setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 30))
 				.signWith(SignatureAlgorithm.HS256, secretkey).compact();
 		log.debug("TOKEN {}:", token);
 		log.info("END");
