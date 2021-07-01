@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StocksService,Stocks,UpdateStocks} from '../stocks.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class PlaceOrderComponent implements OnInit{
   quantity:number;
   medicine:string;
 
-  constructor(private stocksService:StocksService) { }
+  constructor(private stocksService:StocksService,private router:Router) { }
   profileForm = new FormGroup({
     name: new FormControl(''),
     quantity:new FormControl(''),
@@ -28,6 +29,9 @@ export class PlaceOrderComponent implements OnInit{
   public updatestock(medicine:UpdateStocks)
   {
    this.stocksService.updateStocks(medicine.name,medicine.quantity).subscribe(response=>(console.log(response)));
+   alert("Stocks has been updated");
+   this.router.navigateByUrl('check-stocks');
+
   }
   public getStocks():void
   {

@@ -19,9 +19,9 @@ public class MedRepScheduleServiceApplication {
 	
 	public static void main(String[] args) {
 		log.info("Start");
-		
+
 		SpringApplication.run(MedRepScheduleServiceApplication.class, args);
-		log.info("End");
+		log.info("End"); 
 	}
 	@Bean
 	public CorsFilter corsFilter() {

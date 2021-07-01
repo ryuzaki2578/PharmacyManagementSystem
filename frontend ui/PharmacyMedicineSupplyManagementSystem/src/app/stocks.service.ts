@@ -35,7 +35,8 @@ export class StocksService {
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
     console.log(headers.get('Authorization'));
     const url = `http://localhost:8081/api/medicine-stock/update-stock/${medicine}/${count}`;
-    return this.httpClient.post(url,{headers})
+    
+    return this.httpClient.post(url,null,{headers})
   }
 }
 
