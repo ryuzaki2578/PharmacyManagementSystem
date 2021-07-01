@@ -111,11 +111,13 @@ public class MedicineStockController {
 
 		log.info("START");
 		Boolean ans = false;
+		MedicineStock stock;
 
 		try {
 			JwtResponse jwtResponse = authFeignClient.verifyToken(token);
 			if (jwtResponse.isValid()) {
-				ans = medicineStockService.updateNumberOfTabletsInStockByName(medicine, count);
+				stock=medicineStockService.getNumberOfTabletsInStockByName(medicine);
+				ans =  medicineStockService.updateNumberOfTabletsInStockByName(medicine, stock.getNumberOfTabletsInStock()-count);
 			}
 		} catch (FeignException e) {
 			log.info("EXCEPTION : TOKEN EXPIRED");

@@ -28,14 +28,14 @@ export class StocksService {
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
        return this.httpClient.get<Stocks[]>('http://localhost:8081/api/medicine-stock/medicine-stock-information',{headers});
-  }
+      
+      }
   updateStocks(medicine:string,count:number)
   {
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
     console.log(headers.get('Authorization'));
     const url = `http://localhost:8081/api/medicine-stock/update-stock/${medicine}/${count}`;
-    
     return this.httpClient.post(url,null,{headers})
   }
 }
