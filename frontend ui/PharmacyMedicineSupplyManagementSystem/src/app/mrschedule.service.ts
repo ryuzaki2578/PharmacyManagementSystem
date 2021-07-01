@@ -13,12 +13,10 @@ export class Mrschedule{
     public treatingAilment:String
   ) {}
 }
-
 @Injectable({
   providedIn: 'root'
 })
 export class MrScheduleService {
-
   constructor(private httpClient:HttpClient) { }
   getMR()
   {
@@ -33,5 +31,6 @@ export class MrScheduleService {
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
       return this.httpClient.get<any>('http://localhost:8082/api/medical-representative-schedule-service/RepSchedule/'+date,{headers});
   }
+  
 }
 

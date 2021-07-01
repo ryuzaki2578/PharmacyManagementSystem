@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 export class Stocks{
+  static numberOfTabletsInStock: number;
   constructor(
     public id:string,
     public name:string,
