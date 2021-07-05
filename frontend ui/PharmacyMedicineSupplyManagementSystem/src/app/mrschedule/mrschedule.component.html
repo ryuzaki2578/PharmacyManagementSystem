@@ -1,29 +1,48 @@
 +<div style="text-align: center;">
     <h2 ><b>MR Scheduler</b></h2>
-    <div class="row" style="padding-left: 50px; padding-right: 50px;" >
-        <div class="col-sm-2"></div>
-        <div class="col-sm-3">
-          <div class="card">
-        <img src="../../../assets/images/mrschedule.jpg" alt="Avatar" style="width:100%">
+    <div class="row" >
+        <div class="col-sm-4">
+            <div class="card" style=" background-color: lightblue;">
+              <form >
+                  <label >
+                    Choose your preferred appointment date (required):
+                    <input type="date" [(ngModel)]='date' name="date" min="2021-06-29" max="2021-07-10" required>
+                    <span class="validity"></span>
+                  </label>
+                    <button  (click)='getMr()' style="background-color: green;">Submit</button>
+              </form>
+          </div>
    
       </div>
-</div>
-<div class="col-sm-1" ></div>
-    <div class="card" style="width: 40%; background-color: lightblue;">
-<form style="width: 100%; ">
-    <label >
-      Choose your preferred appointment date (required):
-      <input type="date" [(ngModel)]='date' name="date" min="2021-06-29" max="2021-07-10" required>
-      <span class="validity"></span>
-    </label>
-
-  
-    <p style="margin-top: 25px; ">
-      <button  (click)='getMr()' style="background-color: green;">Submit</button>
-    </p>
-</form>
-    </div>
-    <div class="col-sm-2"></div>
-    </div>
+   
+    <div  class="col-sm-8">
+      <table class="table table-hover"><thead>
+        <tr>
+          <th>id</th>
+          <th>MR Name</th>
+          <th>Doctor Name</th>
+          <th>Meeting Date</th>
+          <th>Meeting slot</th>
+          <th>Contact</th>
+          <th>Medicines</th>
+          <th>Treating Ailment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of schedule">
+        <td> {{stock.id}}</td>
+        <td>{{stock.repName}}</td>
+        <td>{{stock.doctorName}}</td>
+        <td>{{stock.meetingSlot}}</td>
+        <td>{{stock.meetingDate}}</td>
+        <td>{{stock.doctorContactNumber}}</td>
+        <td>{{stock.medicines}}</td>
+        <td>{{stock.treatingAilment}}</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  </div>
+    
 </div>
   

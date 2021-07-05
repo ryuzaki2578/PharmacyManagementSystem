@@ -18,6 +18,7 @@ import { BasicAuthHttpInterceptorService } from './_service/basic-auth-http-inte
 import { CommonModule } from '@angular/common';
 import { MRScheduleComponent } from './mrschedule/mrschedule.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -37,7 +38,7 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+    NgbModule,
     ReactiveFormsModule,
   ],
   providers: [

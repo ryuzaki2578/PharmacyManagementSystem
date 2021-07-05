@@ -31,3 +31,12 @@ input,
 label {
     margin: .4rem 0;
 }
+.card
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.table
+{
+  overflow: scroll;
+}
