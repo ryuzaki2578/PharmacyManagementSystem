@@ -43,7 +43,7 @@ public class TestUserLoginCredential {
 	@Test
 	public void testToStringMethod() {
 		
-		assertEquals("UserLoginCredential(userid=" + userLogin.getUserId() + ", password=" + userLogin.getPassword()
+		assertEquals("UserLoginCredential(userId=" + userLogin.getUserId() + ", password=" + userLogin.getPassword()
 				+  ")", userLogin.toString());	
 	}
 }

@@ -5,10 +5,13 @@ import static org.mockito.Mockito.when;
 
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -36,15 +39,24 @@ class MedRepServiceImplTest {
 
 	@MockBean
 	private MedRepScheduleServiceImpl medicalRepresentativeScheduleService;
-	
-	@MockBean
+
+	@Autowired
 	private MedRepServiceImpl medicalRepresentativeService;
 
+	@BeforeEach
+	public void initMock() {
+		MockitoAnnotations.initMocks(this);
+	}
+
+	@BeforeEach
+	public void setup() {
+
+	}
+
 	@Test
-	 void testGetMedicalRepresentatives() throws TokenValidationFailedException {
+	void testGetMedicalRepresentatives() throws TokenValidationFailedException {
 
 		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("1", "admin", true));
-		when(new MedRepServiceImpl().isValidSession("token")).thenReturn(false);
 
 		List<MedicalRepresentative> medicalRepresentatives = medicalRepresentativeService
 				.getMedicalRepresentatives("token");

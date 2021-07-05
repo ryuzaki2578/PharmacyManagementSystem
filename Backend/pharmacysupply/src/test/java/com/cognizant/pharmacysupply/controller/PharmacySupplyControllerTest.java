@@ -96,6 +96,7 @@ public class PharmacySupplyControllerTest {
 		log.info("Start");
 		when(pharmacyService.validateToken("token")).thenReturn(false);
 		ResponseEntity<?> responseEntity = pharmacyController.getMedicineSupply("token");
+		assertNotNull(responseEntity);
 		log.info("End");
 	}
 	

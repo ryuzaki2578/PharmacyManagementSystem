@@ -6,12 +6,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.cognizant.medicalrepresentativeschedule.MedRepScheduleServiceApplication;
 
 
-@SpringBootTest
- class MedRepScheduleServiceApplicationTests {
+@SpringBootTest(classes=MedRepScheduleServiceApplication.class)
+ public class MedRepScheduleServiceApplicationTests {
 
 	
 	@Test
-	void main() {
+	public void main() {
 		MedRepScheduleServiceApplication.main(new String[] {});
 	}
 

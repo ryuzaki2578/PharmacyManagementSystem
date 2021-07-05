@@ -10,9 +10,11 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.cognizant.medicalrepresentativeschedule.MedRepScheduleServiceApplication;
 import com.cognizant.medicalrepresentativeschedule.model.ErrorResponse;
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes=MedRepScheduleServiceApplication.class)
 public class ErrorResponseTest {
 	@Mock
 	private ErrorResponse ErrorResponse;
@@ -40,14 +42,14 @@ public class ErrorResponseTest {
 	public void testAllArgsConstructor() {
 		ErrorResponse ErrorResponse = new ErrorResponse(null, HttpStatus.OK, "Bad request",
 				"Please provide valid value");
-		assertEquals("Bad request", ErrorResponse.getReason());
+		assertEquals("Bad request", ErrorResponse.getMessage());
 	}
 
 	@Test
 	public void testToStringMethod() {
 		assertEquals(
 				"ErrorResponse(timestamp=" + ErrorResponse.getTimestamp() + ", status=" + ErrorResponse.getStatus()
-						+ ", reason=" + ErrorResponse.getReason() + ", message=" + ErrorResponse.getMessage() + ")",
+						+ ", message=" + ErrorResponse.getMessage() + ", reason=" + ErrorResponse.getReason() + ")",
 				ErrorResponse.toString());
 
 	}

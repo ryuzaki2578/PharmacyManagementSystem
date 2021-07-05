@@ -1,16 +1,20 @@
 package com.cognizant.medicalrepresentativeschedule.controller;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -42,6 +46,11 @@ class MedRepScheduleControllerTest {
 
 	@MockBean
 	private MedRepScheduleServiceImpl scheduleService;
+	
+	@BeforeEach
+	public void initMock() {
+		MockitoAnnotations.initMocks(this);
+	}
 
 	public List<RepSchedule> getMockRepSchedule() {
 		List<RepSchedule> repSchedules = new ArrayList<>();
@@ -60,19 +69,19 @@ class MedRepScheduleControllerTest {
 	}
 
 	@Test
-	 void retrieveDetailsForCourse() throws InvalidDateException, TokenValidationFailedException {
+	 public void retrieveDetailsForCourse() throws InvalidDateException, TokenValidationFailedException {
 
-		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("admin", "adminpass", true));
-		ResponseEntity<?> allMedicineStockInformation = medicalRepresenativeScheduleController.getRepSchedule("token", "2020-02-03");
+		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("admin", "admin", true));
+		ResponseEntity<?> allMedicineStockInformation = medicalRepresenativeScheduleController.getRepSchedule("token", "20-02-2020");
 		assertNotNull(allMedicineStockInformation);
 
 	}
 
 	@Test
-	 void testGetRepScheduleFails() throws InvalidDateException, TokenValidationFailedException {
+	 public void testGetRepScheduleFails() throws InvalidDateException, TokenValidationFailedException {
 		when(authenticationFeignClient.verifyToken("token")).thenReturn(new JwtResponse("admin", "admin", false));
-		ResponseEntity<?> allProducts = medicalRepresenativeScheduleController.getRepSchedule("token", "2020-02-03");
-		assertNotNull(allProducts);
+		TokenValidationFailedException except=assertThrows(TokenValidationFailedException.class,()->medicalRepresenativeScheduleController.getRepSchedule("token", "20-02-2020"));
+		assertTrue(except.getMessage().contains("Invalid Token"));
 	}
 
 	

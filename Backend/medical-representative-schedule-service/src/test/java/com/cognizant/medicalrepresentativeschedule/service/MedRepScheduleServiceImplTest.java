@@ -1,16 +1,18 @@
 package com.cognizant.medicalrepresentativeschedule.service;
 
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.Rule;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -19,12 +21,12 @@ import com.cognizant.medicalrepresentativeschedule.model.Doctor;
 import com.cognizant.medicalrepresentativeschedule.model.RepSchedule;
 
 import feign.FeignException;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class MedRepScheduleServiceImplTest {
+	@Rule
+    public MockitoRule rule = MockitoJUnit.rule();
 	@Autowired
 	private MedRepScheduleServiceImpl medicalRepresentativeScheduleService;
 
@@ -50,15 +52,11 @@ class MedRepScheduleServiceImplTest {
 	}
 
 	@Test
-	 void testGetRepSchedule() throws FeignException {
-		log.info("Start");
-		 LocalDate localDate=LocalDate.of(2020, 2, 2);
-		FeignException thrown = assertThrows(FeignException.class,
-				() -> medicalRepresentativeScheduleService.getRepSchedule("token",localDate));
+	void testGetRepSchedule() throws FeignException {
+		LocalDate localDate = LocalDate.of(2020, 2, 2);
+		assertThrows(FeignException.class,
+				() -> medicalRepresentativeScheduleService.getRepSchedule("token", localDate));
 
-		assertTrue(thrown.getMessage().contains("Invalid Token"));
-
-		log.info("End");
 	}
 
 }

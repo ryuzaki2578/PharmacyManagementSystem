@@ -9,7 +9,7 @@ public class MedicineStockMicroServiceApplicationTests {
 
 	
 	@Test
-	void main() {
+	public void main() {
 		MedicineStockMicroServiceApplication.main(new String[] {});
 	}
 }

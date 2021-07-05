@@ -48,7 +48,7 @@ public class JwtResponseTest {
 	public void testNoArgsConstructor() {
 		log.info("Start");
 		JwtResponse authResponse = new JwtResponse();
-		assertEquals(authResponse, new JwtResponse());
+		assertEquals(authResponse.toString(), new JwtResponse().toString());
 		log.info("End");
 	}
 
