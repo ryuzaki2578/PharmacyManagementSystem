@@ -1,6 +1,5 @@
 package com.cognizant.pharmacysupply.service;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
@@ -64,10 +63,9 @@ public class PharmacyServiceTest {
 
 	@Test
 	public void testGetMedicineSupply() {
-		log.info("Start");
+		log.info("Test Get Medicine Supply");
 		List<PharmacyMedicineSupply> medicineSupply = medicineSupplyServiceImpl.getMedicineSupply();
 		assertNotNull(medicineSupply);
-		log.info("End");
 	}
 
 	@Test(expected = MedicineNotFoundException.class)
