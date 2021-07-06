@@ -9,9 +9,9 @@ import { UserToken } from '../user-token';
 export class AuthenticationService {  
   private apiUrl=environment.apiBaseUrlLogin;
   private jwtResponse:UserToken;
-  constructor(private httpCLient:HttpClient,private router:Router){}
+  constructor(private httpClient:HttpClient,private router:Router){}
   login(userId: string, password: string) {  
-    this.httpCLient.post<UserToken>(this.apiUrl,{userId,password}).subscribe((response:UserToken)=>{this.jwtResponse=response;},
+    this.httpClient.post<UserToken>(this.apiUrl,{userId,password}).subscribe((response:UserToken)=>{this.jwtResponse=response;},
     (error:HttpErrorResponse)=>
     {alert("Invalid Credentials");
     this.router.navigate(['login'])}

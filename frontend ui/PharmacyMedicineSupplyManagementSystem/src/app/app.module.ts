@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { MRScheduleComponent } from './mrschedule/mrschedule.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -31,7 +32,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CheckStockComponent,
     AboutUsComponent,
     ContactUsComponent,
-    MRScheduleComponent
+    MRScheduleComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

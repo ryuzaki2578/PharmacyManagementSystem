@@ -6,6 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MRScheduleComponent } from './mrschedule/mrschedule.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { StocksComponent } from './stocks/stocks.component';
 import { AuthGuard } from './_service/auth-guard.service';
@@ -17,7 +18,8 @@ const routes: Routes = [
 {path:'place-order',component:PlaceOrderComponent,canActivate: [AuthGuard]},
 {path:'check-stocks',component:CheckStockComponent,canActivate: [AuthGuard]},
 {path:'about-us',component:AboutUsComponent},
-{path:'contact-us',component:ContactUsComponent}];
+{path:'contact-us',component:ContactUsComponent},
+{path:'**',component:PagenotfoundComponent}];
   
 
 @NgModule({
