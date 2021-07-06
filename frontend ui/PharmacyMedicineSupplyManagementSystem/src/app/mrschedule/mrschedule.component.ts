@@ -22,7 +22,7 @@ export class MRScheduleComponent implements OnInit {
      const newDate=new DatePipe('en-US').transform(this.date,'dd-MM-yyyy');
     this.mrScheduler.getMrSchedule(newDate).subscribe(
       (response: any) =>{this.data=response;
-        this.handleSuccessfulResponse(this.data)},
+        this.handleSuccessfulResponse(this.data)},(error:any)=>(alert(error))
      );
    }
    handleSuccessfulResponse(response: Mrschedule[])

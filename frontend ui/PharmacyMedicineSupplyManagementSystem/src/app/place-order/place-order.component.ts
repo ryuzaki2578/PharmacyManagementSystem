@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -29,15 +30,16 @@ export class PlaceOrderComponent implements OnInit{
   }
   public updatestock(medicine:UpdateStocks)
   {
-   this.stocksService.updateStocks(medicine.name,  medicine.quantity).subscribe(response=>(console.log(response)));
-   alert("Stocks has been updated");
-   this.router.navigateByUrl('check-stocks');
+   this.stocksService.updateStocks(medicine.name,  medicine.quantity).subscribe((response)=>{ alert("Stocks has been updated");this.router.navigateByUrl('check-stocks');},
+   (error:HttpErrorResponse)=>{alert(error.error.message);this.router.navigateByUrl('check-stocks')}
+   );
+  
 
   }
   public getStocks():void
   {
     this.stocksService.getStocks().subscribe(
-      response =>{this.handleSuccessfulResponse(response)});
+      (response:Stocks[]) =>{this.handleSuccessfulResponse(response)},(error:HttpErrorResponse)=>(alert(error.message)));
   }
   handleSuccessfulResponse(response: Stocks[])
   {

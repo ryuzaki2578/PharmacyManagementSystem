@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cognizant.medicinestock.exception.MedicineNotFoundException;
 import com.cognizant.medicinestock.exception.TokenValidationFailedException;
 import com.cognizant.medicinestock.feignclient.AuthenticationFeignClient;
 import com.cognizant.medicinestock.model.JwtResponse;
@@ -26,7 +27,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MedicineStockController {
 
-
 	@Autowired
 	private AuthenticationFeignClient authFeignClient;
 
@@ -34,7 +34,8 @@ public class MedicineStockController {
 	private MedicineStockServiceImpl medicineStockService;
 
 	@GetMapping("/medicine-stock-information")
-	public ResponseEntity<List<MedicineStock>> getMedicineStockInformation(@RequestHeader(name = "Authorization") String token) {
+	public ResponseEntity<List<MedicineStock>> getMedicineStockInformation(
+			@RequestHeader(name = "Authorization") String token) {
 		log.info("START");
 		log.debug("TOKEN {}:", token);
 		List<MedicineStock> medicineStockInformation = null;
@@ -84,7 +85,6 @@ public class MedicineStockController {
 
 	}
 
-
 	@GetMapping("/get-stock-count/{medicine}")
 	public ResponseEntity<MedicineStock> getStockCountForMedicine(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("medicine") String medicine) {
@@ -104,7 +104,6 @@ public class MedicineStockController {
 		return new ResponseEntity<>(medicineStock, HttpStatus.OK);
 	}
 
-	
 	@PostMapping("/update-stock/{medicine}/{count}")
 	public Boolean updateNumberOfTabletsInStockByName(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("medicine") String medicine, @PathVariable("count") int count) {
@@ -116,12 +115,16 @@ public class MedicineStockController {
 		try {
 			JwtResponse jwtResponse = authFeignClient.verifyToken(token);
 			if (jwtResponse.isValid()) {
-				stock=medicineStockService.getNumberOfTabletsInStockByName(medicine);
-				ans =  medicineStockService.updateNumberOfTabletsInStockByName(medicine, stock.getNumberOfTabletsInStock()-count);
+				stock = medicineStockService.getNumberOfTabletsInStockByName(medicine);
+				ans = medicineStockService.updateNumberOfTabletsInStockByName(medicine,
+						stock.getNumberOfTabletsInStock() - count);
 			}
 		} catch (FeignException e) {
 			log.info("EXCEPTION : TOKEN EXPIRED");
 			throw new TokenValidationFailedException("TOKEN EXPIRED");
+		} catch (MedicineNotFoundException e) {
+			log.info("Exception : Medicine Out Of Stock");
+			throw new MedicineNotFoundException("Out Of Stocks");
 		}
 		log.info("END");
 		return ans;
