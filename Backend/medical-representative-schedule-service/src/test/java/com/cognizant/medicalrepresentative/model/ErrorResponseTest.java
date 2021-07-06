@@ -13,8 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.cognizant.medicalrepresentativeschedule.MedRepScheduleServiceApplication;
 import com.cognizant.medicalrepresentativeschedule.model.ErrorResponse;
+
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=MedRepScheduleServiceApplication.class)
+@SpringBootTest(classes = MedRepScheduleServiceApplication.class)
 public class ErrorResponseTest {
 	@Mock
 	private ErrorResponse ErrorResponse;
