@@ -44,7 +44,7 @@ public class MedicineStockServiceImpl implements MedicineStockService {
 	@Override
 	public Boolean updateNumberOfTabletsInStockByName(String medicine, int count) {
 		log.info("START");
-		log.info(getNumberOfTabletsInStockByName(medicine).getNumberOfTabletsInStock() + " ############# " + count);
+		log.info(medicine + " ############# " + count);
 		if (count<0) {
 			throw new MedicineNotFoundException("Out Of Stocks");
 		}

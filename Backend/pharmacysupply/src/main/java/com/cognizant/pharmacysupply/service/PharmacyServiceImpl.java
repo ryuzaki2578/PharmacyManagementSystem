@@ -41,8 +41,6 @@ public class PharmacyServiceImpl implements PharmacyService {
 	@Override
 	public List<PharmacyMedicineSupply> getPharmacySupplyCount(String token, List<MedicineDemand> medicineDemandList)
 			throws MedicineNotFoundException {
-		log.info("Start");
-		log.info("Medicine Demand List {} ", medicineDemandList);
 		List<PharmacyMedicineSupply> list = new ArrayList<>();
 		List<PharmacyMedicineSupply> nullList = null;
 		for (MedicineDemand medicineDemand : medicineDemandList) {
@@ -78,9 +76,10 @@ public class PharmacyServiceImpl implements PharmacyService {
 			val = medicineStock.getNumberOfTabletsInStock() - medicineDemand.getDemandCount();
 
 		}
-		log.info("val = {}", val);
+		//log.info("val = {}", val);
 		try {
-			stockFeignClient.updateNumberOfTabletsInStockByName(token, medicineDemand.getMedicineName(), val);
+			log.info("val={}",val);
+			stockFeignClient.updateNumberOfTabletsInStockByName(token, medicineDemand.getMedicineName(),val);
 		} catch (FeignException ex) {
 			throw new MedicineNotFoundException("Medicine not found");
 		}
