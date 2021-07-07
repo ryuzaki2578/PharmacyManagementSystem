@@ -1,11 +1,28 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-<label for="name">Select names:</label><br>
-        <select id='name' formControlName="name">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <table formArrayName="quantities">
+    <h2>Medicine Supply</h2>
+    <tr>  
+      <th colspan="2">Add Multiple Quantity:</th>  
+      <th width="150px"><button type="button" (click)="addQuantity()">Add</button></th>  
+    </tr>  
+    <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+    
+<td><label for="name">Select names:</label><br>
+        <select id='name' formControlName="name" class="form-control">
           <option *ngFor="let stock of stocks" [ngValue]='stock.name'>
             {{stock.name}}
           </option>
         </select>
-<label for="quantity">Enter quantity of names</label>
-<input type="number" formControlName="quantity">        
+</td>
+<td>
+<label for="quantity">Enter quantity of Medicine</label>
+<input type="number" formControlName="quantity" class="form-control"> 
+</td>
+<td>  
+  <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>  
+</td>  
+</tr>
+       
 <button type="submit">Submit</button>
+</table>
 </form>

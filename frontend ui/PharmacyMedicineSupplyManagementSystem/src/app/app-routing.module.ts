@@ -6,6 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MedicineDemandComponent } from './medicine-demand/medicine-demand.component';
+import { MedicineSupplyComponent } from './medicine-supply/medicine-supply.component';
 import { MRScheduleComponent } from './mrschedule/mrschedule.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
 {path:'about-us',component:AboutUsComponent},
 {path:'contact-us',component:ContactUsComponent},
 {path:'medicine-demand',component:MedicineDemandComponent},
+{path:'medicine-supply',component:MedicineSupplyComponent},
 {path:'**',component:PagenotfoundComponent}];
   
 

@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { StocksService,Stocks,UpdateStocks} from '../stocks.service';
 
@@ -11,22 +11,39 @@ import { StocksService,Stocks,UpdateStocks} from '../stocks.service';
 })
 export class PlaceOrderComponent implements OnInit{
   stocks: Stocks[];
-  stock:UpdateStocks[];
   quantity:number;
   medicine:string;
+  productForm: FormGroup;
 
-  constructor(private stocksService:StocksService,private router:Router) { }
-  profileForm = new FormGroup({
-    name: new FormControl(''),
-    quantity:new FormControl(''),
-  });
+  constructor(private fb:FormBuilder,private stocksService:StocksService,private router:Router) 
+  {
+    this.productForm = this.fb.group({   
+      quantities: this.fb.array([]) ,  
+    }); 
+   }
+   quantities() : FormArray {  
+    return this.productForm.get("quantities") as FormArray  
+  }  
+  newQuantity(): FormGroup {  
+    return this.fb.group({  
+      name: '',  
+      quantity: '',  
+    })  
+  }  
+  addQuantity() {  
+    this.quantities().push(this.newQuantity());  
+  }  
+     
+  removeQuantity(i:number) {  
+    this.quantities().removeAt(i);  
+  }  
   
   ngOnInit(): void {
     this.getStocks();
   }
   onSubmit() {
-    //console.log(this.profileForm.value);
-    this.updatestock(this.profileForm.value);
+    console.log(this.productForm.value);
+    this.updatestock(this.productForm.value);
   }
   public updatestock(medicine:UpdateStocks)
   {
