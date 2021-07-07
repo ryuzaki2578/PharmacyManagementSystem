@@ -8605,3 +8605,1038 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-07T21:13:07Z. Curren
 2021-07-07 21:47:44.983 DEBUG 1772 --- [http-nio-8084-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserToken(userid=admin, authToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2NCwia (truncated)...]
 2021-07-07 21:47:44.989 DEBUG 1772 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
 2021-07-07 21:47:44.990  INFO 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:02:56.989  INFO 16112 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication on rYuZAki with PID 16112 (C:\Users\rYuZAki\Desktop\MPFE\PharmacyManagementSystem\Backend\authorization-service\target\classes started by rYuZAki in C:\Users\rYuZAki\Desktop\MPFE\PharmacyManagementSystem\Backend\authorization-service)
+2021-07-07 22:02:56.994 DEBUG 16112 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2021-07-07 22:02:56.995  INFO 16112 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : No active profile set, falling back to default profiles: default
+2021-07-07 22:02:57.112  INFO 16112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-07 22:02:57.114  INFO 16112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-07 22:03:00.104  INFO 16112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-07-07 22:03:00.258  INFO 16112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 1 JPA repository interfaces.
+2021-07-07 22:03:01.599  INFO 16112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-07-07 22:03:01.621  INFO 16112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-07 22:03:01.622  INFO 16112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-07-07 22:03:01.904  INFO 16112 --- [restartedMain] o.a.c.c.C.[.[localhost].[/api/auth]      : Initializing Spring embedded WebApplicationContext
+2021-07-07 22:03:01.905  INFO 16112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4790 ms
+2021-07-07 22:03:02.330  INFO 16112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-07 22:03:03.087  INFO 16112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-07 22:03:03.110  INFO 16112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2021-07-07 22:03:03.427 DEBUG 16112 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2021-07-07 22:03:03.429 DEBUG 16112 --- [restartedMain] c.c.a.service.JwtRequestFilter           : Filter 'jwtRequestFilter' configured for use
+2021-07-07 22:03:03.731  INFO 16112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-07 22:03:03.855  INFO 16112 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-07 22:03:03.972  WARN 16112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-07 22:03:04.103  INFO 16112 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-07-07 22:03:04.109  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 22:03:04.111  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 22:03:04.296  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 22:03:04.337  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 22:03:04.354  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 22:03:04.356  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 22:03:04.478  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 22:03:04.491 DEBUG 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : SESSION CREATE POLICY org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer@500ee4fb:
+2021-07-07 22:03:04.493 DEBUG 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : ADD FILTER BEFOREorg.springframework.security.config.annotation.web.builders.HttpSecurity@eb47236:
+2021-07-07 22:03:04.494  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 22:03:04.497  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 22:03:04.501 DEBUG 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : ANT MATCHERSorg.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer@70790abe:
+2021-07-07 22:03:04.503  INFO 16112 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 22:03:04.507  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2021-07-07 22:03:04.508  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-07-07 22:03:04.508  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/configuration/ui'], []
+2021-07-07 22:03:04.509  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/configuration/security'], []
+2021-07-07 22:03:04.510  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**'], []
+2021-07-07 22:03:04.511  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/manage/health/**'], []
+2021-07-07 22:03:04.606  INFO 16112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@522ce9a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e77fe7c, org.springframework.security.web.header.HeaderWriterFilter@24212456, org.springframework.security.web.authentication.logout.LogoutFilter@5c98dde2, com.cognizant.authorization.service.JwtRequestFilter@e7c3455, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f79b6a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a6c1db3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5edaf7c9, org.springframework.security.web.session.SessionManagementFilter@65be307, org.springframework.security.web.access.ExceptionTranslationFilter@b07f1cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21fc9a7d]
+2021-07-07 22:03:04.715  INFO 16112 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-07-07 22:03:05.040 DEBUG 16112 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-07-07 22:03:05.213 DEBUG 16112 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2021-07-07 22:03:05.225  INFO 16112 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-07 22:03:05.283 DEBUG 16112 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-07-07 22:03:05.308 DEBUG 16112 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-07-07 22:03:07.508 DEBUG 16112 --- [task-1] org.hibernate.SQL                        : drop table if exists user CASCADE 
+2021-07-07 22:03:07.519 DEBUG 16112 --- [task-1] org.hibernate.SQL                        : create table user (userid varchar(20) not null, password varchar(20), username varchar(20), primary key (userid))
+2021-07-07 22:03:07.538  INFO 16112 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-07 22:03:07.559  INFO 16112 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-07 22:03:07.603  INFO 16112 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-07 22:03:07.618  INFO 16112 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[.[localhost].[/api/auth]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-07 22:03:07.620  INFO 16112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-07 22:03:07.625 DEBUG 16112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-07-07 22:03:07.647  INFO 16112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-07-07 22:03:07.686 DEBUG 16112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-07-07 22:03:07.687  INFO 16112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 66 ms
+2021-07-07 22:03:07.905  INFO 16112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path '/api/auth'
+2021-07-07 22:03:07.907  INFO 16112 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-07-07 22:03:08.365  INFO 16112 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-07-07 22:03:08.372  INFO 16112 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : Started AuthorizationServiceApplication in 12.266 seconds (JVM running for 14.451)
+2021-07-07 22:03:08.387 DEBUG 16112 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : END
+2021-07-07 22:06:20.815  INFO 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:06:20.817 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@6e83a7ae
+2021-07-07 22:06:20.817 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@3fc0a940
+2021-07-07 22:06:20.818 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@74087e0
+2021-07-07 22:06:20.818 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NDY1OSwiaWF0IjoxNjI1NjcyODU5fQ.6RFaCq84F5Sy1zF16h_rEDUhIHe6xijZwPzB4AkdrfM:
+2021-07-07 22:06:20.819 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NDY1OSwiaWF0IjoxNjI1NjcyODU5fQ.6RFaCq84F5Sy1zF16h_rEDUhIHe6xijZwPzB4AkdrfM:
+2021-07-07 22:06:20.819  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:20.820 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NDY1OSwiaWF0IjoxNjI1NjcyODU5fQ.6RFaCq84F5Sy1zF16h_rEDUhIHe6xijZwPzB4AkdrfM:
+2021-07-07 22:06:20.821  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:20.822 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NDY1OSwiaWF0IjoxNjI1NjcyODU5fQ.6RFaCq84F5Sy1zF16h_rEDUhIHe6xijZwPzB4AkdrfM:
+2021-07-07 22:06:20.823 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:06:20.823  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:20.823 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NDY1OSwiaWF0IjoxNjI1NjcyODU5fQ.6RFaCq84F5Sy1zF16h_rEDUhIHe6xijZwPzB4AkdrfM:
+2021-07-07 22:06:21.061 ERROR 16112 --- [http-nio-8084-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/api/auth] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-07T21:47:39Z. Current time: 2021-07-07T22:06:21Z, a difference of 1122040 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.cognizant.authorization.service.JwtUtil.extractAllClaims(JwtUtil.java:71) ~[classes/:na]
+	at com.cognizant.authorization.service.JwtUtil.extractClaim(JwtUtil.java:60) ~[classes/:na]
+	at com.cognizant.authorization.service.JwtUtil.extractUsername(JwtUtil.java:33) ~[classes/:na]
+	at com.cognizant.authorization.service.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:53) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-07-07 22:06:34.052  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:06:34.053 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@2045f126]
+2021-07-07 22:06:34.054 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@3729c66c
+2021-07-07 22:06:34.056 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@11af7387
+2021-07-07 22:06:34.056 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 22:06:34.097  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:06:34.104  INFO 16112 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:06:34.105 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@2045f126]
+2021-07-07 22:06:34.106 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@56f1d69a
+2021-07-07 22:06:34.106 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@11af7387
+2021-07-07 22:06:34.106 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 22:06:34.115 DEBUG 16112 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2021-07-07 22:06:34.123 DEBUG 16112 --- [http-nio-8084-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#login(UserLoginCredential)
+2021-07-07 22:06:34.207 DEBUG 16112 --- [http-nio-8084-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserLoginCredential(userId=admin, password=admin)]
+2021-07-07 22:06:34.225  INFO 16112 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 22:06:34.226  INFO 16112 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 22:06:34.227 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : USERID AND PASSWORD admin:
+2021-07-07 22:06:34.230 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:34.290 DEBUG 16112 --- [http-nio-8084-exec-3] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:06:34.300 TRACE 16112 --- [http-nio-8084-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:06:34.323 TRACE 16112 --- [http-nio-8084-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:06:34.324 TRACE 16112 --- [http-nio-8084-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:06:34.348 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:34.354 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:34.356 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:34.357 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : USERDETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:34.357  INFO 16112 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:06:34.360  INFO 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:34.361 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:34.361 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 22:06:34.362  INFO 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:34.362 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 22:06:34.362 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : SUBJECT admin:
+2021-07-07 22:06:34.383 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:34.384  INFO 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:34.386 DEBUG 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : CREATE TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:34.386  INFO 16112 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:34.398 DEBUG 16112 --- [http-nio-8084-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:06:34.400 DEBUG 16112 --- [http-nio-8084-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserToken(userid=admin, authToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwia (truncated)...]
+2021-07-07 22:06:34.419 DEBUG 16112 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:06:34.422  INFO 16112 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:06:36.378  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:06:36.379 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@2045f126]
+2021-07-07 22:06:36.380 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@25025da9
+2021-07-07 22:06:36.380 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@11af7387
+2021-07-07 22:06:36.381 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 22:06:36.383 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2021-07-07 22:06:36.384 DEBUG 16112 --- [http-nio-8084-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#login(UserLoginCredential)
+2021-07-07 22:06:36.387 DEBUG 16112 --- [http-nio-8084-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserLoginCredential(userId=admin, password=admin)]
+2021-07-07 22:06:36.389  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 22:06:36.390  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 22:06:36.391 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : USERID AND PASSWORD admin:
+2021-07-07 22:06:36.391 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:36.393 DEBUG 16112 --- [http-nio-8084-exec-4] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:06:36.395 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:06:36.397 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:06:36.399 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:06:36.401 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:36.402 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:36.405 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:36.406 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : USERDETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:36.407  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:06:36.408  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.410 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:36.413 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 22:06:36.414  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.416 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 22:06:36.417 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : SUBJECT admin:
+2021-07-07 22:06:36.420 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NiwiaWF0IjoxNjI1Njc1Nzk2fQ.7Vy7hh_ETv01ogYvUuyWPa_cd7x-io6OgUuyvP7rXY4:
+2021-07-07 22:06:36.421  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.421 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CREATE TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NiwiaWF0IjoxNjI1Njc1Nzk2fQ.7Vy7hh_ETv01ogYvUuyWPa_cd7x-io6OgUuyvP7rXY4:
+2021-07-07 22:06:36.423  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.425 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:06:36.427 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserToken(userid=admin, authToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5Niwia (truncated)...]
+2021-07-07 22:06:36.431 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:06:36.433  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:06:36.436  INFO 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:06:36.437 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@30b955d4
+2021-07-07 22:06:36.438 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@3e7ebdb3
+2021-07-07 22:06:36.438 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@3a413ea4
+2021-07-07 22:06:36.438 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.438 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.438  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.439 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.439  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.439 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.440 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:06:36.440  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.440 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.443 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.444  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.444 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.444 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:06:36.444  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.444 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:06:36.445  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.445 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : USERNAME admin:
+2021-07-07 22:06:36.445 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:36.447 DEBUG 16112 --- [http-nio-8084-exec-5] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:06:36.447 TRACE 16112 --- [http-nio-8084-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:06:36.449 TRACE 16112 --- [http-nio-8084-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:06:36.450 TRACE 16112 --- [http-nio-8084-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:06:36.451 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:36.451 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:36.452  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.452 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.452 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:36.452  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.452 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.452  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.453 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.453 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:06:36.453  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.453 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.455 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.456  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.457 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.457 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:06:36.457  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.457 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:06:36.457  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.457 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : USERNAMEadmin:
+2021-07-07 22:06:36.458  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.458  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.458 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.458  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.458 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.459  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.460 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.460 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:06:36.460  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.460 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.462 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.463  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.463 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.463 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:06:36.464  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.464 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:06:36.465  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.465 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:06:36.465  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.465  INFO 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : TOKEN IS VALID
+2021-07-07 22:06:36.466 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : USERNAME PASSWORD AUTHENTICATION TOKEN org.springframework.security.authentication.UsernamePasswordAuthenticationToken@fa79fc8b: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities; Credentials: [PROTECTED]; Authenticated: true; Details: null; Not granted any authorities:
+2021-07-07 22:06:36.468 DEBUG 16112 --- [http-nio-8084-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/validate", parameters={}
+2021-07-07 22:06:36.470 DEBUG 16112 --- [http-nio-8084-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#getValidity(String)
+2021-07-07 22:06:36.490 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.c.JwtAuthenticationController      : TOKEN Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.491 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.c.JwtAuthenticationController      : TOKEN AFTER REMOVING BEARER eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.493  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.493 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.494  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.494  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.494 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.494  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.495 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.495  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.495 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.495 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:06:36.496  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.496 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.498 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.499  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.499 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.499 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:06:36.499  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.499 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:06:36.500  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.500 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:06:36.500  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.500  INFO 16112 --- [http-nio-8084-exec-5] c.c.a.c.JwtAuthenticationController      : TOKEN IS VALID
+2021-07-07 22:06:36.500  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.500 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.501  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.501 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.501 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:06:36.501  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.501 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.503 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.504  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.504 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.505 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:06:36.505  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.506 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:06:36.506  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.506  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.507 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.507  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.508 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.508 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:06:36.508  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:36.509 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:06:36.511 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.511  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.512 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:06:36.512 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:06:36.513  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.513 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:06:36.513  INFO 16112 --- [http-nio-8084-exec-5] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:36.515 DEBUG 16112 --- [http-nio-8084-exec-5] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:06:36.517 TRACE 16112 --- [http-nio-8084-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:06:36.519 TRACE 16112 --- [http-nio-8084-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:06:36.520 TRACE 16112 --- [http-nio-8084-exec-5] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:06:36.522 DEBUG 16112 --- [http-nio-8084-exec-5] c.c.a.c.JwtAuthenticationController      : JWTRESPONSE JwtResponse(userid=admin, username=administrator, isValid=true):
+2021-07-07 22:06:36.523  INFO 16112 --- [http-nio-8084-exec-5] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:06:36.527 DEBUG 16112 --- [http-nio-8084-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:06:36.528 DEBUG 16112 --- [http-nio-8084-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
+2021-07-07 22:06:36.532 DEBUG 16112 --- [http-nio-8084-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:06:36.533  INFO 16112 --- [http-nio-8084-exec-5] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:06:51.252  INFO 16112 --- [http-nio-8084-exec-8] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:06:51.253 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@8f05137]
+2021-07-07 22:06:51.254 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@637ae59
+2021-07-07 22:06:51.254 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@2083a47
+2021-07-07 22:06:51.254 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 22:06:51.255 DEBUG 16112 --- [http-nio-8084-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2021-07-07 22:06:51.255 DEBUG 16112 --- [http-nio-8084-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#login(UserLoginCredential)
+2021-07-07 22:06:51.257 DEBUG 16112 --- [http-nio-8084-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserLoginCredential(userId=admin, password=admin)]
+2021-07-07 22:06:51.258  INFO 16112 --- [http-nio-8084-exec-8] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 22:06:51.258  INFO 16112 --- [http-nio-8084-exec-8] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 22:06:51.258 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.c.JwtAuthenticationController      : USERID AND PASSWORD admin:
+2021-07-07 22:06:51.259 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:51.263 DEBUG 16112 --- [http-nio-8084-exec-8] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:06:51.264 TRACE 16112 --- [http-nio-8084-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:06:51.266 TRACE 16112 --- [http-nio-8084-exec-8] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:06:51.267 TRACE 16112 --- [http-nio-8084-exec-8] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:06:51.268 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:51.268 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:06:51.270 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:06:51.271 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.a.c.JwtAuthenticationController      : USERDETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:51.271  INFO 16112 --- [http-nio-8084-exec-8] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:06:51.271  INFO 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:51.271 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:06:51.271 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 22:06:51.271  INFO 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:06:51.271 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 22:06:51.271 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : SUBJECT admin:
+2021-07-07 22:06:51.272 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:06:51.273  INFO 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:51.273 DEBUG 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : CREATE TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:06:51.273  INFO 16112 --- [http-nio-8084-exec-8] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:06:51.274 DEBUG 16112 --- [http-nio-8084-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:06:51.274 DEBUG 16112 --- [http-nio-8084-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserToken(userid=admin, authToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwia (truncated)...]
+2021-07-07 22:06:51.277 DEBUG 16112 --- [http-nio-8084-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:06:51.279  INFO 16112 --- [http-nio-8084-exec-8] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:07:09.065  INFO 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:07:09.067 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@59a5559d
+2021-07-07 22:07:09.067 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@5762a0d9
+2021-07-07 22:07:09.068 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@535d3eed
+2021-07-07 22:07:09.068 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.069 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.069  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.069 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.069  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.069 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.069 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.069  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.070 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.072 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.073  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.073 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.073 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.073  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.073 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.074  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.074 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : USERNAME admin:
+2021-07-07 22:07:09.074 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:07:09.077 DEBUG 16112 --- [http-nio-8084-exec-9] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:09.078 TRACE 16112 --- [http-nio-8084-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:09.080 TRACE 16112 --- [http-nio-8084-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:09.081 TRACE 16112 --- [http-nio-8084-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:09.082 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:07:09.082 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:09.083  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.083 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.084 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:09.084  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.084 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.085  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.085 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.085 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.085  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.085 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.087 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.088  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.088 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.088 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.088  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.089 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.089  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.089 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : USERNAMEadmin:
+2021-07-07 22:07:09.089  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.089  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.089 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.089  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.090 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.090  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.090 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.090 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:09.090  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.090 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.092 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.092  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.092 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.105 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.106  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.106 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.107  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.107 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:09.107  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.108  INFO 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : TOKEN IS VALID
+2021-07-07 22:07:09.109 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : USERNAME PASSWORD AUTHENTICATION TOKEN org.springframework.security.authentication.UsernamePasswordAuthenticationToken@fa79fc8b: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities; Credentials: [PROTECTED]; Authenticated: true; Details: null; Not granted any authorities:
+2021-07-07 22:07:09.111 DEBUG 16112 --- [http-nio-8084-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/validate", parameters={}
+2021-07-07 22:07:09.113 DEBUG 16112 --- [http-nio-8084-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#getValidity(String)
+2021-07-07 22:07:09.115 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.c.JwtAuthenticationController      : TOKEN Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.116 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.c.JwtAuthenticationController      : TOKEN AFTER REMOVING BEARER eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.116  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.117 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.117  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.117  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.118 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.118  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.118 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.118  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.119 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.119 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:09.119  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.120 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.122 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.123  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.123 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.124 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.124  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.125 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.125  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.125 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:09.126  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.126  INFO 16112 --- [http-nio-8084-exec-9] c.c.a.c.JwtAuthenticationController      : TOKEN IS VALID
+2021-07-07 22:07:09.126  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.126 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.127  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.127 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.128 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.128  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.129 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.131 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.131  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.132 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.132 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.133  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.134 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.135  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.135  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.136 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.136  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.137 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.137 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.138  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.139 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.142 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.142  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.143 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.143 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.144  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.144 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.144  INFO 16112 --- [http-nio-8084-exec-9] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.146 DEBUG 16112 --- [http-nio-8084-exec-9] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:09.147 TRACE 16112 --- [http-nio-8084-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:09.148 TRACE 16112 --- [http-nio-8084-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:09.149 TRACE 16112 --- [http-nio-8084-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:09.153 DEBUG 16112 --- [http-nio-8084-exec-9] c.c.a.c.JwtAuthenticationController      : JWTRESPONSE JwtResponse(userid=admin, username=administrator, isValid=true):
+2021-07-07 22:07:09.153  INFO 16112 --- [http-nio-8084-exec-9] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:07:09.154 DEBUG 16112 --- [http-nio-8084-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:07:09.155 DEBUG 16112 --- [http-nio-8084-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
+2021-07-07 22:07:09.158 DEBUG 16112 --- [http-nio-8084-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:07:09.158  INFO 16112 --- [http-nio-8084-exec-9] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:07:09.197  INFO 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:07:09.198 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@a4ee288
+2021-07-07 22:07:09.198 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@4891db1
+2021-07-07 22:07:09.198 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@b689f8
+2021-07-07 22:07:09.198 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.198 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.198  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.198 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.199  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.199 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.199 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.199  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.199 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.202 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.202  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.203 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.203 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.203  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.203 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.203  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.203 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : USERNAME admin:
+2021-07-07 22:07:09.204 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:07:09.206 DEBUG 16112 --- [http-nio-8084-exec-10] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:09.208 TRACE 16112 --- [http-nio-8084-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:09.209 TRACE 16112 --- [http-nio-8084-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:09.210 TRACE 16112 --- [http-nio-8084-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:09.211 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:07:09.212 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:09.212  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.212 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.212 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:09.212  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.212 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.213  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.213 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.213 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.213  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.213 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.214 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.215  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.215 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.215 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.215  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.215 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.215  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.215 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : USERNAMEadmin:
+2021-07-07 22:07:09.215  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.215  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.216 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.216  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.216 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.216  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.216 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.216 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:09.217  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.217 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.220 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.221  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.221 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.221 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.222  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.222 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.223  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.224 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:09.224  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.224  INFO 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : TOKEN IS VALID
+2021-07-07 22:07:09.224 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : USERNAME PASSWORD AUTHENTICATION TOKEN org.springframework.security.authentication.UsernamePasswordAuthenticationToken@fa79fc8b: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities; Credentials: [PROTECTED]; Authenticated: true; Details: null; Not granted any authorities:
+2021-07-07 22:07:09.226 DEBUG 16112 --- [http-nio-8084-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/validate", parameters={}
+2021-07-07 22:07:09.228 DEBUG 16112 --- [http-nio-8084-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#getValidity(String)
+2021-07-07 22:07:09.229 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.c.JwtAuthenticationController      : TOKEN Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.230 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.c.JwtAuthenticationController      : TOKEN AFTER REMOVING BEARER eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.230  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.230 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.230  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.230  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.230 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.230  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.230 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.231  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.231 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.231 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:09.231  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.231 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.233 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.235  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.236 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.236 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.237  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.237 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.238  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.238 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:09.238  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.239  INFO 16112 --- [http-nio-8084-exec-10] c.c.a.c.JwtAuthenticationController      : TOKEN IS VALID
+2021-07-07 22:07:09.240  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.240 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.240  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.240 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.240 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.241  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.241 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.242 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.243  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.243 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.243 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.244  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.244 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.244  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.244  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.244 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.244  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.245 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.245 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.245  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.245 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.247 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.247  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.247 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.248 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.248  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.248 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.248  INFO 16112 --- [http-nio-8084-exec-10] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.250 DEBUG 16112 --- [http-nio-8084-exec-10] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:09.253 TRACE 16112 --- [http-nio-8084-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:09.256 TRACE 16112 --- [http-nio-8084-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:09.257 TRACE 16112 --- [http-nio-8084-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:09.259 DEBUG 16112 --- [http-nio-8084-exec-10] c.c.a.c.JwtAuthenticationController      : JWTRESPONSE JwtResponse(userid=admin, username=administrator, isValid=true):
+2021-07-07 22:07:09.259  INFO 16112 --- [http-nio-8084-exec-10] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:07:09.260 DEBUG 16112 --- [http-nio-8084-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:07:09.261 DEBUG 16112 --- [http-nio-8084-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
+2021-07-07 22:07:09.264 DEBUG 16112 --- [http-nio-8084-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:07:09.265  INFO 16112 --- [http-nio-8084-exec-10] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:07:09.381  INFO 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:07:09.381 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@24268ace
+2021-07-07 22:07:09.381 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@5a5c4c9f
+2021-07-07 22:07:09.381 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@286996a9
+2021-07-07 22:07:09.381 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.382 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.382  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.382 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.382  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.382 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.382 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.382  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.382 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.385 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.385  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.386 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.386 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.386  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.386 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.386  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.387 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : USERNAME admin:
+2021-07-07 22:07:09.387 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:07:09.388 DEBUG 16112 --- [http-nio-8084-exec-1] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:09.389 TRACE 16112 --- [http-nio-8084-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:09.391 TRACE 16112 --- [http-nio-8084-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:09.391 TRACE 16112 --- [http-nio-8084-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:09.393 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:07:09.393 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:09.393  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.393 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.393 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:09.393  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.393 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.393  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.393 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.394 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.394  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.394 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.395 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.396  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.396 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.396 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.396  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.396 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.396  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.396 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : USERNAMEadmin:
+2021-07-07 22:07:09.396  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.396  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.396 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.396  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.397 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.397  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.397 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.397 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:09.397  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.397 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.398 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.399  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.399 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.400 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.401  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.401 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.401  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.402 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:09.402  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.402  INFO 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : TOKEN IS VALID
+2021-07-07 22:07:09.402 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : USERNAME PASSWORD AUTHENTICATION TOKEN org.springframework.security.authentication.UsernamePasswordAuthenticationToken@fa79fc8b: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities; Credentials: [PROTECTED]; Authenticated: true; Details: null; Not granted any authorities:
+2021-07-07 22:07:09.403 DEBUG 16112 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/validate", parameters={}
+2021-07-07 22:07:09.405 DEBUG 16112 --- [http-nio-8084-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#getValidity(String)
+2021-07-07 22:07:09.406 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.c.JwtAuthenticationController      : TOKEN Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.407 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.c.JwtAuthenticationController      : TOKEN AFTER REMOVING BEARER eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.407  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.407 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.407  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.407  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.407 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.407  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.407 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.408  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.408 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.408 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:09.408  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.408 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.410 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.410  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.410 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.411 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.411  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.411 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:51 IST 2021:
+2021-07-07 22:07:09.411  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.411 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:09.411  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.411  INFO 16112 --- [http-nio-8084-exec-1] c.c.a.c.JwtAuthenticationController      : TOKEN IS VALID
+2021-07-07 22:07:09.412  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.412 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.412  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.412 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.412 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.412  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.412 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.414 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.414  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.414 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.415 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.415  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.415 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.415  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.415  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.415 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.415  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.415 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.416 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:09.416  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:09.416 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzYxMSwiaWF0IjoxNjI1Njc1ODExfQ.Me8DHN308cWLIVkK7fGZ8ibS2j9tHCLGn_oDKpRVfVE:
+2021-07-07 22:07:09.419 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.420  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.420 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677611, iat=1625675811}:
+2021-07-07 22:07:09.421 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:09.421  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.421 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:09.421  INFO 16112 --- [http-nio-8084-exec-1] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:09.423 DEBUG 16112 --- [http-nio-8084-exec-1] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:09.425 TRACE 16112 --- [http-nio-8084-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:09.426 TRACE 16112 --- [http-nio-8084-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:09.427 TRACE 16112 --- [http-nio-8084-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:09.428 DEBUG 16112 --- [http-nio-8084-exec-1] c.c.a.c.JwtAuthenticationController      : JWTRESPONSE JwtResponse(userid=admin, username=administrator, isValid=true):
+2021-07-07 22:07:09.428  INFO 16112 --- [http-nio-8084-exec-1] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:07:09.430 DEBUG 16112 --- [http-nio-8084-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:07:09.430 DEBUG 16112 --- [http-nio-8084-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
+2021-07-07 22:07:09.433 DEBUG 16112 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:07:09.434  INFO 16112 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:07:21.325  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:07:21.326 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@432e74c0
+2021-07-07 22:07:21.327 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@5af214d6
+2021-07-07 22:07:21.327 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@3469e042
+2021-07-07 22:07:21.327 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.327 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.327  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.328 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.328  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.328 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.328 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:21.328  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.328 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.330 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.331  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.331 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.331 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:21.331  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.331 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:21.331  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.332 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : USERNAME admin:
+2021-07-07 22:07:21.332 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:07:21.333 DEBUG 16112 --- [http-nio-8084-exec-2] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:21.335 TRACE 16112 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:21.337 TRACE 16112 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:21.340 TRACE 16112 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:21.343 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:07:21.344 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:21.344  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.344 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.344 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:07:21.344  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.344 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.344  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.345 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.345 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:21.345  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.345 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.346 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.346  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.346 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.347 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:21.347  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.347 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:21.347  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.347 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : USERNAMEadmin:
+2021-07-07 22:07:21.347  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.347  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.347 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.347  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.348 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.348  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.348 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.348 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:21.348  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.348 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.350 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.350  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.350 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.351 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:07:21.351  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.351 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:07:21.351  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.351 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:21.351  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.351  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : TOKEN IS VALID
+2021-07-07 22:07:21.351 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : USERNAME PASSWORD AUTHENTICATION TOKEN org.springframework.security.authentication.UsernamePasswordAuthenticationToken@fa79fc8b: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities; Credentials: [PROTECTED]; Authenticated: true; Details: null; Not granted any authorities:
+2021-07-07 22:07:21.352 DEBUG 16112 --- [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/validate", parameters={}
+2021-07-07 22:07:21.353 DEBUG 16112 --- [http-nio-8084-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#getValidity(String)
+2021-07-07 22:07:21.354 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : TOKEN Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.355 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : TOKEN AFTER REMOVING BEARER eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.356  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.356 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.356  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.356  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.357 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.357  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.357 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.357  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.358 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.358 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:07:21.358  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.358 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.360 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.361  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.361 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.361 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:07:21.362  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.362 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:07:21.362  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.362 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:07:21.362  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.363  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : TOKEN IS VALID
+2021-07-07 22:07:21.363  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.363 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.363  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.363 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.363 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:21.363  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.363 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.365 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.365  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.365 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.365 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:21.365  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.365 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:21.365  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.366  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.366 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.366  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.366 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.366 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:07:21.366  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:07:21.366 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:07:21.367 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.368  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.368 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:07:21.368 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:07:21.368  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.368 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:07:21.368  INFO 16112 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:07:21.371 DEBUG 16112 --- [http-nio-8084-exec-2] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:07:21.372 TRACE 16112 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:07:21.374 TRACE 16112 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:07:21.374 TRACE 16112 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:07:21.375 DEBUG 16112 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : JWTRESPONSE JwtResponse(userid=admin, username=administrator, isValid=true):
+2021-07-07 22:07:21.375  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:07:21.376 DEBUG 16112 --- [http-nio-8084-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:07:21.376 DEBUG 16112 --- [http-nio-8084-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
+2021-07-07 22:07:21.379 DEBUG 16112 --- [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:07:21.380  INFO 16112 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 22:08:14.802  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 22:08:14.805 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : REQUEST org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@256a795f
+2021-07-07 22:08:14.806 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@ad7520d
+2021-07-07 22:08:14.806 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.springframework.security.web.FilterChainProxy$VirtualFilterChain@557d64b4
+2021-07-07 22:08:14.806 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : AUTH HEADER Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.807 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : JWT TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.808  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.808 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.808  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.808 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.809 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:08:14.809  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.809 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.812 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.813  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.813 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.813 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:08:14.813  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.814 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:08:14.814  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.814 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : USERNAME admin:
+2021-07-07 22:08:14.815 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 22:08:14.818 DEBUG 16112 --- [http-nio-8084-exec-4] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:08:14.820 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:08:14.824 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:08:14.826 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:08:14.829 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 22:08:14.830 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:08:14.831  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.831 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.831 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 22:08:14.832  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.832 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.833  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.833 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.833 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:08:14.833  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.833 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.835 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.836  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.836 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.837 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:08:14.837  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.837 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:08:14.837  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.837 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : USERNAMEadmin:
+2021-07-07 22:08:14.837  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.838  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.838 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.838  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.838 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.838  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.839 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.839 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:08:14.840  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.841 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.843 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.844  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.845 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.845 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:08:14.846  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.846 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:08:14.846  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.846 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:08:14.847  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.847  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : TOKEN IS VALID
+2021-07-07 22:08:14.847 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : USERNAME PASSWORD AUTHENTICATION TOKEN org.springframework.security.authentication.UsernamePasswordAuthenticationToken@fa79fc8b: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities; Credentials: [PROTECTED]; Authenticated: true; Details: null; Not granted any authorities:
+2021-07-07 22:08:14.848 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/validate", parameters={}
+2021-07-07 22:08:14.850 DEBUG 16112 --- [http-nio-8084-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#getValidity(String)
+2021-07-07 22:08:14.852 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : TOKEN Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.853 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : TOKEN AFTER REMOVING BEARER eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.853  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.853 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.853  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.853  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.853 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.853  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.854 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.854  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.854 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.855 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1192/0x0000000800fab010@4657625a:
+2021-07-07 22:08:14.855  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.855 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.858 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.859  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.860 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.861 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : APPLY Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:08:14.862  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.862 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : EXPIRY DATE Wed Jul 07 22:36:34 IST 2021:
+2021-07-07 22:08:14.862  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.862 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CHECK TOKEN EXPIRATION false:
+2021-07-07 22:08:14.862  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.863  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : TOKEN IS VALID
+2021-07-07 22:08:14.863  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.863 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.863  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.863 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.863 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:08:14.863  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.863 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.865 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.865  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.865 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.866 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:08:14.866  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.866 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:08:14.866  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.866  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.866 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.866  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.866 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.867 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS RESOLVER com.cognizant.authorization.service.JwtUtil$$Lambda$1142/0x0000000800faa990@6f3196c5:
+2021-07-07 22:08:14.867  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : START
+2021-07-07 22:08:14.867 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NzU5NCwiaWF0IjoxNjI1Njc1Nzk0fQ.u6HdFc1k76ApHRIsxs2Al4PWcmuJVh5dt2WPo9-Pq4E:
+2021-07-07 22:08:14.868 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.869  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.869 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : CLAIMS {sub=admin, exp=1625677594, iat=1625675794}:
+2021-07-07 22:08:14.869 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : APPLY admin:
+2021-07-07 22:08:14.869  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.870 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : EXTRACT CLAIM admin:
+2021-07-07 22:08:14.870  INFO 16112 --- [http-nio-8084-exec-4] c.c.authorization.service.JwtUtil        : END
+2021-07-07 22:08:14.871 DEBUG 16112 --- [http-nio-8084-exec-4] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 22:08:14.873 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 22:08:14.876 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 22:08:14.877 TRACE 16112 --- [http-nio-8084-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 22:08:14.879 DEBUG 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : JWTRESPONSE JwtResponse(userid=admin, username=administrator, isValid=true):
+2021-07-07 22:08:14.880  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 22:08:14.881 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:08:14.882 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
+2021-07-07 22:08:14.885 DEBUG 16112 --- [http-nio-8084-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:08:14.886  INFO 16112 --- [http-nio-8084-exec-4] c.c.a.service.JwtRequestFilter           : END

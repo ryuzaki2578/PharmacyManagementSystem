@@ -13,8 +13,7 @@ export class MedicineDemandComponent implements OnInit {
   constructor(private pharmacyService:PharmacySupplyService) { }
   medicineDemand:MedicineDemand[]=[{"medicineName":"Crocin","demandCount":"1"}];
   ngOnInit(): void {
-    //this.pharmacyService.getPharmcySupply().subscribe((response)=>(console.log(response)));
-    this.pharmacyService.getMedicineSupplyCount(this.medicineDemand).subscribe((response)=>(console.log(response)),(error:HttpErrorResponse)=>(console.log(error)));
+    this.pharmacyService.getPharmcySupply().subscribe((response:any)=>(this.medicineDemand=response),(error:HttpErrorResponse)=>(alert(error.error.message)));
   }
 
 }
