@@ -10,6 +10,6 @@ phases:
             - echo Build Completed successfully
 artifacts:
     files:
-        - target/authorization-service-0.0.1-SNAPSHOT.jar
+        - target/medical-representative-schedule-service-0.0.1-SNAPSHOT.jar
     discard-paths: yes
     
