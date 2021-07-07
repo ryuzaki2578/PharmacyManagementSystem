@@ -2,6 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MedicineDemand } from '../medicine-demand';
+import { PharmacySupplyService } from '../pharmacy-supply.service';
 import { StocksService,Stocks,UpdateStocks} from '../stocks.service';
 
 @Component({
@@ -15,7 +17,7 @@ export class PlaceOrderComponent implements OnInit{
   medicine:string;
   productForm: FormGroup;
 
-  constructor(private fb:FormBuilder,private stocksService:StocksService,private router:Router) 
+  constructor(private fb:FormBuilder,private stocksService:StocksService,private router:Router,private pharmacyService:PharmacySupplyService) 
   {
     this.productForm = this.fb.group({   
       quantities: this.fb.array([]) ,  
@@ -26,8 +28,8 @@ export class PlaceOrderComponent implements OnInit{
   }  
   newQuantity(): FormGroup {  
     return this.fb.group({  
-      name: '',  
-      quantity: '',  
+      medicineName: '',  
+      demandCount: '',  
     })  
   }  
   addQuantity() {  
@@ -42,16 +44,13 @@ export class PlaceOrderComponent implements OnInit{
     this.getStocks();
   }
   onSubmit() {
-    console.log(this.productForm.value);
-    this.updatestock(this.productForm.value);
+    //console.log(this.productForm.get('quantities')?.value);
+    this.getPharmacySupply(this.productForm.get('quantities')?.value);
   }
-  public updatestock(medicine:UpdateStocks)
-  {
-   this.stocksService.updateStocks(medicine.name,  medicine.quantity).subscribe((response)=>{ alert("Stocks has been updated");this.router.navigateByUrl('check-stocks');},
-   (error:HttpErrorResponse)=>{alert(error.error.message);this.router.navigateByUrl('check-stocks')}
-   );
-  
-
+  getPharmacySupply(medicinedemand:MedicineDemand[]){
+    this.pharmacyService.getMedicineSupplyCount(medicinedemand).subscribe((response)=>{alert("SuccessfullyAddedSupply");this.router.navigateByUrl('medicine-demand')},
+    (error:HttpErrorResponse)=>{alert(error.error.message);}
+    );
   }
   public getStocks():void
   {

@@ -8,7 +8,7 @@
     <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
     
 <td><label for="name">Select names:</label><br>
-        <select id='name' formControlName="name" class="form-control">
+        <select id='name' formControlName="medicineName" class="form-control">
           <option *ngFor="let stock of stocks" [ngValue]='stock.name'>
             {{stock.name}}
           </option>
@@ -16,7 +16,7 @@
 </td>
 <td>
 <label for="quantity">Enter quantity of Medicine</label>
-<input type="number" formControlName="quantity" class="form-control"> 
+<input type="number" formControlName="demandCount" class="form-control"> 
 </td>
 <td>  
   <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>  

@@ -16,7 +16,7 @@ export class PharmacySupplyService {
   getPharmcySupply(){
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-    console.log(token);
+    //console.log(token);
     return this.httpClient.get("http://localhost:8083/api/pharmacy-medicine-supply/getMedicineDemand",{headers});
   }
 }

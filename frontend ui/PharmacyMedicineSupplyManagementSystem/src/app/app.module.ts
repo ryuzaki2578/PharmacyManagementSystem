@@ -20,7 +20,6 @@ import { MRScheduleComponent } from './mrschedule/mrschedule.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { MedicineSupplyComponent } from './medicine-supply/medicine-supply.component';
 import { MedicineDemandComponent } from './medicine-demand/medicine-demand.component';
 @NgModule({
   declarations: [
@@ -36,7 +35,6 @@ import { MedicineDemandComponent } from './medicine-demand/medicine-demand.compo
     ContactUsComponent,
     MRScheduleComponent,
     PagenotfoundComponent,
-    MedicineSupplyComponent,
     MedicineDemandComponent
   ],
   imports: [
