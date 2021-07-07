@@ -1263,3 +1263,305 @@
 2021-07-07 22:08:14.907 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
 2021-07-07 22:08:14.908 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@eedb70e]]
 2021-07-07 22:08:14.913 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:15:48.455 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 22:15:48.457 DEBUG 23700 --- [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 22:15:48.461  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:15:48.555 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:15:48.557  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:15:48.558  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:15:48.561 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 22:15:48.565 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 22:15:48.567 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 22:15:48.569 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 22:15:48.572 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:15:48.574 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@1161a9a5]]
+2021-07-07 22:15:48.577 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:16:06.489  INFO 23700 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-07-07 22:16:06.496  INFO 23700 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-07-07 22:16:06.498  INFO 23700 --- [Thread-1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-07-07 22:16:06.499 DEBUG 23700 --- [Thread-1] org.hibernate.SQL                        : drop table if exists medicine_demand CASCADE 
+2021-07-07 22:16:06.507 DEBUG 23700 --- [Thread-1] org.hibernate.SQL                        : drop table if exists medicine_supply CASCADE 
+2021-07-07 22:16:06.509 DEBUG 23700 --- [Thread-1] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2021-07-07 22:16:06.738  WARN 23700 --- [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-07-07 22:16:06.740  INFO 23700 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-07-07 22:16:06.745  INFO 23700 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-07-07 22:16:06.827  INFO 23700 --- [restartedMain] c.c.p.PharmacySupplyApplication          : START
+2021-07-07 22:16:07.624  INFO 23700 --- [restartedMain] c.c.p.PharmacySupplyApplication          : No active profile set, falling back to default profiles: default
+2021-07-07 22:16:08.606  INFO 23700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-07-07 22:16:08.648  INFO 23700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 2 JPA repository interfaces.
+2021-07-07 22:16:08.777  INFO 23700 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c843b4a3-ef62-3ccb-9e37-33089a001e23
+2021-07-07 22:16:08.965  INFO 23700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2021-07-07 22:16:08.967  INFO 23700 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-07 22:16:08.968  INFO 23700 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-07-07 22:16:09.069  INFO 23700 --- [restartedMain] .c.C.[.[.[/api/pharmacy-medicine-supply] : Initializing Spring embedded WebApplicationContext
+2021-07-07 22:16:09.071  INFO 23700 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2021-07-07 22:16:09.148  INFO 23700 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-07-07 22:16:09.156  INFO 23700 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-07-07 22:16:09.157  INFO 23700 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-07 22:16:09.204 DEBUG 23700 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2021-07-07 22:16:09.297  INFO 23700 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-07 22:16:09.322  INFO 23700 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-07 22:16:09.497 DEBUG 23700 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medicine_demand CASCADE 
+2021-07-07 22:16:09.499 DEBUG 23700 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medicine_supply CASCADE 
+2021-07-07 22:16:09.501 DEBUG 23700 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2021-07-07 22:16:09.506 DEBUG 23700 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2021-07-07 22:16:09.508 DEBUG 23700 --- [restartedMain] org.hibernate.SQL                        : create table medicine_demand (id integer not null, demand_count integer not null, medicine_name varchar(255) not null, primary key (id))
+2021-07-07 22:16:09.513 DEBUG 23700 --- [restartedMain] org.hibernate.SQL                        : create table medicine_supply (id integer not null, medicine_name varchar(255), pharmacy_name varchar(255), supply_count integer not null, primary key (id))
+2021-07-07 22:16:09.518  INFO 23700 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-07 22:16:09.520  INFO 23700 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-07 22:16:09.572  WARN 23700 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-07-07 22:16:09.765  WARN 23700 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-07 22:16:09.958  WARN 23700 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-07-07 22:16:09.958  INFO 23700 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-07-07 22:16:10.062  INFO 23700 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-07 22:16:10.069 DEBUG 23700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-07-07 22:16:10.086 DEBUG 23700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2021-07-07 22:16:10.095 DEBUG 23700 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-07-07 22:16:10.128 DEBUG 23700 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-07-07 22:16:10.439  INFO 23700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path '/api/pharmacy-medicine-supply'
+2021-07-07 22:16:10.608  INFO 23700 --- [http-nio-8083-exec-1] .c.C.[.[.[/api/pharmacy-medicine-supply] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-07 22:16:10.609  INFO 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-07 22:16:10.609 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-07-07 22:16:10.616  INFO 23700 --- [restartedMain] c.c.p.PharmacySupplyApplication          : Started PharmacySupplyApplication in 3.755 seconds (JVM running for 772.378)
+2021-07-07 22:16:10.619 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-07-07 22:16:10.619  INFO 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-07-07 22:16:10.621 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 22:16:10.623 DEBUG 23700 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 22:16:10.626  INFO 23700 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-07-07 22:16:10.628  INFO 23700 --- [restartedMain] c.c.p.PharmacySupplyApplication          : END
+2021-07-07 22:16:10.634 DEBUG 23700 --- [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@4f5dc0d1, com.cognizant.pharmacysupply.model.Medi (truncated)...]
+2021-07-07 22:16:10.683  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.controller.PharmacyController      : Start
+2021-07-07 22:16:10.684 DEBUG 23700 --- [http-nio-8083-exec-1] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@4f5dc0d1, com.cognizant.pharmacysupply.model.MedicineDemand@b47a90]:
+2021-07-07 22:16:10.684  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:10.775 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:16:10.777  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:10.778  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:10.778  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@4f5dc0d1, com.cognizant.pharmacysupply.model.MedicineDemand@b47a90] 
+2021-07-07 22:16:10.779  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:10.779  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@4f5dc0d1
+2021-07-07 22:16:10.916 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:16:10.918  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:10.919  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=200)
+2021-07-07 22:16:10.921  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 200
+2021-07-07 22:16:10.922  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:10.923  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : number of tablets 200
+2021-07-07 22:16:10.923  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : val = 192
+2021-07-07 22:16:11.035 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:16:11.036  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@4f5dc0d1 medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=8)
+2021-07-07 22:16:11.036  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8):
+2021-07-07 22:16:11.037  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:11.038  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:11.038  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@b47a90
+2021-07-07 22:16:11.117 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:16:11.119  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:11.119  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=2, name=Digoxin, chemicalComposition=Cardenolide glycosides, derivatives, targetAilment=Cardiology, pharmacyName=Best Care Pharmacy, dateOfExpiry=Tue Sep 12 05:30:00 IST 2023, numberOfTabletsInStock=300)
+2021-07-07 22:16:11.120  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine Digoxin , Tablets 300
+2021-07-07 22:16:11.121  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:11.121  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : number of tablets 300
+2021-07-07 22:16:11.122  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : val = 292
+2021-07-07 22:16:11.218 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:16:11.219  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@b47a90 medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Digoxin, supplyCount=8)
+2021-07-07 22:16:11.220  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Best Care Pharmacy, medicineName=Digoxin, supplyCount=8):
+2021-07-07 22:16:11.221  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:11.231 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:16:11.234 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:16:11.237 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : insert into medicine_supply (medicine_name, pharmacy_name, supply_count, id) values (?, ?, ?, ?)
+2021-07-07 22:16:11.240 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 22:16:11.241 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Healthy Pharmacy]
+2021-07-07 22:16:11.241 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [8]
+2021-07-07 22:16:11.242 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [1]
+2021-07-07 22:16:11.243 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : insert into medicine_supply (medicine_name, pharmacy_name, supply_count, id) values (?, ?, ?, ?)
+2021-07-07 22:16:11.245 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Digoxin]
+2021-07-07 22:16:11.245 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Best Care Pharmacy]
+2021-07-07 22:16:11.246 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [8]
+2021-07-07 22:16:11.247 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [2]
+2021-07-07 22:16:11.255 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:16:11.257 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:16:11.262 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : insert into medicine_demand (demand_count, medicine_name, id) values (?, ?, ?)
+2021-07-07 22:16:11.264 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [8]
+2021-07-07 22:16:11.265 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Crocin]
+2021-07-07 22:16:11.266 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [3]
+2021-07-07 22:16:11.267 DEBUG 23700 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : insert into medicine_demand (demand_count, medicine_name, id) values (?, ?, ?)
+2021-07-07 22:16:11.269 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [8]
+2021-07-07 22:16:11.270 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Digoxin]
+2021-07-07 22:16:11.273 TRACE 23700 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [4]
+2021-07-07 22:16:11.275  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:11.276  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.controller.PharmacyController      : End
+2021-07-07 22:16:11.279 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:16:11.279 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PharmacyMedicineSupply(id=1, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8), Ph (truncated)...]
+2021-07-07 22:16:11.283 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:16:17.430 DEBUG 23700 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 22:16:17.432 DEBUG 23700 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 22:16:17.436  INFO 23700 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:17.501 DEBUG 23700 --- [http-nio-8083-exec-3] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:16:17.503  INFO 23700 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:16:17.503  INFO 23700 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:16:17.513 DEBUG 23700 --- [http-nio-8083-exec-3] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 22:16:17.515 TRACE 23700 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [3]
+2021-07-07 22:16:17.517 TRACE 23700 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 22:16:17.518 TRACE 23700 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 22:16:17.519 TRACE 23700 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [4]
+2021-07-07 22:16:17.520 TRACE 23700 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 22:16:17.522 TRACE 23700 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Digoxin]
+2021-07-07 22:16:17.526 DEBUG 23700 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:16:17.527 DEBUG 23700 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@1fa65c33, com.cognizant.pharmacysupply.model.Medi (truncated)...]
+2021-07-07 22:16:17.531 DEBUG 23700 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:18:21.967 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 22:18:21.968 DEBUG 23700 --- [http-nio-8083-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 22:18:21.970 DEBUG 23700 --- [http-nio-8083-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@4267be17, com.cognizant.pharmacysupply.model.Medi (truncated)...]
+2021-07-07 22:18:21.971  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.controller.PharmacyController      : Start
+2021-07-07 22:18:21.972 DEBUG 23700 --- [http-nio-8083-exec-7] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@4267be17, com.cognizant.pharmacysupply.model.MedicineDemand@765383f]:
+2021-07-07 22:18:21.972  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:22.018 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:18:22.019  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:22.020  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:22.020  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@4267be17, com.cognizant.pharmacysupply.model.MedicineDemand@765383f] 
+2021-07-07 22:18:22.020  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:22.020  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@4267be17
+2021-07-07 22:18:22.118 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:18:22.120  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:22.121  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=8)
+2021-07-07 22:18:22.121  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 8
+2021-07-07 22:18:22.121  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:22.121  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : number of tablets 8
+2021-07-07 22:18:22.121  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : val = 0
+2021-07-07 22:18:22.219 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:18:22.220  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@4267be17 medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=8)
+2021-07-07 22:18:22.220  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8):
+2021-07-07 22:18:22.221  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:22.221  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:22.221  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@765383f
+2021-07-07 22:18:22.295 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:18:22.297  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:22.297  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=2, name=Digoxin, chemicalComposition=Cardenolide glycosides, derivatives, targetAilment=Cardiology, pharmacyName=Best Care Pharmacy, dateOfExpiry=Tue Sep 12 05:30:00 IST 2023, numberOfTabletsInStock=8)
+2021-07-07 22:18:22.297  INFO 23700 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Medicine Digoxin , Tablets 8
+2021-07-07 22:18:22.301 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:18:22.302 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2021-07-07 22:18:22.303 DEBUG 23700 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 22:18:27.342 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 22:18:27.345 DEBUG 23700 --- [http-nio-8083-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 22:18:27.347 DEBUG 23700 --- [http-nio-8083-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@e7f3ef, com.cognizant.pharmacysupply.model.Medici (truncated)...]
+2021-07-07 22:18:27.348  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.controller.PharmacyController      : Start
+2021-07-07 22:18:27.349 DEBUG 23700 --- [http-nio-8083-exec-8] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@e7f3ef, com.cognizant.pharmacysupply.model.MedicineDemand@e201d83]:
+2021-07-07 22:18:27.349  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:27.396 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:18:27.397  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:27.398  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:27.399  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@e7f3ef, com.cognizant.pharmacysupply.model.MedicineDemand@e201d83] 
+2021-07-07 22:18:27.399  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:27.399  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@e7f3ef
+2021-07-07 22:18:27.472 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:18:27.473  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:27.473  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=8)
+2021-07-07 22:18:27.474  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 8
+2021-07-07 22:18:27.474  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:27.474  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : number of tablets 8
+2021-07-07 22:18:27.474  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : val = 0
+2021-07-07 22:18:27.572 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:18:27.573  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@e7f3ef medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=8)
+2021-07-07 22:18:27.573  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8):
+2021-07-07 22:18:27.573  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:27.573  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:18:27.574  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@e201d83
+2021-07-07 22:18:27.653 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:18:27.654  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:18:27.655  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=2, name=Digoxin, chemicalComposition=Cardenolide glycosides, derivatives, targetAilment=Cardiology, pharmacyName=Best Care Pharmacy, dateOfExpiry=Tue Sep 12 05:30:00 IST 2023, numberOfTabletsInStock=8)
+2021-07-07 22:18:27.655  INFO 23700 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Medicine Digoxin , Tablets 8
+2021-07-07 22:18:27.656 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:18:27.656 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2021-07-07 22:18:27.657 DEBUG 23700 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 22:19:44.569 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 22:19:44.571 DEBUG 23700 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 22:19:44.573 DEBUG 23700 --- [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@5c6e9b31, com.cognizant.pharmacysupply.model.Medi (truncated)...]
+2021-07-07 22:19:44.574  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.controller.PharmacyController      : Start
+2021-07-07 22:19:44.575 DEBUG 23700 --- [http-nio-8083-exec-1] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@5c6e9b31, com.cognizant.pharmacysupply.model.MedicineDemand@66edd560]:
+2021-07-07 22:19:44.576  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:44.637 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:19:44.638  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:44.639  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:44.640  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@5c6e9b31, com.cognizant.pharmacysupply.model.MedicineDemand@66edd560] 
+2021-07-07 22:19:44.640  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:44.640  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@5c6e9b31
+2021-07-07 22:19:44.770 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:19:44.771  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:44.772  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=8)
+2021-07-07 22:19:44.772  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 8
+2021-07-07 22:19:44.772  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:44.772  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : number of tablets 8
+2021-07-07 22:19:44.772  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : val = 0
+2021-07-07 22:19:44.899 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:19:44.901  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@5c6e9b31 medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=8)
+2021-07-07 22:19:44.902  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8):
+2021-07-07 22:19:44.902  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:44.902  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:44.903  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@66edd560
+2021-07-07 22:19:45.050 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:19:45.052  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:45.052  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=2, name=Digoxin, chemicalComposition=Cardenolide glycosides, derivatives, targetAilment=Cardiology, pharmacyName=Best Care Pharmacy, dateOfExpiry=Tue Sep 12 05:30:00 IST 2023, numberOfTabletsInStock=8)
+2021-07-07 22:19:45.053  INFO 23700 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Medicine Digoxin , Tablets 8
+2021-07-07 22:19:45.054 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:19:45.055 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2021-07-07 22:19:45.057 DEBUG 23700 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 22:19:50.956 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 22:19:50.957 DEBUG 23700 --- [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 22:19:50.960 DEBUG 23700 --- [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@3b32ba29, com.cognizant.pharmacysupply.model.Medi (truncated)...]
+2021-07-07 22:19:50.961  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : Start
+2021-07-07 22:19:50.962 DEBUG 23700 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@3b32ba29, com.cognizant.pharmacysupply.model.MedicineDemand@35f5433f]:
+2021-07-07 22:19:50.962  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:51.014 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 22:19:51.016  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:51.017  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:51.017  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@3b32ba29, com.cognizant.pharmacysupply.model.MedicineDemand@35f5433f] 
+2021-07-07 22:19:51.017  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:51.017  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@3b32ba29
+2021-07-07 22:19:51.106 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:19:51.108  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:51.108  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=8)
+2021-07-07 22:19:51.109  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 8
+2021-07-07 22:19:51.110  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:51.110  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : number of tablets 8
+2021-07-07 22:19:51.111  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : val = 0
+2021-07-07 22:19:51.204 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:19:51.205  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@3b32ba29 medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=8)
+2021-07-07 22:19:51.206  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8):
+2021-07-07 22:19:51.206  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:51.206  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:51.206  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@35f5433f
+2021-07-07 22:19:51.310 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 22:19:51.313  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:51.314  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=2, name=Digoxin, chemicalComposition=Cardenolide glycosides, derivatives, targetAilment=Cardiology, pharmacyName=Best Care Pharmacy, dateOfExpiry=Tue Sep 12 05:30:00 IST 2023, numberOfTabletsInStock=8)
+2021-07-07 22:19:51.314  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine Digoxin , Tablets 8
+2021-07-07 22:19:51.315  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 22:19:51.315  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : number of tablets 8
+2021-07-07 22:19:51.315  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : val = 7
+2021-07-07 22:19:51.423 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 22:19:51.424  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@35f5433f medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Digoxin, supplyCount=1)
+2021-07-07 22:19:51.425  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Best Care Pharmacy, medicineName=Digoxin, supplyCount=1):
+2021-07-07 22:19:51.425  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:51.427 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:19:51.431 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:19:51.433 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : insert into medicine_supply (medicine_name, pharmacy_name, supply_count, id) values (?, ?, ?, ?)
+2021-07-07 22:19:51.435 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 22:19:51.437 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Healthy Pharmacy]
+2021-07-07 22:19:51.438 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [8]
+2021-07-07 22:19:51.438 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [5]
+2021-07-07 22:19:51.439 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : insert into medicine_supply (medicine_name, pharmacy_name, supply_count, id) values (?, ?, ?, ?)
+2021-07-07 22:19:51.441 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Digoxin]
+2021-07-07 22:19:51.442 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Best Care Pharmacy]
+2021-07-07 22:19:51.444 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2021-07-07 22:19:51.445 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [6]
+2021-07-07 22:19:51.448 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:19:51.451 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 22:19:51.454 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : insert into medicine_demand (demand_count, medicine_name, id) values (?, ?, ?)
+2021-07-07 22:19:51.455 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [8]
+2021-07-07 22:19:51.457 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Crocin]
+2021-07-07 22:19:51.457 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [7]
+2021-07-07 22:19:51.459 DEBUG 23700 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : insert into medicine_demand (demand_count, medicine_name, id) values (?, ?, ?)
+2021-07-07 22:19:51.462 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2021-07-07 22:19:51.463 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Digoxin]
+2021-07-07 22:19:51.465 TRACE 23700 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [8]
+2021-07-07 22:19:51.467  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 22:19:51.468  INFO 23700 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : End
+2021-07-07 22:19:51.468 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:19:51.469 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PharmacyMedicineSupply(id=5, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8), Ph (truncated)...]
+2021-07-07 22:19:51.471 DEBUG 23700 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
