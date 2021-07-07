@@ -49,9 +49,7 @@ public class PharmacyServiceImpl implements PharmacyService {
 			log.info("Medicine {} , Tablets {}", medicineDemand.getMedicineName(),
 					medicineStock.getNumberOfTabletsInStock());
 
-			if (medicineStock.getNumberOfTabletsInStock() < medicineDemand.getDemandCount()) {
-				return nullList;
-			}
+		
 			PharmacyMedicineSupply pharmacyMedicineSupply = new PharmacyMedicineSupply();
 
 			setSupply(token, pharmacyMedicineSupply, medicineDemand, medicineStock);

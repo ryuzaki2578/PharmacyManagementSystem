@@ -31187,3 +31187,89 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: The database is open in excl
 2021-07-07 22:54:14.840 DEBUG 18696 --- [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2021-07-07 22:54:14.840 DEBUG 18696 --- [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid cr (truncated)...]
 2021-07-07 22:54:14.842 DEBUG 18696 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:54:52.065 DEBUG 18696 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/medicine-stock/get-stock-count/Crocin", parameters={}
+2021-07-07 22:54:52.066 DEBUG 18696 --- [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.medicinestock.controller.MedicineStockController#getStockCountForMedicine(String, String)
+2021-07-07 22:54:52.067  INFO 18696 --- [http-nio-8081-exec-9] c.c.m.c.MedicineStockController          : START
+2021-07-07 22:54:52.085 DEBUG 18696 --- [http-nio-8081-exec-9] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.medicinestock.model.JwtResponse]
+2021-07-07 22:54:52.085  INFO 18696 --- [http-nio-8081-exec-9] c.c.m.service.MedicineStockServiceImpl   : START
+2021-07-07 22:54:52.086  INFO 18696 --- [http-nio-8081-exec-9] c.c.m.service.MedicineStockServiceImpl   : END
+2021-07-07 22:54:52.086 DEBUG 18696 --- [http-nio-8081-exec-9] org.hibernate.SQL                        : select medicinest0_.id as id1_0_, medicinest0_.chemical_composition as chemical2_0_, medicinest0_.date_of_expiry as date_of_3_0_, medicinest0_.name as name4_0_, medicinest0_.number_of_tablets_in_stock as number_o5_0_, medicinest0_.pharmacy_name as pharmacy6_0_, medicinest0_.target_ailment as target_a7_0_ from medicine_stock medicinest0_ where medicinest0_.name=?
+2021-07-07 22:54:52.087 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 22:54:52.087 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [1]
+2021-07-07 22:54:52.087 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([chemical2_0_] : [VARCHAR]) - [disaccharide gentiobiose, dicarboxylic acid crocetin]
+2021-07-07 22:54:52.087 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([date_of_3_0_] : [DATE]) - [2022-09-12]
+2021-07-07 22:54:52.088 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 22:54:52.088 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([number_o5_0_] : [INTEGER]) - [95]
+2021-07-07 22:54:52.088 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pharmacy6_0_] : [VARCHAR]) - [Healthy Pharmacy]
+2021-07-07 22:54:52.088 TRACE 18696 --- [http-nio-8081-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([target_a7_0_] : [VARCHAR]) - [General]
+2021-07-07 22:54:52.088 DEBUG 18696 --- [http-nio-8081-exec-9] c.c.m.service.MedicineStockServiceImpl   : NUMBER OF TABLETS IN STOCK BY NAME MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=2022-09-12, numberOfTabletsInStock=95):
+2021-07-07 22:54:52.088  INFO 18696 --- [http-nio-8081-exec-9] c.c.m.c.MedicineStockController          : END
+2021-07-07 22:54:52.089 DEBUG 18696 --- [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:54:52.089 DEBUG 18696 --- [http-nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid cro (truncated)...]
+2021-07-07 22:54:52.090 DEBUG 18696 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:56:03.607 DEBUG 18696 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/medicine-stock/get-stock-count/Crocin", parameters={}
+2021-07-07 22:56:03.608 DEBUG 18696 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.medicinestock.controller.MedicineStockController#getStockCountForMedicine(String, String)
+2021-07-07 22:56:03.608  INFO 18696 --- [http-nio-8081-exec-2] c.c.m.c.MedicineStockController          : START
+2021-07-07 22:56:03.625 DEBUG 18696 --- [http-nio-8081-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.medicinestock.model.JwtResponse]
+2021-07-07 22:56:03.625  INFO 18696 --- [http-nio-8081-exec-2] c.c.m.service.MedicineStockServiceImpl   : START
+2021-07-07 22:56:03.625  INFO 18696 --- [http-nio-8081-exec-2] c.c.m.service.MedicineStockServiceImpl   : END
+2021-07-07 22:56:03.626 DEBUG 18696 --- [http-nio-8081-exec-2] org.hibernate.SQL                        : select medicinest0_.id as id1_0_, medicinest0_.chemical_composition as chemical2_0_, medicinest0_.date_of_expiry as date_of_3_0_, medicinest0_.name as name4_0_, medicinest0_.number_of_tablets_in_stock as number_o5_0_, medicinest0_.pharmacy_name as pharmacy6_0_, medicinest0_.target_ailment as target_a7_0_ from medicine_stock medicinest0_ where medicinest0_.name=?
+2021-07-07 22:56:03.627 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 22:56:03.628 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [1]
+2021-07-07 22:56:03.629 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([chemical2_0_] : [VARCHAR]) - [disaccharide gentiobiose, dicarboxylic acid crocetin]
+2021-07-07 22:56:03.629 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([date_of_3_0_] : [DATE]) - [2022-09-12]
+2021-07-07 22:56:03.629 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 22:56:03.629 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([number_o5_0_] : [INTEGER]) - [95]
+2021-07-07 22:56:03.629 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pharmacy6_0_] : [VARCHAR]) - [Healthy Pharmacy]
+2021-07-07 22:56:03.630 TRACE 18696 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([target_a7_0_] : [VARCHAR]) - [General]
+2021-07-07 22:56:03.630 DEBUG 18696 --- [http-nio-8081-exec-2] c.c.m.service.MedicineStockServiceImpl   : NUMBER OF TABLETS IN STOCK BY NAME MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=2022-09-12, numberOfTabletsInStock=95):
+2021-07-07 22:56:03.630  INFO 18696 --- [http-nio-8081-exec-2] c.c.m.c.MedicineStockController          : END
+2021-07-07 22:56:03.631 DEBUG 18696 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:56:03.631 DEBUG 18696 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid cro (truncated)...]
+2021-07-07 22:56:03.632 DEBUG 18696 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:56:48.551 DEBUG 18696 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/medicine-stock/get-stock-count/Crocin", parameters={}
+2021-07-07 22:56:48.551 DEBUG 18696 --- [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.medicinestock.controller.MedicineStockController#getStockCountForMedicine(String, String)
+2021-07-07 22:56:48.552  INFO 18696 --- [http-nio-8081-exec-3] c.c.m.c.MedicineStockController          : START
+2021-07-07 22:56:48.569 DEBUG 18696 --- [http-nio-8081-exec-3] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.medicinestock.model.JwtResponse]
+2021-07-07 22:56:48.569  INFO 18696 --- [http-nio-8081-exec-3] c.c.m.service.MedicineStockServiceImpl   : START
+2021-07-07 22:56:48.569  INFO 18696 --- [http-nio-8081-exec-3] c.c.m.service.MedicineStockServiceImpl   : END
+2021-07-07 22:56:48.570 DEBUG 18696 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : select medicinest0_.id as id1_0_, medicinest0_.chemical_composition as chemical2_0_, medicinest0_.date_of_expiry as date_of_3_0_, medicinest0_.name as name4_0_, medicinest0_.number_of_tablets_in_stock as number_o5_0_, medicinest0_.pharmacy_name as pharmacy6_0_, medicinest0_.target_ailment as target_a7_0_ from medicine_stock medicinest0_ where medicinest0_.name=?
+2021-07-07 22:56:48.570 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 22:56:48.571 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [1]
+2021-07-07 22:56:48.571 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([chemical2_0_] : [VARCHAR]) - [disaccharide gentiobiose, dicarboxylic acid crocetin]
+2021-07-07 22:56:48.571 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([date_of_3_0_] : [DATE]) - [2022-09-12]
+2021-07-07 22:56:48.571 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 22:56:48.572 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([number_o5_0_] : [INTEGER]) - [95]
+2021-07-07 22:56:48.572 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pharmacy6_0_] : [VARCHAR]) - [Healthy Pharmacy]
+2021-07-07 22:56:48.572 TRACE 18696 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([target_a7_0_] : [VARCHAR]) - [General]
+2021-07-07 22:56:48.572 DEBUG 18696 --- [http-nio-8081-exec-3] c.c.m.service.MedicineStockServiceImpl   : NUMBER OF TABLETS IN STOCK BY NAME MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=2022-09-12, numberOfTabletsInStock=95):
+2021-07-07 22:56:48.572  INFO 18696 --- [http-nio-8081-exec-3] c.c.m.c.MedicineStockController          : END
+2021-07-07 22:56:48.572 DEBUG 18696 --- [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:56:48.573 DEBUG 18696 --- [http-nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid cro (truncated)...]
+2021-07-07 22:56:48.573 DEBUG 18696 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 22:56:48.578 DEBUG 18696 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/medicine-stock/update-stock/Crocin/0", parameters={}
+2021-07-07 22:56:48.579 DEBUG 18696 --- [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.medicinestock.controller.MedicineStockController#updateNumberOfTabletsInStockByName(String, String, int)
+2021-07-07 22:56:48.580  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.c.MedicineStockController          : START
+2021-07-07 22:56:48.597 DEBUG 18696 --- [http-nio-8081-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.medicinestock.model.JwtResponse]
+2021-07-07 22:56:48.598  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.service.MedicineStockServiceImpl   : START
+2021-07-07 22:56:48.598  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.service.MedicineStockServiceImpl   : END
+2021-07-07 22:56:48.599 DEBUG 18696 --- [http-nio-8081-exec-4] org.hibernate.SQL                        : select medicinest0_.id as id1_0_, medicinest0_.chemical_composition as chemical2_0_, medicinest0_.date_of_expiry as date_of_3_0_, medicinest0_.name as name4_0_, medicinest0_.number_of_tablets_in_stock as number_o5_0_, medicinest0_.pharmacy_name as pharmacy6_0_, medicinest0_.target_ailment as target_a7_0_ from medicine_stock medicinest0_ where medicinest0_.name=?
+2021-07-07 22:56:48.599 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 22:56:48.599 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [1]
+2021-07-07 22:56:48.600 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([chemical2_0_] : [VARCHAR]) - [disaccharide gentiobiose, dicarboxylic acid crocetin]
+2021-07-07 22:56:48.600 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([date_of_3_0_] : [DATE]) - [2022-09-12]
+2021-07-07 22:56:48.600 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 22:56:48.600 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([number_o5_0_] : [INTEGER]) - [95]
+2021-07-07 22:56:48.600 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([pharmacy6_0_] : [VARCHAR]) - [Healthy Pharmacy]
+2021-07-07 22:56:48.600 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([target_a7_0_] : [VARCHAR]) - [General]
+2021-07-07 22:56:48.601 DEBUG 18696 --- [http-nio-8081-exec-4] c.c.m.service.MedicineStockServiceImpl   : NUMBER OF TABLETS IN STOCK BY NAME MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=2022-09-12, numberOfTabletsInStock=95):
+2021-07-07 22:56:48.601  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.service.MedicineStockServiceImpl   : START
+2021-07-07 22:56:48.601  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.service.MedicineStockServiceImpl   : Crocin ############# 0
+2021-07-07 22:56:48.602 DEBUG 18696 --- [http-nio-8081-exec-4] org.hibernate.SQL                        : UPDATE MEDICINE_STOCK M SET M.NUMBER_OF_TABLETS_IN_STOCK =? where M.NAME =?
+2021-07-07 22:56:48.602 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [0]
+2021-07-07 22:56:48.602 TRACE 18696 --- [http-nio-8081-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Crocin]
+2021-07-07 22:56:48.603  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.service.MedicineStockServiceImpl   : END
+2021-07-07 22:56:48.603  INFO 18696 --- [http-nio-8081-exec-4] c.c.m.c.MedicineStockController          : END
+2021-07-07 22:56:48.603 DEBUG 18696 --- [http-nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 22:56:48.604 DEBUG 18696 --- [http-nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [true]
+2021-07-07 22:56:48.604 DEBUG 18696 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
