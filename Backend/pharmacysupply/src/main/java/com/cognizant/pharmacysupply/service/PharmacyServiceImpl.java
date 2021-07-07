@@ -95,7 +95,7 @@ public class PharmacyServiceImpl implements PharmacyService {
 			throws MedicineNotFoundException {
 		log.info("Start");
 		MedicineStock medicineStock = null;
-		log.info("Medicine : {}", medicineDemand);
+		log.info("Medicine : {}", medicineDemand.toString());
 		try {
 			medicineStock = stockFeignClient.getNumberOfTabletsInStockByName(token, medicineDemand.getMedicineName());
 		} catch (FeignException ex) {
