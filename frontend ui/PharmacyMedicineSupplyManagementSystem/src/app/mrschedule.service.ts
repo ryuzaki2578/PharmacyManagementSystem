@@ -23,13 +23,13 @@ export class MrScheduleService {
     const token=localStorage.getItem('accessToken');
     //console.log(token);
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-       return this.httpClient.get<Mrschedule[]>('http://13.235.133.10:8082/api/medical-representative-schedule-service/RepSchedule',{headers});
+       return this.httpClient.get<Mrschedule[]>('http://15.164.180.169:8082/api/medical-representative-schedule-service/RepSchedule',{headers});
   }
   getMrSchedule(date:any){
     
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-      return this.httpClient.get<any>('http://13.235.133.10:8082/api/medical-representative-schedule-service/RepSchedule/'+date,{headers});
+      return this.httpClient.get<any>('http://15.164.180.169:8082/api/medical-representative-schedule-service/RepSchedule/'+date,{headers});
   }
   
 }
