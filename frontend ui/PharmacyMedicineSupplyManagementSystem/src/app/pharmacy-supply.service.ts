@@ -11,11 +11,12 @@ export class PharmacySupplyService {
   getMedicineSupplyCount(medicinedemand:MedicineDemand[]){
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-    return this.httpClient.post("http://localhost:8083/api/pharmacy-medicine-supply/pharmacy-supply",{medicinedemand,headers});
+    return this.httpClient.post("http://localhost:8083/api/pharmacy-medicine-supply/pharmacy-supply",medicinedemand,{headers});
   }
   getPharmcySupply(){
     const token=localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}`});
-    this.httpClient.get("http://localhost:8083/api/pharmacy-medicine-supply/getMedicineDemand",{headers});
+    console.log(token);
+    return this.httpClient.get("http://localhost:8083/api/pharmacy-medicine-supply/getMedicineDemand",{headers});
   }
 }

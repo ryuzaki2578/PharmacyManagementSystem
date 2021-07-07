@@ -648,3 +648,509 @@
 2021-07-07 20:59:23.604 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2021-07-07 20:59:23.605 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PharmacyMedicineSupply(id=1, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=80)]]
 2021-07-07 20:59:23.607 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:16:25.354 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:16:25.356 DEBUG 18644 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:16:25.391 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2021-07-07 21:17:31.955 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:17:31.957 DEBUG 18644 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:17:31.961 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2021-07-07 21:18:47.174 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:18:47.177 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:18:47.182 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2021-07-07 21:20:12.186  INFO 18644 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-07-07 21:20:12.205  INFO 18644 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-07-07 21:20:12.215  INFO 18644 --- [Thread-34] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-07-07 21:20:12.218 DEBUG 18644 --- [Thread-34] org.hibernate.SQL                        : drop table if exists medicine_demand CASCADE 
+2021-07-07 21:20:12.237 DEBUG 18644 --- [Thread-34] org.hibernate.SQL                        : drop table if exists medicine_supply CASCADE 
+2021-07-07 21:20:12.243 DEBUG 18644 --- [Thread-34] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2021-07-07 21:20:12.474  WARN 18644 --- [Thread-34] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-07-07 21:20:12.476  INFO 18644 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2021-07-07 21:20:12.480  INFO 18644 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2021-07-07 21:20:12.788  INFO 18644 --- [restartedMain] c.c.p.PharmacySupplyApplication          : START
+2021-07-07 21:20:13.311  INFO 18644 --- [restartedMain] c.c.p.PharmacySupplyApplication          : No active profile set, falling back to default profiles: default
+2021-07-07 21:20:13.842  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-07-07 21:20:13.905  INFO 18644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 2 JPA repository interfaces.
+2021-07-07 21:20:14.006  INFO 18644 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c843b4a3-ef62-3ccb-9e37-33089a001e23
+2021-07-07 21:20:14.172  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2021-07-07 21:20:14.174  INFO 18644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-07 21:20:14.174  INFO 18644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-07-07 21:20:14.264  INFO 18644 --- [restartedMain] .c.C.[.[.[/api/pharmacy-medicine-supply] : Initializing Spring embedded WebApplicationContext
+2021-07-07 21:20:14.265  INFO 18644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 945 ms
+2021-07-07 21:20:14.317  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2021-07-07 21:20:14.322  INFO 18644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2021-07-07 21:20:14.323  INFO 18644 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-07 21:20:14.356 DEBUG 18644 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2021-07-07 21:20:14.400  INFO 18644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-07 21:20:14.416  INFO 18644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-07 21:20:14.504 DEBUG 18644 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medicine_demand CASCADE 
+2021-07-07 21:20:14.506 DEBUG 18644 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medicine_supply CASCADE 
+2021-07-07 21:20:14.506 DEBUG 18644 --- [restartedMain] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2021-07-07 21:20:14.507 DEBUG 18644 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2021-07-07 21:20:14.508 DEBUG 18644 --- [restartedMain] org.hibernate.SQL                        : create table medicine_demand (id integer not null, demand_count integer not null, medicine_name varchar(255) not null, primary key (id))
+2021-07-07 21:20:14.510 DEBUG 18644 --- [restartedMain] org.hibernate.SQL                        : create table medicine_supply (id integer not null, medicine_name varchar(255), pharmacy_name varchar(255), supply_count integer not null, primary key (id))
+2021-07-07 21:20:14.513  INFO 18644 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-07 21:20:14.514  INFO 18644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-07 21:20:14.543  WARN 18644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-07-07 21:20:14.683  WARN 18644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-07 21:20:14.807  WARN 18644 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-07-07 21:20:14.808  INFO 18644 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-07-07 21:20:14.906  INFO 18644 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-07 21:20:14.915 DEBUG 18644 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-07-07 21:20:14.931 DEBUG 18644 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2021-07-07 21:20:14.941 DEBUG 18644 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-07-07 21:20:14.968 DEBUG 18644 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-07-07 21:20:15.244  INFO 18644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path '/api/pharmacy-medicine-supply'
+2021-07-07 21:20:15.429  INFO 18644 --- [restartedMain] c.c.p.PharmacySupplyApplication          : Started PharmacySupplyApplication in 2.59 seconds (JVM running for 2295.16)
+2021-07-07 21:20:15.431  INFO 18644 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-07-07 21:20:15.432  INFO 18644 --- [restartedMain] c.c.p.PharmacySupplyApplication          : END
+2021-07-07 21:20:32.506  INFO 18644 --- [http-nio-8083-exec-2] .c.C.[.[.[/api/pharmacy-medicine-supply] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-07 21:20:32.507  INFO 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-07 21:20:32.507 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-07-07 21:20:32.513 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-07-07 21:20:32.514  INFO 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-07-07 21:20:32.517 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:20:32.518 DEBUG 18644 --- [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:20:32.534 DEBUG 18644 --- [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@46451217]]
+2021-07-07 21:20:32.566  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:20:32.567 DEBUG 18644 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@46451217]:
+2021-07-07 21:20:32.567  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:20:32.594 DEBUG 18644 --- [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleAllErrors(Exception)
+2021-07-07 21:20:32.605 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:20:32.606 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(timestamp=2021-07-07T21:20:32.597674400, status=400 BAD_REQUEST, reason=Bad request, m (truncated)...]
+2021-07-07 21:20:32.609  WARN 18644 --- [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$Forbidden: [403] during [GET] to [http://localhost:8084/api/auth/validate] [AuthenticationFeignClient#verifyToken(String)]: []]
+2021-07-07 21:20:32.609 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 21:20:42.894 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:20:42.895 DEBUG 18644 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:20:42.897 DEBUG 18644 --- [http-nio-8083-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@1debe85b]]
+2021-07-07 21:20:42.902  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:20:42.903 DEBUG 18644 --- [http-nio-8083-exec-3] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@1debe85b]:
+2021-07-07 21:20:42.904  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:20:42.918 DEBUG 18644 --- [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleAllErrors(Exception)
+2021-07-07 21:20:42.921 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:20:42.922 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(timestamp=2021-07-07T21:20:42.920973300, status=400 BAD_REQUEST, reason=Bad request, m (truncated)...]
+2021-07-07 21:20:42.925  WARN 18644 --- [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$Forbidden: [403] during [GET] to [http://localhost:8084/api/auth/validate] [AuthenticationFeignClient#verifyToken(String)]: []]
+2021-07-07 21:20:42.925 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 21:21:03.733 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:21:03.734 DEBUG 18644 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:21:03.736 DEBUG 18644 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@3a88eb4e]]
+2021-07-07 21:21:03.736  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:21:03.736 DEBUG 18644 --- [http-nio-8083-exec-4] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@3a88eb4e]:
+2021-07-07 21:21:03.737  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:03.801 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:21:03.803  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:03.803  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:03.804  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@3a88eb4e] 
+2021-07-07 21:21:03.805  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:03.806  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@3a88eb4e
+2021-07-07 21:21:03.878 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 21:21:03.880  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:03.881  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=68)
+2021-07-07 21:21:03.881  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 68
+2021-07-07 21:21:03.885 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:21:03.886 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2021-07-07 21:21:03.886 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 21:21:12.422 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:21:12.423 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:21:12.425 DEBUG 18644 --- [http-nio-8083-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@4982303f]]
+2021-07-07 21:21:12.425  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:21:12.426 DEBUG 18644 --- [http-nio-8083-exec-5] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@4982303f]:
+2021-07-07 21:21:12.426  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:12.488 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:21:12.490  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:12.490  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:12.490  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@4982303f] 
+2021-07-07 21:21:12.490  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:12.491  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@4982303f
+2021-07-07 21:21:12.566 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 21:21:12.567  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:12.568  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=68)
+2021-07-07 21:21:12.569  INFO 18644 --- [http-nio-8083-exec-5] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 68
+2021-07-07 21:21:12.570 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:21:12.570 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2021-07-07 21:21:12.571 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-07-07 21:21:18.344 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:21:18.345 DEBUG 18644 --- [http-nio-8083-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:21:18.350 DEBUG 18644 --- [http-nio-8083-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@8ab7231]]
+2021-07-07 21:21:18.352  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:21:18.353 DEBUG 18644 --- [http-nio-8083-exec-6] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@8ab7231]:
+2021-07-07 21:21:18.353  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:18.411 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:21:18.413  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:18.414  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:18.415  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@8ab7231] 
+2021-07-07 21:21:18.415  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:18.416  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@8ab7231
+2021-07-07 21:21:18.491 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 21:21:18.492  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:18.492  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=68)
+2021-07-07 21:21:18.493  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 68
+2021-07-07 21:21:18.493  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:18.493  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : number of tablets 68
+2021-07-07 21:21:18.493  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : val = 60
+2021-07-07 21:21:18.570 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 21:21:18.571  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@8ab7231 medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=8)
+2021-07-07 21:21:18.572  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8):
+2021-07-07 21:21:18.572  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:18.579 DEBUG 18644 --- [http-nio-8083-exec-6] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 21:21:18.586 DEBUG 18644 --- [http-nio-8083-exec-6] org.hibernate.SQL                        : insert into medicine_supply (medicine_name, pharmacy_name, supply_count, id) values (?, ?, ?, ?)
+2021-07-07 21:21:18.588 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 21:21:18.590 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Healthy Pharmacy]
+2021-07-07 21:21:18.592 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [8]
+2021-07-07 21:21:18.592 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [1]
+2021-07-07 21:21:18.606 DEBUG 18644 --- [http-nio-8083-exec-6] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 21:21:18.609 DEBUG 18644 --- [http-nio-8083-exec-6] org.hibernate.SQL                        : insert into medicine_demand (demand_count, medicine_name, id) values (?, ?, ?)
+2021-07-07 21:21:18.610 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [8]
+2021-07-07 21:21:18.611 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Crocin]
+2021-07-07 21:21:18.612 TRACE 18644 --- [http-nio-8083-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [2]
+2021-07-07 21:21:18.615  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:18.615  INFO 18644 --- [http-nio-8083-exec-6] c.c.p.controller.PharmacyController      : End
+2021-07-07 21:21:18.617 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:21:18.618 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PharmacyMedicineSupply(id=1, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=8)]]
+2021-07-07 21:21:18.625 DEBUG 18644 --- [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:21:24.356 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:21:24.357 DEBUG 18644 --- [http-nio-8083-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:21:24.360  INFO 18644 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:24.452 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:21:24.454  INFO 18644 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:21:24.454  INFO 18644 --- [http-nio-8083-exec-8] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:21:24.462 DEBUG 18644 --- [http-nio-8083-exec-8] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:21:24.465 TRACE 18644 --- [http-nio-8083-exec-8] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:21:24.467 TRACE 18644 --- [http-nio-8083-exec-8] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:21:24.469 TRACE 18644 --- [http-nio-8083-exec-8] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:21:24.472 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:21:24.473 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@40ab7b9d]]
+2021-07-07 21:21:24.476 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:22:43.532 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:22:43.534 DEBUG 18644 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:22:43.536 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:22:43.537 DEBUG 18644 --- [http-nio-8083-exec-3] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: Missing request header 'Authorization' for method parameter of type String
+2021-07-07 21:22:43.538 DEBUG 18644 --- [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:22:43.540 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:22:43.541  WARN 18644 --- [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'Authorization' for method parameter of type String]
+2021-07-07 21:22:43.542 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:22:43.538 DEBUG 18644 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:22:43.547  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:22:43.665 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:22:43.667  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:22:43.668  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:22:43.673 DEBUG 18644 --- [http-nio-8083-exec-4] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:22:43.675 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:22:43.677 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:22:43.679 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:22:43.682 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:22:43.683 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@3d919453]]
+2021-07-07 21:22:43.689 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:22:47.709 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:22:47.711 DEBUG 18644 --- [http-nio-8083-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:22:47.713  INFO 18644 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:22:47.717 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:22:47.721 DEBUG 18644 --- [http-nio-8083-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:22:47.724 DEBUG 18644 --- [http-nio-8083-exec-8] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: Missing request header 'Authorization' for method parameter of type String
+2021-07-07 21:22:47.725 DEBUG 18644 --- [http-nio-8083-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:22:47.740 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:22:47.741  WARN 18644 --- [http-nio-8083-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'Authorization' for method parameter of type String]
+2021-07-07 21:22:47.742 DEBUG 18644 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:22:47.830 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:22:47.834  INFO 18644 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:22:47.834  INFO 18644 --- [http-nio-8083-exec-7] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:22:47.837 DEBUG 18644 --- [http-nio-8083-exec-7] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:22:47.839 TRACE 18644 --- [http-nio-8083-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:22:47.840 TRACE 18644 --- [http-nio-8083-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:22:47.841 TRACE 18644 --- [http-nio-8083-exec-7] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:22:47.843 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:22:47.844 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@58b993e4]]
+2021-07-07 21:22:47.847 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:23:33.062 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:23:33.064 DEBUG 18644 --- [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:23:33.066  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:23:33.077 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:23:33.086 DEBUG 18644 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:23:33.090 DEBUG 18644 --- [http-nio-8083-exec-1] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:23:33.091 DEBUG 18644 --- [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:23:33.093 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:23:33.094  WARN 18644 --- [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:23:33.095 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:23:33.202 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:23:33.204  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:23:33.205  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:23:33.209 DEBUG 18644 --- [http-nio-8083-exec-2] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:23:33.212 TRACE 18644 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:23:33.214 TRACE 18644 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:23:33.215 TRACE 18644 --- [http-nio-8083-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:23:33.220 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:23:33.221 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@6c544f00]]
+2021-07-07 21:23:33.225 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:23:38.918 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:23:38.918 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:23:38.923 DEBUG 18644 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:23:38.925 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:23:38.925  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:23:38.927 DEBUG 18644 --- [http-nio-8083-exec-5] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:23:38.927 DEBUG 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:23:38.928 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:23:38.929  WARN 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:23:38.929 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:23:39.069 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:23:39.070  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:23:39.071  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:23:39.074 DEBUG 18644 --- [http-nio-8083-exec-4] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:23:39.076 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:23:39.077 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:23:39.078 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:23:39.080 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:23:39.081 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@1fd566cf]]
+2021-07-07 21:23:39.083 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:24:37.039 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:24:37.041 DEBUG 18644 --- [http-nio-8083-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:24:37.043  INFO 18644 --- [http-nio-8083-exec-10] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:24:37.043 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:24:37.046 DEBUG 18644 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:24:37.050 DEBUG 18644 --- [http-nio-8083-exec-1] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:24:37.052 DEBUG 18644 --- [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:24:37.054 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:24:37.055  WARN 18644 --- [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:24:37.056 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:24:37.178 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:24:37.180  INFO 18644 --- [http-nio-8083-exec-10] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:24:37.180  INFO 18644 --- [http-nio-8083-exec-10] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:24:37.182 DEBUG 18644 --- [http-nio-8083-exec-10] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:24:37.185 TRACE 18644 --- [http-nio-8083-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:24:37.186 TRACE 18644 --- [http-nio-8083-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:24:37.187 TRACE 18644 --- [http-nio-8083-exec-10] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:24:37.190 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:24:37.191 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@309717f4]]
+2021-07-07 21:24:37.193 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:25:57.416 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:25:57.419 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:25:57.424 DEBUG 18644 --- [http-nio-8083-exec-5] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:25:57.426 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:25:57.426 DEBUG 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:25:57.428 DEBUG 18644 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:25:57.429 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:25:57.430  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:25:57.431  WARN 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:25:57.432 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:25:57.522 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:25:57.525  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:25:57.526  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:25:57.529 DEBUG 18644 --- [http-nio-8083-exec-4] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:25:57.532 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:25:57.534 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:25:57.535 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:25:57.538 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:25:57.539 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@3a4df265]]
+2021-07-07 21:25:57.543 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:26:28.030 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:26:28.032 DEBUG 18644 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:26:28.034  INFO 18644 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:26:28.035 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:26:28.036 DEBUG 18644 --- [http-nio-8083-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:26:28.039 DEBUG 18644 --- [http-nio-8083-exec-10] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:26:28.040 DEBUG 18644 --- [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:26:28.042 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:26:28.043  WARN 18644 --- [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:26:28.044 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:26:28.110 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:26:28.112  INFO 18644 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:26:28.113  INFO 18644 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:26:28.115 DEBUG 18644 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:26:28.117 TRACE 18644 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:26:28.119 TRACE 18644 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:26:28.121 TRACE 18644 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:26:28.124 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:26:28.124 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@2ee68a4c]]
+2021-07-07 21:26:28.126 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:26:44.584 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:26:44.587 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:26:44.587 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:26:44.589 DEBUG 18644 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:26:44.591  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:26:44.592 DEBUG 18644 --- [http-nio-8083-exec-5] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:26:44.594 DEBUG 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:26:44.596 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:26:44.597  WARN 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:26:44.598 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:26:44.721 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:26:44.723  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:26:44.724  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:26:44.726 DEBUG 18644 --- [http-nio-8083-exec-4] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:26:44.728 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:26:44.730 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:26:44.731 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:26:44.734 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:26:44.735 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@1b1699a9]]
+2021-07-07 21:26:44.737 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:29:20.656 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:29:20.657 DEBUG 18644 --- [http-nio-8083-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:29:20.657 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:29:20.660 DEBUG 18644 --- [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:29:20.662 DEBUG 18644 --- [http-nio-8083-exec-10] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:29:20.663 DEBUG 18644 --- [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:29:20.663  INFO 18644 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:29:20.664 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:29:20.666  WARN 18644 --- [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:29:20.667 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:29:20.770 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:29:20.773  INFO 18644 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:29:20.773  INFO 18644 --- [http-nio-8083-exec-1] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:29:20.777 DEBUG 18644 --- [http-nio-8083-exec-1] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:29:20.781 TRACE 18644 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:29:20.786 TRACE 18644 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:29:20.788 TRACE 18644 --- [http-nio-8083-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:29:20.791 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:29:20.793 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@2157c4f3]]
+2021-07-07 21:29:20.796 DEBUG 18644 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:29:40.093 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:29:40.094 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:29:40.095 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:29:40.097 DEBUG 18644 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:29:40.098 DEBUG 18644 --- [http-nio-8083-exec-5] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:29:40.099 DEBUG 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:29:40.100  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:29:40.101 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:29:40.102  WARN 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:29:40.103 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:29:40.180 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:29:40.182  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:29:40.182  INFO 18644 --- [http-nio-8083-exec-4] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:29:40.184 DEBUG 18644 --- [http-nio-8083-exec-4] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:29:40.186 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:29:40.188 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:29:40.189 TRACE 18644 --- [http-nio-8083-exec-4] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:29:40.191 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:29:40.192 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@698ec8f1]]
+2021-07-07 21:29:40.194 DEBUG 18644 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:30:00.997 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:30:00.997 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:30:00.999 DEBUG 18644 --- [http-nio-8083-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:30:01.001 DEBUG 18644 --- [http-nio-8083-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:30:01.003 DEBUG 18644 --- [http-nio-8083-exec-10] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:30:01.005 DEBUG 18644 --- [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:30:01.006 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:30:01.009  WARN 18644 --- [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:30:01.010 DEBUG 18644 --- [http-nio-8083-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:30:01.010  INFO 18644 --- [http-nio-8083-exec-9] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:30:01.088 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:30:01.090  INFO 18644 --- [http-nio-8083-exec-9] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:30:01.091  INFO 18644 --- [http-nio-8083-exec-9] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:30:01.098 DEBUG 18644 --- [http-nio-8083-exec-9] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:30:01.100 TRACE 18644 --- [http-nio-8083-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:30:01.101 TRACE 18644 --- [http-nio-8083-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:30:01.102 TRACE 18644 --- [http-nio-8083-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:30:01.105 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:30:01.105 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@6672b2ab]]
+2021-07-07 21:30:01.108 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:30:19.074 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/pharmacy-medicine-supply/getMedicineDemand", parameters={}
+2021-07-07 21:30:19.074 DEBUG 18644 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getMedicineDemand(String)
+2021-07-07 21:30:19.076  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:30:19.077 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:30:19.078 DEBUG 18644 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:30:19.082 DEBUG 18644 --- [http-nio-8083-exec-5] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:30:19.083 DEBUG 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:30:19.086 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:30:19.086  WARN 18644 --- [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:30:19.087 DEBUG 18644 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:30:19.164 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:30:19.171  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:30:19.172  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:30:19.173 DEBUG 18644 --- [http-nio-8083-exec-3] org.hibernate.SQL                        : select medicinede0_.id as id1_0_, medicinede0_.demand_count as demand_c2_0_, medicinede0_.medicine_name as medicine3_0_ from medicine_demand medicinede0_
+2021-07-07 21:30:19.175 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [INTEGER]) - [2]
+2021-07-07 21:30:19.176 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([demand_c2_0_] : [INTEGER]) - [8]
+2021-07-07 21:30:19.176 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([medicine3_0_] : [VARCHAR]) - [Crocin]
+2021-07-07 21:30:19.178 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:30:19.178 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.cognizant.pharmacysupply.model.MedicineDemand@4e398107]]
+2021-07-07 21:30:19.180 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:30:53.159 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:30:53.163 DEBUG 18644 --- [http-nio-8083-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:30:53.170 DEBUG 18644 --- [http-nio-8083-exec-7] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:30:53.172 DEBUG 18644 --- [http-nio-8083-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:30:53.175 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:30:53.176  WARN 18644 --- [http-nio-8083-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:30:53.178 DEBUG 18644 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:33:11.300 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:33:11.302 DEBUG 18644 --- [http-nio-8083-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:33:11.306 DEBUG 18644 --- [http-nio-8083-exec-9] .w.s.m.m.a.ServletInvocableHandlerMethod : Could not resolve parameter [1] in public org.springframework.http.ResponseEntity<java.util.List<com.cognizant.pharmacysupply.model.PharmacyMedicineSupply>> com.cognizant.pharmacysupply.controller.PharmacyController.getPharmacySupply(java.lang.String,java.util.List<com.cognizant.pharmacysupply.model.MedicineDemand>) throws com.cognizant.pharmacysupply.exception.MedicineNotFoundException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-07-07 21:33:11.307 DEBUG 18644 --- [http-nio-8083-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleException(Exception, WebRequest)
+2021-07-07 21:33:11.310 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : No match for [application/json, text/plain, */*], supported: []
+2021-07-07 21:33:11.311  WARN 18644 --- [http-nio-8083-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<com.cognizant.pharmacysupply.model.MedicineDemand>` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2021-07-07 21:33:11.312 DEBUG 18644 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2021-07-07 21:34:24.999 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:34:25.005 DEBUG 18644 --- [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:34:25.010 DEBUG 18644 --- [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@222083ec]]
+2021-07-07 21:34:25.012  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:34:25.013 DEBUG 18644 --- [http-nio-8083-exec-2] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@222083ec]:
+2021-07-07 21:34:25.014  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:34:25.091 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:34:25.092  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:34:25.093  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:34:25.093  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@222083ec] 
+2021-07-07 21:34:25.094  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:34:25.094  INFO 18644 --- [http-nio-8083-exec-2] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@222083ec
+2021-07-07 21:34:25.257 DEBUG 18644 --- [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.cognizant.pharmacysupply.exception.GlobalHandler#handleFeignStatusException(MedicineNotFoundException)
+2021-07-07 21:34:25.258 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:34:25.259 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(timestamp=2021-07-07T21:34:25.258615900, status=403 FORBIDDEN, reason=You might have e (truncated)...]
+2021-07-07 21:34:25.261  WARN 18644 --- [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.cognizant.pharmacysupply.exception.MedicineNotFoundException: Medicine not found]
+2021-07-07 21:34:25.262 DEBUG 18644 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2021-07-07 21:35:01.938 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/pharmacy-medicine-supply/pharmacy-supply", parameters={}
+2021-07-07 21:35:01.940 DEBUG 18644 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.pharmacysupply.controller.PharmacyController#getPharmacySupply(String, List)
+2021-07-07 21:35:01.944 DEBUG 18644 --- [http-nio-8083-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [[com.cognizant.pharmacysupply.model.MedicineDemand@2e994c5e]]
+2021-07-07 21:35:01.946  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.controller.PharmacyController      : Start
+2021-07-07 21:35:01.947 DEBUG 18644 --- [http-nio-8083-exec-3] c.c.p.controller.PharmacyController      : medicineDemandList [com.cognizant.pharmacysupply.model.MedicineDemand@2e994c5e]:
+2021-07-07 21:35:01.948  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:35:02.026 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.JwtResponse]
+2021-07-07 21:35:02.028  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:35:02.028  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:35:02.029  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Medicine Demand List [com.cognizant.pharmacysupply.model.MedicineDemand@2e994c5e] 
+2021-07-07 21:35:02.029  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:35:02.029  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Medicine : com.cognizant.pharmacysupply.model.MedicineDemand@2e994c5e
+2021-07-07 21:35:02.119 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.cognizant.pharmacysupply.model.MedicineStock]
+2021-07-07 21:35:02.121  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:35:02.122  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : MedicineStock(id=1, name=Crocin, chemicalComposition=disaccharide gentiobiose, dicarboxylic acid crocetin, targetAilment=General, pharmacyName=Healthy Pharmacy, dateOfExpiry=Mon Sep 12 05:30:00 IST 2022, numberOfTabletsInStock=8)
+2021-07-07 21:35:02.123  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Medicine Crocin , Tablets 8
+2021-07-07 21:35:02.123  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : Start
+2021-07-07 21:35:02.123  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : number of tablets 8
+2021-07-07 21:35:02.123  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : val = 7
+2021-07-07 21:35:02.265 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.c.HttpMessageConverterExtractor    : Reading to [java.lang.Boolean]
+2021-07-07 21:35:02.266  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : medicineDemand com.cognizant.pharmacysupply.model.MedicineDemand@2e994c5e medicineSupply PharmacyMedicineSupply(id=0, pharmacyName=null, medicineName=Crocin, supplyCount=1)
+2021-07-07 21:35:02.267  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : medicineSupplyPharmacyMedicineSupply(id=0, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=1):
+2021-07-07 21:35:02.268  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:35:02.271 DEBUG 18644 --- [http-nio-8083-exec-3] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 21:35:02.274 DEBUG 18644 --- [http-nio-8083-exec-3] org.hibernate.SQL                        : insert into medicine_supply (medicine_name, pharmacy_name, supply_count, id) values (?, ?, ?, ?)
+2021-07-07 21:35:02.275 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Crocin]
+2021-07-07 21:35:02.277 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Healthy Pharmacy]
+2021-07-07 21:35:02.278 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2021-07-07 21:35:02.278 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [3]
+2021-07-07 21:35:02.282 DEBUG 18644 --- [http-nio-8083-exec-3] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-07-07 21:35:02.285 DEBUG 18644 --- [http-nio-8083-exec-3] org.hibernate.SQL                        : insert into medicine_demand (demand_count, medicine_name, id) values (?, ?, ?)
+2021-07-07 21:35:02.286 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2021-07-07 21:35:02.287 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Crocin]
+2021-07-07 21:35:02.288 TRACE 18644 --- [http-nio-8083-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [4]
+2021-07-07 21:35:02.290  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.service.PharmacyServiceImpl        : End
+2021-07-07 21:35:02.291  INFO 18644 --- [http-nio-8083-exec-3] c.c.p.controller.PharmacyController      : End
+2021-07-07 21:35:02.292 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:35:02.293 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[PharmacyMedicineSupply(id=3, pharmacyName=Healthy Pharmacy, medicineName=Crocin, supplyCount=1)]]
+2021-07-07 21:35:02.295 DEBUG 18644 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

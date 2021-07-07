@@ -21,6 +21,7 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MedicineSupplyComponent } from './medicine-supply/medicine-supply.component';
+import { MedicineDemandComponent } from './medicine-demand/medicine-demand.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -35,7 +36,8 @@ import { MedicineSupplyComponent } from './medicine-supply/medicine-supply.compo
     ContactUsComponent,
     MRScheduleComponent,
     PagenotfoundComponent,
-    MedicineSupplyComponent
+    MedicineSupplyComponent,
+    MedicineDemandComponent
   ],
   imports: [
     BrowserModule,
