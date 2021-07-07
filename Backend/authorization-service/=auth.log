@@ -8466,3 +8466,142 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired at 2021-07-07T21:13:07Z. Curren
 2021-07-07 21:35:02.181 DEBUG 14788 --- [http-nio-8084-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtResponse(userid=admin, username=administrator, isValid=true)]
 2021-07-07 21:35:02.183 DEBUG 14788 --- [http-nio-8084-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
 2021-07-07 21:35:02.183  INFO 14788 --- [http-nio-8084-exec-7] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 21:47:36.093  INFO 1772 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication on LAPTOP-EPAIT5E1 with PID 1772 (C:\Users\amanr\OneDrive\Documents\GitHub\PharmacyManagementSystem\Backend\authorization-service\target\classes started by amanr in C:\Users\amanr\OneDrive\Documents\GitHub\PharmacyManagementSystem\Backend\authorization-service)
+2021-07-07 21:47:36.095 DEBUG 1772 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2021-07-07 21:47:36.096  INFO 1772 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : No active profile set, falling back to default profiles: default
+2021-07-07 21:47:36.174  INFO 1772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-07 21:47:36.175  INFO 1772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-07 21:47:37.798  INFO 1772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-07-07 21:47:37.898  INFO 1772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84ms. Found 1 JPA repository interfaces.
+2021-07-07 21:47:38.805  INFO 1772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-07-07 21:47:38.828  INFO 1772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-07 21:47:38.828  INFO 1772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-07-07 21:47:39.004  INFO 1772 --- [restartedMain] o.a.c.c.C.[.[localhost].[/api/auth]      : Initializing Spring embedded WebApplicationContext
+2021-07-07 21:47:39.004  INFO 1772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2828 ms
+2021-07-07 21:47:39.177  INFO 1772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-07 21:47:39.444  INFO 1772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-07 21:47:39.452  INFO 1772 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2021-07-07 21:47:39.579 DEBUG 1772 --- [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2021-07-07 21:47:39.580 DEBUG 1772 --- [restartedMain] c.c.a.service.JwtRequestFilter           : Filter 'jwtRequestFilter' configured for use
+2021-07-07 21:47:39.689  INFO 1772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-07 21:47:39.748  INFO 1772 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-07 21:47:39.787  WARN 1772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-07 21:47:39.834  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 21:47:39.834  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 21:47:39.850  INFO 1772 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-07-07 21:47:39.896  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 21:47:39.916  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 21:47:39.922  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 21:47:39.923  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 21:47:39.972  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 21:47:39.978 DEBUG 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : SESSION CREATE POLICY org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer@4fbe10cb:
+2021-07-07 21:47:39.979 DEBUG 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : ADD FILTER BEFOREorg.springframework.security.config.annotation.web.builders.HttpSecurity@4e1a1fae:
+2021-07-07 21:47:39.979  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 21:47:39.980  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : START
+2021-07-07 21:47:39.981 DEBUG 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : ANT MATCHERSorg.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer@43e97d69:
+2021-07-07 21:47:39.981  INFO 1772 --- [restartedMain] c.c.a.config.WebSecurityConfig           : END
+2021-07-07 21:47:39.982  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2021-07-07 21:47:39.982  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], []
+2021-07-07 21:47:39.983  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/configuration/ui'], []
+2021-07-07 21:47:39.983  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/configuration/security'], []
+2021-07-07 21:47:39.983  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**'], []
+2021-07-07 21:47:39.983  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/manage/health/**'], []
+2021-07-07 21:47:40.020  INFO 1772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ba74c70, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ecbe9d5, org.springframework.security.web.header.HeaderWriterFilter@499ca226, org.springframework.security.web.authentication.logout.LogoutFilter@25b7a3e3, com.cognizant.authorization.service.JwtRequestFilter@37e8932e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@646887f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69c147a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27bec8de, org.springframework.security.web.session.SessionManagementFilter@512acaf1, org.springframework.security.web.access.ExceptionTranslationFilter@155d77a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@27ce0c4]
+2021-07-07 21:47:40.126  INFO 1772 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-07-07 21:47:40.172 DEBUG 1772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-07-07 21:47:40.256 DEBUG 1772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2021-07-07 21:47:40.300 DEBUG 1772 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-07-07 21:47:40.317 DEBUG 1772 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-07-07 21:47:40.349  INFO 1772 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-07 21:47:41.132 DEBUG 1772 --- [task-1] org.hibernate.SQL                        : drop table if exists user CASCADE 
+2021-07-07 21:47:41.136 DEBUG 1772 --- [task-1] org.hibernate.SQL                        : create table user (userid varchar(20) not null, password varchar(20), username varchar(20), primary key (userid))
+2021-07-07 21:47:41.149  INFO 1772 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-07 21:47:41.160  INFO 1772 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-07 21:47:41.194  INFO 1772 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-07 21:47:41.254  INFO 1772 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-07-07 21:47:41.332  INFO 1772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path '/api/auth'
+2021-07-07 21:47:41.334  INFO 1772 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-07-07 21:47:41.576  INFO 1772 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-07-07 21:47:41.589  INFO 1772 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : Started AuthorizationServiceApplication in 6.061 seconds (JVM running for 7.481)
+2021-07-07 21:47:41.597 DEBUG 1772 --- [restartedMain] c.c.a.AuthorizationServiceApplication    : END
+2021-07-07 21:47:43.031  INFO 1772 --- [http-nio-8084-exec-1] o.a.c.c.C.[.[localhost].[/api/auth]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-07 21:47:43.032  INFO 1772 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-07 21:47:43.032 DEBUG 1772 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-07-07 21:47:43.040 DEBUG 1772 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-07-07 21:47:43.040  INFO 1772 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-07-07 21:47:43.052  INFO 1772 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 21:47:43.052 DEBUG 1772 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@4655827f]
+2021-07-07 21:47:43.053 DEBUG 1772 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@2c1012d7
+2021-07-07 21:47:43.053 DEBUG 1772 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@1e5f9fa9
+2021-07-07 21:47:43.053 DEBUG 1772 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 21:47:43.071  INFO 1772 --- [http-nio-8084-exec-1] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 21:47:43.083  INFO 1772 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 21:47:43.083 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@4655827f]
+2021-07-07 21:47:43.083 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@1f824d4
+2021-07-07 21:47:43.083 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@1e5f9fa9
+2021-07-07 21:47:43.083 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 21:47:43.088 DEBUG 1772 --- [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2021-07-07 21:47:43.093 DEBUG 1772 --- [http-nio-8084-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#login(UserLoginCredential)
+2021-07-07 21:47:43.161 DEBUG 1772 --- [http-nio-8084-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserLoginCredential(userId=admin, password=admin)]
+2021-07-07 21:47:43.168  INFO 1772 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 21:47:43.168  INFO 1772 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 21:47:43.169 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : USERID AND PASSWORD admin:
+2021-07-07 21:47:43.170 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 21:47:43.195 DEBUG 1772 --- [http-nio-8084-exec-2] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 21:47:43.199 TRACE 1772 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 21:47:43.209 TRACE 1772 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 21:47:43.209 TRACE 1772 --- [http-nio-8084-exec-2] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 21:47:43.217 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 21:47:43.219 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 21:47:43.220 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 21:47:43.221 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : USERDETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 21:47:43.221  INFO 1772 --- [http-nio-8084-exec-2] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 21:47:43.222  INFO 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 21:47:43.222 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 21:47:43.222 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 21:47:43.223  INFO 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : START
+2021-07-07 21:47:43.223 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 21:47:43.223 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : SUBJECT admin:
+2021-07-07 21:47:43.326 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2MywiaWF0IjoxNjI1Njc0NjYzfQ.mzWhPB9iHxMjHsQJY3_CqMdxBBwT6n7Kh05rYUDEN9U:
+2021-07-07 21:47:43.326  INFO 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 21:47:43.327 DEBUG 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : CREATE TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2MywiaWF0IjoxNjI1Njc0NjYzfQ.mzWhPB9iHxMjHsQJY3_CqMdxBBwT6n7Kh05rYUDEN9U:
+2021-07-07 21:47:43.327  INFO 1772 --- [http-nio-8084-exec-2] c.c.authorization.service.JwtUtil        : END
+2021-07-07 21:47:43.337 DEBUG 1772 --- [http-nio-8084-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:47:43.337 DEBUG 1772 --- [http-nio-8084-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserToken(userid=admin, authToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2Mywia (truncated)...]
+2021-07-07 21:47:43.344 DEBUG 1772 --- [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:47:43.346  INFO 1772 --- [http-nio-8084-exec-2] c.c.a.service.JwtRequestFilter           : END
+2021-07-07 21:47:44.956  INFO 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : START
+2021-07-07 21:47:44.958 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : REQUEST FirewalledRequest[ org.apache.catalina.connector.RequestFacade@4655827f]
+2021-07-07 21:47:44.958 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : RESPONSE org.springframework.security.web.firewall.FirewalledResponse@764df8f
+2021-07-07 21:47:44.958 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : FILTER CHAIN org.apache.catalina.core.ApplicationFilterChain@1e5f9fa9
+2021-07-07 21:47:44.959 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : AUTH HEADER null:
+2021-07-07 21:47:44.960 DEBUG 1772 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2021-07-07 21:47:44.961 DEBUG 1772 --- [http-nio-8084-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.cognizant.authorization.controller.JwtAuthenticationController#login(UserLoginCredential)
+2021-07-07 21:47:44.963 DEBUG 1772 --- [http-nio-8084-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserLoginCredential(userId=admin, password=admin)]
+2021-07-07 21:47:44.964  INFO 1772 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 21:47:44.964  INFO 1772 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : START
+2021-07-07 21:47:44.964 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : USERID AND PASSWORD admin:
+2021-07-07 21:47:44.964 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 21:47:44.965 DEBUG 1772 --- [http-nio-8084-exec-3] org.hibernate.SQL                        : select myuser0_.userid as userid1_0_0_, myuser0_.password as password2_0_0_, myuser0_.username as username3_0_0_ from user myuser0_ where myuser0_.userid=?
+2021-07-07 21:47:44.966 TRACE 1772 --- [http-nio-8084-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2021-07-07 21:47:44.967 TRACE 1772 --- [http-nio-8084-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password2_0_0_] : [VARCHAR]) - [admin]
+2021-07-07 21:47:44.969 TRACE 1772 --- [http-nio-8084-exec-3] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_0_0_] : [VARCHAR]) - [administrator]
+2021-07-07 21:47:44.970 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 21:47:44.971 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : USERID 
+2021-07-07 21:47:44.972 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.service.CustomerDetailsService     : CUSTUSER MyUser(userid=admin, password=admin, username=administrator):
+2021-07-07 21:47:44.973 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : USERDETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 21:47:44.973  INFO 1772 --- [http-nio-8084-exec-3] c.c.a.c.JwtAuthenticationController      : END
+2021-07-07 21:47:44.973  INFO 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : START
+2021-07-07 21:47:44.974 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : USER DETAILS org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Not granted any authorities:
+2021-07-07 21:47:44.974 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 21:47:44.975  INFO 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : START
+2021-07-07 21:47:44.976 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : CLAIMS {}:
+2021-07-07 21:47:44.977 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : SUBJECT admin:
+2021-07-07 21:47:44.978 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2NCwiaWF0IjoxNjI1Njc0NjY0fQ.NlGff5jjKjapQfLcGomLZ_o_9dVGphsWKuKyjhv6P3k:
+2021-07-07 21:47:44.980  INFO 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : END
+2021-07-07 21:47:44.981 DEBUG 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : CREATE TOKEN eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2NCwiaWF0IjoxNjI1Njc0NjY0fQ.NlGff5jjKjapQfLcGomLZ_o_9dVGphsWKuKyjhv6P3k:
+2021-07-07 21:47:44.981  INFO 1772 --- [http-nio-8084-exec-3] c.c.authorization.service.JwtUtil        : END
+2021-07-07 21:47:44.982 DEBUG 1772 --- [http-nio-8084-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-07-07 21:47:44.983 DEBUG 1772 --- [http-nio-8084-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserToken(userid=admin, authToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNTY3NjQ2NCwia (truncated)...]
+2021-07-07 21:47:44.989 DEBUG 1772 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-07-07 21:47:44.990  INFO 1772 --- [http-nio-8084-exec-3] c.c.a.service.JwtRequestFilter           : END
